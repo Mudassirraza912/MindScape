@@ -18,38 +18,20 @@ import { HomeRoutine } from '../screens/Home/HomeRoutine'
 import { HomePersona } from '../screens/Home/HomePersona'
 import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
+import { Dashboard } from '../screens/Home/Dashboard'
+import { Profile } from '../screens/Profile/Profile'
+import { Setting } from '../screens/Setting/setting'
+import { Emergency } from '../screens/Emergency/emergency'
+import { HelpCenter } from '../screens/HelpCenter/helpcenter'
+import { AboutUs } from '../screens/AboutUs/aboutus'
+import { TermsCondition } from '../screens/TermsCondition/termsAndCondition'
+import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
+import { ContactUs } from '../screens/ContactUs/contactUs'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
 const AppStack = createStackNavigator()
-const Tab = createBottomTabNavigator()
-
-// function MyTabs() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen
-//         name="Home"
-//         component={Home}
-//         options={{
-//           headerShown: false,
-//           tabBarIcon: ({ focused, color, size }) => {
-//             return <Icon name={'ios-home'} size={25} color={color} />
-//           }
-//         }}
-//       />
-//       <Tab.Screen
-//         name="Profile"
-//         component={Profile}
-//         options={{
-//           headerShown: false,
-//           tabBarIcon: ({ focused, color, size }) => {
-//             return <Icon name={'ios-settings'} size={25} color={color} />
-//           }
-//         }}
-//       />
-//     </Tab.Navigator>
-//   )
-// }
+const Drawer = createDrawerNavigator();
 
 function AuthStackNavigator() {
   return (
@@ -69,6 +51,31 @@ function AuthStackNavigator() {
   );
 }
 
+
+function MainDrawer() {
+  return (
+    <Drawer.Navigator
+      drawerContent={props => <CustomDrawer {...props} />}
+      drawerContentOptions={{
+        itemStyle: { marginVertical: 8, marginHorizontal: 8 },
+      }}
+      initialRouteName="Home"
+      overlayColor="transparent"
+      drawerType="front">
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard"  component={Dashboard}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Profile"  component={Profile}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting"  component={Setting}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency"  component={Emergency}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter"  component={HelpCenter}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Subscription" component={Subscription} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="AboutUs" component={AboutUs} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="TermsCondition" component={TermsCondition} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="PrivacyPolicy" component={PrivacyPolicy} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="ContactUs" component={ContactUs} />
+    </Drawer.Navigator>
+  )
+}
+
 function AppStackNavigator() {
   return(
     <AppStack.Navigator 
@@ -85,8 +92,7 @@ function AppStackNavigator() {
           <AppStack.Screen name="HomePersona"  component={HomePersona} />
           <AppStack.Screen name="PersonaVirtue"  component={PersonaVirtue} />
           <AppStack.Screen name="ToolsDashboard"  component={ToolsDashboard} />
-
-
+          <AppStack.Screen name="Dashboard"  component={MainDrawer} />
     </AppStack.Navigator>
   )
 }
