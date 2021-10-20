@@ -1,10 +1,13 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export const WalkThrough = ({navigation}) => {
     return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <View style={styles.mainContainer}>
+
+
+        <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text>
                 WalkThroug page
             </Text>
@@ -14,5 +17,16 @@ export const WalkThrough = ({navigation}) => {
                 </Text>
             </TouchableOpacity>
         </View>
+
+
+        </View>
     )
 }
+
+
+const styles = StyleSheet.create({
+    mainContainer: {
+      flex: 1,
+      backgroundColor: '#fff',  
+    },
+})
