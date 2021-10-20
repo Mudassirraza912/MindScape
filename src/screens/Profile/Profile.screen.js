@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Alert
 } from 'react-native'
-import styles from '../Home/Home.style'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const Home = ({ navigation }) => {
