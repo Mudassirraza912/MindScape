@@ -100,7 +100,7 @@ function AppStackNavigator() {
 
 
 const MainNavigation = () => {
-  const isLoggedin = false
+  const isLoggedin = true
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
