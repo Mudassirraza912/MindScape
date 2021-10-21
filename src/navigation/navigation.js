@@ -27,6 +27,7 @@ import { AboutUs } from '../screens/AboutUs/aboutus'
 import { TermsCondition } from '../screens/TermsCondition/termsAndCondition'
 import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
+import { createDrawerNavigator } from '@react-navigation/drawer'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -55,7 +56,7 @@ function AuthStackNavigator() {
 function MainDrawer() {
   return (
     <Drawer.Navigator
-      drawerContent={props => <CustomDrawer {...props} />}
+      // drawerContent={props => <CustomDrawer {...props} />}
       drawerContentOptions={{
         itemStyle: { marginVertical: 8, marginHorizontal: 8 },
       }}

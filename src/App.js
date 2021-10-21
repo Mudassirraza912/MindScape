@@ -3,6 +3,7 @@ import React from 'react'
 import MainNavigation from './navigation/navigation'
 import { Provider } from 'react-redux'
 import { store } from './stores'
+import 'react-native-gesture-handler';
 
 const App = () => {
   return (
