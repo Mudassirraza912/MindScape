@@ -10,7 +10,7 @@ export const SignUp = ({navigation}) => {
             <Text style={styles.helloText}>
                 Hello!
             </Text>
-            <TouchableOpacity >
+            <TouchableOpacity  >
                 <Text style={{paddingBottom:6}}>
                     Top to type
                 </Text>
