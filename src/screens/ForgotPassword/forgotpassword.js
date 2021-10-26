@@ -7,7 +7,7 @@ export const ForgotPassword = ({ navigation }) => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor={'#9493AD'}/>
       <View style={styles.mainContainer}>
-        <View style={styles.ContainerView}>
+        <View style={styles.TextView}>
           <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center',}}>
             Enter 4 digit code {'\n'}to authenticate
           </Text>
@@ -15,12 +15,12 @@ export const ForgotPassword = ({ navigation }) => {
             Check your email
           </Text>
         </View>
-        <View style={styles.ContainerView}>
+        <View style={styles.NumberView}>
           <Text style={{ color: '#fff', fontSize: 48, textAlign: 'center' }}>
             0 0 0 0
           </Text>
         </View>
-        <View style={styles.ContainerView}>
+        <View style={styles.ButtonView}>
           <Button
             onPress={() => navigation.navigate('AccountSecure')}
             title="Resend"
@@ -38,7 +38,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#9493AD'
   },
-  ContainerView: {
+  TextView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  NumberView: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  ButtonView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
