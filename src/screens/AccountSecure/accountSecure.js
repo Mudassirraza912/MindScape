@@ -17,7 +17,7 @@ export const AccountSecure = ({ navigation }) => {
             KEEP YOUR {'\n'}ACCOUT SECURE
           </Text>
         </View>
-        <View style={styles.TextView} />
+        <View style={styles.EmptyView} />
         <View style={styles.ButtonView}>
           <Button
             // onPress={() => navigation.navigate('EmailVerification')}
@@ -53,6 +53,11 @@ const styles = StyleSheet.create({
   },
   TextView: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  EmptyView: {
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center'
   },
