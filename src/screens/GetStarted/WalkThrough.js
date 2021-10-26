@@ -6,7 +6,7 @@ import { WalkThroughComponent } from '../../components/Walkthrough'
 export const WalkThrough = ({navigation}) => {
     return (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <WalkThroughComponent />
+            <WalkThroughComponent navigation={navigation} />
         </View>
     )
 }
