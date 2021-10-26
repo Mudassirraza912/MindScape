@@ -13,6 +13,7 @@ import { AccountSecure } from '../screens/AccountSecure/accountSecure'
 import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
+import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
 import { HomeWarning } from '../screens/Home/HomeWarning'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
 import { HomePersona } from '../screens/Home/HomePersona'
@@ -88,6 +89,7 @@ function AppStackNavigator() {
           <AppStack.Screen name="Subscription" component={Subscription} />
           <AppStack.Screen name="HomeWelcome"  component={HomeWelcome} />
           <AppStack.Screen name="HomeSetName"  component={HomeSetName} />
+          <AppStack.Screen name="HomeSetCountry"  component={HomeSetCountry} />
           <AppStack.Screen name="HomeWarning"  component={HomeWarning} />
           <AppStack.Screen name="HomeRoutine"  component={HomeRoutine} />
           <AppStack.Screen name="HomePersona"  component={HomePersona} />
@@ -100,7 +102,7 @@ function AppStackNavigator() {
 
 
 const MainNavigation = () => {
-  const isLoggedin = true
+  const isLoggedin = false
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>

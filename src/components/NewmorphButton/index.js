@@ -24,15 +24,15 @@ const index = ({
                 style={{
                     shadowRadius: 2,
                     shadowColor: backgroundColor,
-                    borderRadius: 50,
+                    borderRadius: 33,
                     backgroundColor: backgroundColor,
-                    width: 80,
-                    height: 80,
+                    width: 70,
+                    height: 70,
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}
             >
-                <Image source={imgPath} style={[{ height: 50, width: 25 }, imgStyle]} />
+                <Image source={imgPath} style={[{ height: 40, width: 20 }, imgStyle]} />
             </Neomorph>
         </TouchableOpacity>
     )
