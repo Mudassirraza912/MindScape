@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { GetstartedMain } from '../screens/GetStarted/getStartedMain'
@@ -9,6 +9,7 @@ import { Login } from '../screens/Login/login'
 import { SignUp } from '../screens/SignUp/signup'
 import { ForgotPassword } from '../screens/ForgotPassword/forgotpassword'
 import { EmailVerification } from '../screens/EmailVerification/EmailVerification'
+import { FreeTrialSubscription } from '../screens/FreeTrialSubscription/freeTrialSubscription'
 import { AccountSecure } from '../screens/AccountSecure/accountSecure'
 import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
@@ -48,6 +49,7 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="SignUp"  component={SignUp} />
       <AuthStack.Screen name="ForgotPassword"  component={ForgotPassword} />
       <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
+      <AuthStack.Screen name="FreeTrialSubscription"  component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
 
     </AuthStack.Navigator>
@@ -104,7 +106,7 @@ function AppStackNavigator() {
 const MainNavigation = () => {
   const isLoggedin = false
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={{...DefaultTheme,dark:true,colors:{'background':'#9493AD'}}}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isLoggedin ?
             <Stack.Screen
