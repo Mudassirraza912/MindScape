@@ -10,14 +10,14 @@ export const WalkThrough = ({navigation}) => {
 
 
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Text>
+            {/* <Text>
                 WalkThroug page
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text>
                     NEXT PAGE
                 </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 {/* ======= */}
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
 {/* <<<<<<< HEAD */}

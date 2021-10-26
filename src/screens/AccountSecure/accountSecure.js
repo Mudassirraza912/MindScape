@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, StatusBar } from 'react-native'
+import { View, Text, StyleSheet,} from 'react-native'
 import Button from '../../components/button/index'
 
 export const AccountSecure = ({ navigation }) => {
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor={'#9493AD'} />
       <View style={styles.mainContainer}>
         <View style={styles.TextView}>
           <Text
@@ -20,7 +19,7 @@ export const AccountSecure = ({ navigation }) => {
         <View style={styles.EmptyView} />
         <View style={styles.ButtonView}>
           <Button
-            // onPress={() => navigation.navigate('EmailVerification')}
+            // onPress={() => navigation.navigate('FreeTrialSubscription')}
             title="YES, PROTECT WITH FACE ID"
             buttonStyle={{
               height: 26,
@@ -31,7 +30,7 @@ export const AccountSecure = ({ navigation }) => {
             textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)' }}
           />
           <Button
-            onPress={() => navigation.navigate('EmailVerification')}
+            onPress={() => navigation.navigate('FreeTrialSubscription')}
             title="May be later"
             buttonStyle={{
               height: 26,
