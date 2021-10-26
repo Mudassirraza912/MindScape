@@ -46,6 +46,7 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="Login"  component={Login} />
       <AuthStack.Screen name="SignUp"  component={SignUp} />
       <AuthStack.Screen name="ForgotPassword"  component={ForgotPassword} />
+      <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
       <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
 
     </AuthStack.Navigator>
@@ -83,8 +84,8 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="AccountSecure">
-        <AppStack.Screen name="AccountSecure"  component={AccountSecure} />
+      initialRouteName="Subscription">
+        
           <AppStack.Screen name="Subscription" component={Subscription} />
           <AppStack.Screen name="HomeWelcome"  component={HomeWelcome} />
           <AppStack.Screen name="HomeSetName"  component={HomeSetName} />
