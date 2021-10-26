@@ -8,7 +8,7 @@ textStyle = {},
 buttonStyle = {}
 }){
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.button,buttonStyle]} activeOpacity={0.9}>
+        <TouchableOpacity onPress={onPress} style={[styles.button,buttonStyle]} activeOpacity={0.8}>
             <Text style={[styles.text, textStyle]}>{title}</Text>
         </TouchableOpacity>
     )
@@ -20,7 +20,6 @@ const styles = StyleSheet.create ({
         borderWidth:1,
         width:150,
         height:32,
-        flex:0,
         justifyContent:"center",
         alignItems:"center",
         borderRadius:15
