@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet,} from 'react-native'
+import { View, Text, StyleSheet, StatusBar} from 'react-native'
 import Button from '../../components/button/index'
 
 export const AccountSecure = ({ navigation }) => {
   return (
     <>
       <View style={styles.mainContainer}>
+      <StatusBar  backgroundColor={'transparent'} translucent={true}/>
         <View style={styles.TextView}>
           <Text
             style={{
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   EmptyView: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },

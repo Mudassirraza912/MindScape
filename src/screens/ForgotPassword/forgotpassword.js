@@ -1,11 +1,12 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import Button from '../../components/button/index'
 
 export const ForgotPassword = ({ navigation }) => {
   return (
     <>
       <View style={styles.mainContainer}>
+      <StatusBar  backgroundColor={'transparent'} translucent={true}/>
         <View style={styles.TextView}>
           <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center',}}>
             Enter 4 digit code {'\n'}to authenticate
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   NumberView: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },
