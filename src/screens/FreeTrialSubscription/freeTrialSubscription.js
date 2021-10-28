@@ -7,6 +7,7 @@ import {
   ImageBackground
 } from 'react-native'
 import Button from '../../components/button/index'
+import PaymentComponent from '../../components/PaymentComponent/index'
 
 export const FreeTrialSubscription = ({ navigation }) => {
   return (
@@ -14,77 +15,33 @@ export const FreeTrialSubscription = ({ navigation }) => {
       <ImageBackground
         style={{ height: '100%', width: '100%' }}
         source={require('../../assets/images/FTSImg.png')}>
-        <StatusBar hidden={true} />
+        <StatusBar  backgroundColor={'transparent'} translucent={true}/>
         <View style={styles.TextView}>
-          <Text style={{ color: '#fff', fontSize: 24, paddingVertical: 5 }}>
+          <Text
+            style={{
+              color: '#fff',
+              fontSize: 24,
+              paddingVertical: 5,
+              marginTop: 20
+            }}>
             7 DAY FREE TRIAL
           </Text>
           <Text style={{ color: '#fff', fontSize: 17 }}>
             SUBSCRIPTION OPTIONS
           </Text>
         </View>
-        <View style={styles.BorderView} />
-        <View style={styles.SectionContainer}>
-          <View style={{ flexDirection: 'row' }}>
-            <Text
-              style={{
-                flex: 1,
-                fontSize: 22,
-                color: '#fff',
-                paddingVertical: 3
-              }}>
-              MONTHLY
-            </Text>
-            <View
-              style={{
-                flex: 1,
-                fontSize: 20,
-                color: '#fff',
-                alignItems: 'flex-end'
-              }}>
-              <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3 }}>
-                AED 37.5
-              </Text>
-            </View>
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <Text style={{ flex: 1, fontSize: 16, color: '#E39684' }}>
-              1 Week Complimentary
-            </Text>
-          </View>
-        </View>
-        <View style={styles.BorderView} />
 
-        <View style={styles.SectionContainer}>
-          <View style={{ flexDirection: 'row' }}>
-            <Text
-              style={{
-                flex: 1,
-                fontSize: 22,
-                color: '#fff',
-                paddingVertical: 3
-              }}>
-              PROGRAM
-            </Text>
-            <View
-              style={{
-                flex: 1,
-                fontSize: 20,
-                color: '#fff',
-                alignItems: 'flex-end'
-              }}>
-              <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3 }}>
-                AED 150
-              </Text>
-            </View>
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <Text style={{ flex: 1, fontSize: 16, color: '#E39684' }}>
-              Most Popular
-            </Text>
-          </View>
-        </View>
-        <View style={styles.BorderView} />
+        <PaymentComponent
+          title="MONTHLY"
+          description="1 Week Complimentary"
+          payment="AED 37.5"
+        />
+
+        <PaymentComponent
+          title="PROGRAM"
+          description="Most Popular"
+          payment="AED 150"
+        />
 
         <View style={styles.ButtonView}>
           <Button
@@ -93,8 +50,9 @@ export const FreeTrialSubscription = ({ navigation }) => {
             buttonStyle={{
               height: 26,
               width: 235,
+              borderWidth: 0,
               backgroundColor: 'rgba(229, 228, 247, .35)',
-              marginVertical: 15
+              marginTop: 25
             }}
             textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)' }}
           />
@@ -112,20 +70,12 @@ const styles = StyleSheet.create({
   TextView: {
     flex: 1.5,
     justifyContent: 'center',
-    alignItems: 'center'
-  },
-  BorderView: {
-    borderBottomColor: '#ffffff99',
-    borderBottomWidth: 0.2
-  },
-  SectionContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: '12%'
+    borderBottomColor: 'rgba(255, 255, 255, .3)',
+    borderBottomWidth: 1
   },
   ButtonView: {
-    flex: 1,
+    flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center'
   }
