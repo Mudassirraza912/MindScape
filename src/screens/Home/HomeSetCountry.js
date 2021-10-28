@@ -2,20 +2,22 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput,Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
-export const HomeWarning = ({ navigation }) => {
+export const HomeSetCountry = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
-                <Text style={{fontSize:24,color:"#A6A4B9",fontFamily:'Regulator Nova'}}>
-                    As they say 'Rome wasn't build in a day
+                <Text >
+                    So Daniel,
                 </Text>
-                <Text style={{color:"#49485F"}}>This evolution entirely depends on your commmitment.We sutable incremental changes
-                    to your lifestyle to help you discover the best version of yourlife.
-                </Text>
+                <Text>Which country are you based in?</Text>
+                <View style={styles.button}>
+                <Text style={{color:"#fff"}}>United Arab Emirates</Text>
+               <Image style={{marginTop:6}} source={require('../../assets/images/ComponentArrow.png')}/>
+            </View>
             </View>
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
-                    onPress={() => navigation.navigate('HomeRoutine')}
+                    onPress={() => navigation.navigate('HomeWarning')}
                     backgroundColor="#9493AD"
                 />
             </View>
