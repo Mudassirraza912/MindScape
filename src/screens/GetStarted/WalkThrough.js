@@ -12,8 +12,8 @@ export const WalkThrough = ({navigation}) => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
             {/* <Text>
                 WalkThroug page
-            </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            </Text> */}
+            {/* <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text>
                     NEXT PAGE
                 </Text>
