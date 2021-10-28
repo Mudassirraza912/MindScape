@@ -17,7 +17,7 @@ export const HomeSetCountry = ({ navigation }) => {
             </View>
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
-                    onPress={() => navigation.navigate('HomeSetCountry')}
+                    onPress={() => navigation.navigate('HomeWarning')}
                     backgroundColor="#9493AD"
                 />
             </View>

@@ -26,13 +26,13 @@ const index = ({
                     shadowColor: backgroundColor,
                     borderRadius: 33,
                     backgroundColor: backgroundColor,
-                    width: 70,
-                    height: 70,
+                    width: 60,
+                    height: 60,
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}
             >
-                <Image source={imgPath} style={[{ height: 40, width: 20 }, imgStyle]} />
+                <Image source={imgPath} style={[{ height: 38, width: 20 }, imgStyle]} />
             </Neomorph>
         </TouchableOpacity>
     )

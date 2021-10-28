@@ -16,9 +16,11 @@ import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
 import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
 import { HomeWarning } from '../screens/Home/HomeWarning'
+import { HomeCommitment } from '../screens/Home/HomeCommitment'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
 import { HomePersona } from '../screens/Home/HomePersona'
 import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
+import { HomeProgram } from '../screens/Home/HomeProgram'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
 import { Profile } from '../screens/Profile/Profile'
@@ -93,7 +95,9 @@ function AppStackNavigator() {
           <AppStack.Screen name="HomeSetName"  component={HomeSetName} />
           <AppStack.Screen name="HomeSetCountry"  component={HomeSetCountry} />
           <AppStack.Screen name="HomeWarning"  component={HomeWarning} />
+          <AppStack.Screen name="HomeCommitment"  component={HomeCommitment} />
           <AppStack.Screen name="HomeRoutine"  component={HomeRoutine} />
+          <AppStack.Screen name="HomeProgram"  component={HomeProgram} />
           <AppStack.Screen name="HomePersona"  component={HomePersona} />
           <AppStack.Screen name="PersonaVirtue"  component={PersonaVirtue} />
           <AppStack.Screen name="ToolsDashboard"  component={ToolsDashboard} />
@@ -106,7 +110,7 @@ function AppStackNavigator() {
 const MainNavigation = () => {
   const isLoggedin = false
   return (
-    <NavigationContainer theme={{...DefaultTheme,dark:true,colors:{'background':'#9493AD'}}}>
+    <NavigationContainer theme={{...DefaultTheme,dark:true,}}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isLoggedin ?
             <Stack.Screen

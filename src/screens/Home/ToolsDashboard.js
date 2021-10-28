@@ -8,7 +8,7 @@ export const ToolsDashboard = ({navigation}) => {
             <Text>
                 Tool sDashboard page
             </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('HomeRoutine')}>
+            <TouchableOpacity onPress={() => navigation.navigate('HomePersona')}>
                 <Text>
                     NEXT PAGE
                 </Text>
