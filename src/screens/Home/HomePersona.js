@@ -14,14 +14,12 @@ export const HomePersona = ({ navigation }) => {
         <View style={{flex: 1}}>
             {/* <Text>Hello</Text> */}
             <PersonaSVG 
-                width={'100%'} 
-                height={height -30} 
                 style={{
                     position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
+                    // top: 100,
+                    // left: 0,
+                    // right: 0,
+                    bottom: 1,
                     // backgroundColor: 'red',
                     // height: 600
 
