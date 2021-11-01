@@ -4,7 +4,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import PersonaSVG from '../../assets/images/bg-par.svg'
 import { imagePicker } from '../../helper/utils'
-
 const { width, height } = Dimensions.get('screen')
 // import Svg, {
 //     Use,

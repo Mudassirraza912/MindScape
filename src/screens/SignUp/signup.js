@@ -39,7 +39,7 @@ export const SignUp = ({navigation}) => {
             ></TextInput>
             <View style={{flex:0,justifyContent:"center",alignItems:"center",marginTop:"10%"}}>
                   <NewmorphButton 
-                   onPress={() => navigation.navigate('ForgotPassword')}
+                   onPress={() => navigation.navigate('OtpVerification')}
                   backgroundColor="#9493AD"
                 />
                 </View>
