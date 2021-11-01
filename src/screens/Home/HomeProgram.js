@@ -1,100 +1,118 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet,ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient';
 import StepIndicator from 'react-native-step-indicator';
 export const HomeProgram = ({ navigation }) => {
-const [currentPosition,setCurrentPosition] = useState (0);
-const [renderLabel,setRenderLabel] = useState ();
-const labels = [];
-const customStyles = {
-    stepIndicatorSize: 25,
-  currentStepIndicatorSize: 30,
-  separatorStrokeWidth: 2,
-  currentStepStrokeWidth: 3,
-  stepStrokeCurrentColor: '#7eaec4',
-  stepStrokeWidth: 3,
-  stepStrokeFinishedColor: '#7eaec4',
-  stepStrokeUnFinishedColor: '#dedede',
-  separatorFinishedColor: '#7eaec4',
-  separatorUnFinishedColor: '#dedede',
-  stepIndicatorFinishedColor: '#7eaec4',
-  stepIndicatorUnFinishedColor: '#ffffff',
-  stepIndicatorCurrentColor: '#ffffff',
-  stepIndicatorLabelFontSize: 0,
-  currentStepIndicatorLabelFontSize: 0,
-  stepIndicatorLabelCurrentColor: 'transparent',
-  stepIndicatorLabelFinishedColor: 'transparent',
-  stepIndicatorLabelUnFinishedColor: 'transparent',
-  labelColor: '#999999',
-  labelSize: 13,
-  currentStepLabelColor: '#7eaec4',
-  }
+    const [currentPosition, setCurrentPosition] = useState(0);
+    const [renderLabel, setRenderLabel] = useState();
+    const onStepPress = (position) => {
+        setCurrentPosition(currentPosition);
+    };
+    const customStyles = {
+        stepIndicatorSize: 25,
+        currentStepIndicatorSize: 30,
+        separatorStrokeWidth: 2,
+        currentStepStrokeWidth: 2,
+        stepStrokeCurrentColor: '#E39684',
+        stepStrokeWidth: 3,
+        stepStrokeFinishedColor: '#ADAABC',
+        stepStrokeUnFinishedColor: '#ADAABC',
+        separatorFinishedColor: '#ADAABC',
+        separatorUnFinishedColor: '#ADAABCe',
+        stepIndicatorFinishedColor: '#ADAABC',
+        stepIndicatorUnFinishedColor: 'transparent',
+        stepIndicatorCurrentColor: '#E39684',
+        stepIndicatorLabelFontSize: 13,
+        currentStepIndicatorLabelFontSize: 13,
+        stepIndicatorLabelCurrentColor: 'transparent',
+        stepIndicatorLabelFinishedColor: 'transparent',
+        stepIndicatorLabelUnFinishedColor: 'transparent',
+        labelColor: '#999999',
+        labelSize: 13,
+        currentStepLabelColor: '#ADAABC',
+    }
     return (
         <LinearGradient style={styles.container} colors={['#EDE7E4', '#9B98B0']}>
-            <ScrollView >
-            <View style={{ paddingHorizontal: "14%",paddingTop:"18%" }}>
-                <Text style={{ paddingVertical: 4 }}>PROGRAM</Text>
-                <View style={styles.border}></View>
-                <Text>VIRTUE 1</Text>
-                <Text>MINDFULNESS</Text>
-                <View style={{ flexDirection: "row" }}>
-                    <View style={{ flex: 1 }}>
-                        <StepIndicator
-                            stepCount={4}
-                            customStyles={customStyles}
-                            currentPosition={currentPosition}
-                            onPress={() => {}}
-                            direction={'vertical'}
-                        />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={{ paddingHorizontal: "14%", paddingTop: "18%" }}>
+                    <Text style={{ paddingVertical: 4, color: "#A3A2BA" }}>PROGRAM</Text>
+                    <View style={styles.border}></View>
+                    <Text style={{ color: "#A3A2BA" }}>VIRTUE 1</Text>
+                    <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 18 }}>MINDFULNESS</Text>
+                    <View style={{ flexDirection: "row", paddingVertical: 10 }}>
+                        <View style={{ flex: 1 }}>
+                            <StepIndicator
+                                stepCount={5}
+                                customStyles={customStyles}
+                                currentPosition={currentPosition}
+                                direction={'vertical'}
+                            />
+                        </View>
+                        <View style={{ flex: 3 }}>
+                            <TouchableOpacity
+                                activeOpacity={0.8}
+                                onPress={() => { onStepPress() }}
+                                style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
+                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold" }}>Connect</Text>
+                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold" }}>w1</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                activeOpacity={0.8}
+                                 onPress={() => { onStepPress() }}
+                                style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                                <Text style={{color:"#706F93",fontSize: 15}}>Manage</Text>
+                                <Text style={{color:"#706F93",fontSize: 15}}>w2</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity 
+                                     activeOpacity={0.8}
+                                     onPress={() => {onStepPress()}} 
+                            style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
+                                <Text style={{color:"#706F93",fontSize: 15}}>Discover</Text>
+                                <Text style={{color:"#706F93",fontSize: 15}}>w3</Text>
+                            </TouchableOpacity >
+                            <TouchableOpacity 
+                             activeOpacity={0.8}
+                            onPress={() => {onStepPress()}} 
+                            style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
+                                <Text style={{color:"#706F93",fontSize: 15}}>Practice</Text>
+                                <Text style={{color:"#706F93",fontSize: 15}}>w4</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity 
+                            activeOpacity={0.8}
+                            onPress={() => {onStepPress()}} 
+                            style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
+                                <Text style={{color:"#706F93",fontSize: 15}}>Become</Text>
+                                <Text style={{color:"#706F93",fontSize: 15}}>w5</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                    <View style={{ flex: 3 }}>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text>Connect</Text>
-                            <Text>w1</Text>
-                        </View>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-                            <Text>Manage</Text>
-                            <Text>w2</Text>
-                        </View>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text>Discover</Text>
-                            <Text>w3</Text>
-                        </View>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text>Practice</Text>
-                            <Text>w4</Text>
-                        </View>
-                        <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text>Become</Text>
-                            <Text>w5</Text>
-                        </View>
-                    </View>
-                </View>
-            </View>
-            <View style={styles.textBorder}>
-                    <Text>VIRTUE 2</Text>
-                    <Text>CURIOSITY</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text>VIRTUE 3</Text>
-                    <Text>COURAGE</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 2</Text>
+                    <Text style={{ color: "#A8A6B9" }}>CURIOSITY</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text>VIRTUE 4</Text>
-                    <Text>GRATITUDE</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 3</Text>
+                    <Text style={{ color: "#A8A6B9" }}>COURAGE</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text>VIRTUE 5</Text>
-                    <Text>COMPASSION</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 4</Text>
+                    <Text style={{ color: "#A8A6B9" }}>GRATITUDE</Text>
                 </View>
-                <View style={{justifyContent:"center",alignItems:"center",paddingVertical:20}}>
-                <TouchableOpacity 
-                style={styles.buttondv}
-                >
-                </TouchableOpacity>
+                <View style={styles.textBorder}>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 5</Text>
+                    <Text style={{ color: "#A8A6B9" }}>COMPASSION</Text>
                 </View>
-                </ScrollView>
+                <View style={{ justifyContent: "center", alignItems: "center", paddingVertical: 20 }}>
+                    <TouchableOpacity
+                        style={styles.buttondv}
+                    >
+                        <Text style={{ color: "#A3A2BA" }}>GET STARTED</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={{ paddingBottom: 30 }}></View>
+            </ScrollView>
         </LinearGradient>
     )
 }
@@ -117,16 +135,19 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         overflow: "hidden"
     },
-    textBorder:{
-        borderTopWidth:1,
-        borderTopColor:"#CECBD3",
-        paddingVertical:20,
-        paddingLeft:"15%"
+    textBorder: {
+        borderTopWidth: 1,
+        borderTopColor: "#CECBD3",
+        paddingVertical: 20,
+        paddingLeft: "15%"
     },
-    buttondv:{
-        backgroundColor:"#ffffff",
-        width:160,
-        height:40,
+    buttondv: {
+        backgroundColor: "#ffffff",
+        width: 150,
+        height: 30,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 20
     }
 })
 
