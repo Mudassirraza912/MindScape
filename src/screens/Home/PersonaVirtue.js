@@ -50,7 +50,7 @@ const styles = StyleSheet.create ({
     textdv:{
         paddingBottom:14,
         paddingTop:6,
-        fontSize:24,
+        fontSize:22,
         color:"#A3A2BA"
     }
 })

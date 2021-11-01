@@ -16,12 +16,7 @@ export const HomePersona = ({ navigation }) => {
             <PersonaSVG 
                 style={{
                     position: 'absolute',
-                    // top: 100,
-                    // left: 0,
-                    // right: 0,
-                    bottom: 1,
-                    // backgroundColor: 'red',
-                    // height: 600
+                    bottom: 0,
 
                 }}
           />
@@ -46,7 +41,8 @@ export const HomePersona = ({ navigation }) => {
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('PersonaVirtue')}
-                    backgroundColor="#9493AD"
+                    // backgroundColor="#9493AD"
+                    backgroundColor={'transparent'}
                 />
             </View>
         </View> */}
@@ -59,7 +55,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         backgroundColor: "#9493AD",
-        paddingHorizontal: "18%"
+        paddingHorizontal: "12%"
     },
     button:{
         backgroundColor:"#2F2F40",
@@ -75,9 +71,13 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderRadius:140,
         borderColor:"#A09EB4",
-        width:"89%",
-        height:"45%",
-        marginTop:10
+        width:"80%",
+        height:"40%",
+        marginTop:10,
+        flex:0,
+        justifyContent:"center",
+        alignItems:"center",
+        marginLeft:15
     },
     btn:{
         backgroundColor:"#2F2F40",
