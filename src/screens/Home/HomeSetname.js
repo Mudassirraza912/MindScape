@@ -2,11 +2,12 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput,Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
-import PersonaSVG from '../../assets/images/Name.svg'
+// import PersonaSVG from '../../assets/images/Name.svg'
+import SetNameSvg from '../../assets/SVG/setNameSVG'
 export const HomeSetName = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <PersonaSVG
+            <SetNameSvg
                 // width={"100%"}
                 width={Dimensions.get('screen').width}
                 height={Dimensions.get('screen').height}
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        backgroundColor: "#9493AD",
+        // backgroundColor: "#9493AD",
         paddingHorizontal: "15%"
     },
     field: {
