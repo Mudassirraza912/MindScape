@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TextInput, Image,Platform } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Image,Platform, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
-// import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import PersonaSVG from '../../assets/images/Step1.svg'
 
 export const HomeRoutine = ({ navigation }) => {
     const showTimepicker = () => {
@@ -11,17 +12,36 @@ export const HomeRoutine = ({ navigation }) => {
     const onChange = (event, selectedDate) => {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
-        setDate(currentDate);
+
+        let time=currentDate.toString().substring(16,21)
+        setCurrentTime(time)
+        setCurrentTime2(time)
+        setCurrentTime3(time)
+        setDate(date);
+
+        // switch () {
+        //     case 'wakeUp':
+        // }
       };
-      const [time, setTime] = useState (false);
+      const [date, setDate] = useState(new Date(1598051730000));
     const [show, setShow] = useState(false);
-    const [mode, setMode] = useState('date');
+    const [mode, setMode] = useState('time');
+    const [currentTime,setCurrentTime]=useState('')
+    const [currentTime2,setCurrentTime2]=useState('')
+    const [currentTime3,setCurrentTime3]=useState('')
     const showMode = (currentMode) => {
         setShow(true);
         setMode(currentMode);
       };
     return (
         <View style={styles.container}>
+                      <PersonaSVG 
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+
+                }}
+          />
             <View style={{ flex: 3, justifyContent: "center", paddingTop: "0%", }}>
                 <Text style={{ textAlign: "center", paddingBottom: 20, color: "#B6B4C5" }}>
                     COMMITMENT
@@ -29,20 +49,24 @@ export const HomeRoutine = ({ navigation }) => {
                 <Text style={{ color: "#D1CDD4", fontSize: 20, paddingVertical: 10 }}>Lets align with your routine</Text>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
-                    <Text style={{ paddingVertical: 6 }}>What time do you make up?</Text>
-                    <View style={styles.buttondv}>
-                        <Text style={{ color: "#fff" }}>07:00</Text>
+                    <Text style={{ paddingVertical: 6 }}>What time do you wake up?</Text>
+                    <TouchableOpacity
+                        onPress={showTimepicker}
+                        style={styles.buttondv}>
+                        <Text style={{ color: "#fff" }}>{    currentTime ? currentTime :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
-                    </View>
+                    </TouchableOpacity>
 
                 </View>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
                     <Text style={{ paddingVertical: 6 }} >Least busy hour in the afternoon?</Text>
-                    <View style={styles.buttondv}>
-                        <Text style={{ color: "#fff" }}>07:00</Text>
+                    <TouchableOpacity
+                        onPress={showTimepicker}
+                        style={styles.buttondv}>
+                    <Text style={{ color: "#fff" }}>{    currentTime2 ? currentTime2 :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
@@ -50,14 +74,14 @@ export const HomeRoutine = ({ navigation }) => {
                     <TouchableOpacity
                         onPress={showTimepicker}
                         style={styles.buttondv}>
-                        <Text style={{ color: "#fff" }}>07:00</Text>
+                <Text style={{ color: "#fff" }}>{    currentTime3 ? currentTime3 :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
                     </TouchableOpacity>
                     {show && (
                         <DateTimePicker
-                          timeZoneOffsetInMinutes={0}
+                        //   timeZoneOffsetInMinutes={0}
                             testID="dateTimePicker"
-                            value={time}
+                            value={date}
                             mode={mode}
                             is24Hour={true}
                             display="default"
@@ -69,7 +93,7 @@ export const HomeRoutine = ({ navigation }) => {
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeCommitment')}
-                    backgroundColor="#9493AD"
+                    backgroundColor="transparent"
                 />
             </View>
         </View>
@@ -99,8 +123,7 @@ const styles = StyleSheet.create({
         height: 0.5
     },
     buttondv: {
-        // backgroundColor:"#9493AD",
-        backgroundColor: "red",
+        backgroundColor:"#9493AD",
         flexDirection: "row",
         justifyContent: "space-between",
         width: "30%",
