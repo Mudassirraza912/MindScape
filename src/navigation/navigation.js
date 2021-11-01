@@ -7,10 +7,11 @@ import { GetstartedMain } from '../screens/GetStarted/getStartedMain'
 import { WalkThrough } from '../screens/GetStarted/WalkThrough'
 import { Login } from '../screens/Login/login'
 import { SignUp } from '../screens/SignUp/signup'
-import { ForgotPassword } from '../screens/ForgotPassword/forgotpassword'
+import { OtpVerification } from '../screens/OtpVerification/OtpVerification'
 import { EmailVerification } from '../screens/EmailVerification/EmailVerification'
 import { FreeTrialSubscription } from '../screens/FreeTrialSubscription/freeTrialSubscription'
 import { AccountSecure } from '../screens/AccountSecure/accountSecure'
+import { AccountSetting } from '../screens/AccountSecure/accountSetting'
 import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
@@ -49,8 +50,9 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="WalkThrough"  component={WalkThrough} />
       <AuthStack.Screen name="Login"  component={Login} />
       <AuthStack.Screen name="SignUp"  component={SignUp} />
-      <AuthStack.Screen name="ForgotPassword"  component={ForgotPassword} />
+      <AuthStack.Screen name="OtpVerification"  component={OtpVerification} />
       <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
+      <AuthStack.Screen name="AccountSetting"  component={AccountSetting} />
       <AuthStack.Screen name="FreeTrialSubscription"  component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
 
@@ -108,7 +110,7 @@ function AppStackNavigator() {
 
 
 const MainNavigation = () => {
-  const isLoggedin = false
+  const isLoggedin = true
   return (
     <NavigationContainer theme={{...DefaultTheme,dark:true,}}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>

@@ -33,6 +33,7 @@ export const GetstartedMain = ({ navigation }) => {
             <Button
               buttonStyle={{ borderColor: '#c5cbe3' }}
               onPress={() => navigation.navigate('WalkThrough')}
+              // onPress={() => navigation.navigate('EmailVerification')}
               title={'Get Started'}
               textStyle={{ color: '#7f83a0' }}
             />

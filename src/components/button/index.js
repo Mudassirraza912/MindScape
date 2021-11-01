@@ -8,7 +8,7 @@ textStyle = {},
 buttonStyle = {}
 }){
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.button,buttonStyle]} activeOpacity={0.8}>
+        <TouchableOpacity onPress={onPress} style={[styles.button,buttonStyle]} activeOpacity={0.7}>
             <Text style={[styles.text, textStyle]}>{title}</Text>
         </TouchableOpacity>
     )
