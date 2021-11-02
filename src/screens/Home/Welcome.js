@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Dimensions, StyleSheet } from 'react-native'
+import { View, Text, Dimensions, StyleSheet, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import WelcomeSvg from '../../assets/SVG/WelcomeSvg'
 // import WelcomeSvg from '../../assets/images/Welcome.svg'
@@ -7,6 +7,7 @@ const {width, height} = Dimensions.get('screen')
 export const HomeWelcome = ({navigation}) => {
     return (
         <View style={{flex: 1}}>
+        <StatusBar hidden={true} />
             <WelcomeSvg 
                 width={Dimensions.get('window').width}
                 height={Dimensions.get('window').height}
@@ -25,7 +26,7 @@ export const HomeWelcome = ({navigation}) => {
                     Mindscape Daniel
                 </Text>
                 <Text onPress={() => navigation.navigate("HomeSetName")} style={styles.text3}>
-                    Ssetup tp begin
+                    Setup to begin
                 </Text>
           </View>
         </View>
