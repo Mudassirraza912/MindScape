@@ -12,7 +12,7 @@ export const HomePersona = ({ navigation }) => {
     return (
         <View style={{flex: 1}}>
             {/* <Text>Hello</Text> */}
-            <PersonaSVG 
+            <SetNameSvg 
                 style={{
                     position: 'absolute',
                     bottom: 0,
