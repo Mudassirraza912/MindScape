@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Text,StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import PersonaSVG from '../../assets/images/Step5.svg'
+import ToolSvg from '../../assets/SVG/toolSvg'
 export const ToolsDashboard = ({navigation}) => {
     return (
         <View style={styles.container}>
-                          <PersonaSVG 
+            <ToolSvg 
                 style={{
                     position: 'absolute',
                     bottom: 0,

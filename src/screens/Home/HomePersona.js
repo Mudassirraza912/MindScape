@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput,Image,ImageBackground,StatusBar, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import SetNameSvg from '../../assets/SVG/setNameSVG'
 import NewmorphButton from '../../components/NewmorphButton/index'
-import PersonaSVG from '../../assets/images/bg-par.svg'
 const { width, height } = Dimensions.get('screen')
 // import Svg, {
 //     Use,

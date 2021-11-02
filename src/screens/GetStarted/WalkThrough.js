@@ -18,17 +18,11 @@ export const WalkThrough = ({navigation}) => {
                     NEXT PAGE
                 </Text>
             </TouchableOpacity> */}
-{/* ======= */}
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-{/* <<<<<<< HEAD */}
             <WalkThroughComponent />
-{/* >>>>>>> 125dec18c87bfdcc951a66e33e7c810b59966191 */}
         </View>
 
-
-{/* ======= */}
             <WalkThroughComponent navigation={navigation} />
-{/* >>>>>>> c1ea2bcb811ef30cde831a31fb8506cd040f8545 */}
         </View>
         </View>
     )
