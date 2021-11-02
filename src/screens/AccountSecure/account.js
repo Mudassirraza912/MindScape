@@ -50,6 +50,7 @@ export const Account = ({ navigation }) => {
                 // value={'123456789012'}
                 placeholder="Dan"
                 placeholderTextColor="#8C8BA5"
+                keyboardType="default"
 
 
               />
@@ -66,6 +67,7 @@ export const Account = ({ navigation }) => {
                 // value={'123456789012'}
                 placeholder="daniel.nehme1@icloud.com"
                 placeholderTextColor="#8C8BA5"
+                keyboardType="email-address"
     
   
               />
@@ -82,6 +84,7 @@ export const Account = ({ navigation }) => {
                 // value={'123456789012'}
                 placeholder="+971 55 8477 327"
                 placeholderTextColor="#8C8BA5"
+                keyboardType="phone-pad"
    
 
               />
@@ -111,9 +114,9 @@ export const Account = ({ navigation }) => {
           </TouchableOpacity>
 
 
-          <TouchableOpacity
+          <View
         //   onPress={() => navigation.navigate('EmailVerification')}
-          activeOpacity={0.7}
+          
             style={{
               width: '100%',
               alignSelf: 'center',
@@ -121,22 +124,23 @@ export const Account = ({ navigation }) => {
               alignItems: 'center'
             }}>
             <View style={{ width: '40%', marginVertical:10,}}>
-              <Image source={require('../../assets/images/Ellipse-59.png')} />
-              <Image source={require('../../assets/images/group-243.png')} style={{position:"absolute",bottom:0, right:28, }}/>     
+             <View style={{borderWidth:1.5, borderColor:"#9493AD", width:105, height:105, borderRadius:52.5, alignItems:"center",justifyContent:"center"}}>
+              <Image style={{ height:104, width:100, resizeMode:"stretch"}} source={require('../../assets/images/group-243.png')} />   
+             </View>  
             </View>
-            <View style={{ width: '60%', }}>
-                  <View style={{marginTop: 25 ,width:100, height:33, borderRadius:20, backgroundColor:"#2F2F40", justifyContent:"center", alignItems:"center"}}>
+            <View style={{ width: '60%', marginLeft: 10 }}>
+                  <TouchableOpacity activeOpacity={0.7} style={{marginTop: 25 ,width:100, height:35, borderRadius:20, backgroundColor:"#2F2F40", justifyContent:"center", alignItems:"center"}}>
                   <Text
                 style={{ color: '#8C8BA5', fontSize: 16,  }}>
                 Upload
               </Text>
-                  </View>
+                  </TouchableOpacity>
                   <Text
-                style={{ color: '#E39684', fontSize: 14, margin: 5 }}>
+                style={{ color: '#E39684', fontSize: 14, marginTop: 10 }}>
                 *update within {'\n'}24 hours
               </Text>              
             </View>
-          </TouchableOpacity>
+          </View>
         </View>
       </View>
     </>
