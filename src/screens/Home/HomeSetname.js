@@ -20,18 +20,19 @@ export const HomeSetName = ({ navigation }) => {
 
                 }}
             />
-            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
+            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20, overflow: 'hidden' }}>
                 <Text >
                     So Daniel,
                 </Text>
                 <Text>What do your friend call you?</Text>
                 <TextInput
                     placeholder="Nick Name"
-                    placeholderTextColor="#CFCFDB"
+                    placeholderTextColor="#9493AD"
                     style={styles.field}
                 ></TextInput>
+                <Text numberOfLines={1} ellipsizeMode="clip" style={{color: "#9493AD", top: -15}}>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
             </View>
-            <View style={{ flex: 1, alignItems: "center", }}>
+            <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeSetCountry')}
                     backgroundColor="transparent"
@@ -49,8 +50,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: "15%"
     },
     field: {
-        borderBottomWidth: 1,
-        borderBottomColor: "#DCD7D9",
+        // borderLeftColor: "red",
+        // borderWidth: 1,
+        // borderBottomWidth: 1,
+        borderRadius: 1,
+        borderBottomColor: "#000",
+        // borderStyle:"dashed",
         fontSize: 22
     }
 })

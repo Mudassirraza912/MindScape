@@ -24,8 +24,8 @@ export const AccountSetting = ({ navigation }) => {
           activeOpacity={0.7}
           style={{
             alignItems: 'flex-end',
-            paddingTop: '12%',
-            paddingRight: '5%'
+            paddingTop: 50,
+            paddingRight: 20,
           }}>
           <Icon name="close" size={40} color="#8C8BA5" />
         </TouchableOpacity>

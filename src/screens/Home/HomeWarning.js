@@ -1,10 +1,22 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Image, Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
+import WarningSvg from '../../assets/SVG/warningSvg'
+
+const { width, height } = Dimensions.get('screen')
 export const HomeWarning = ({ navigation }) => {
     return (
         <View style={styles.container}>
+               <WarningSvg
+                width={width}
+                height={height}
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+
+                }}
+          />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
                 <Text style={{fontSize:24,color:"#A6A4B9",fontFamily:'Regulator Nova'}}>
                     As they say 'Rome wasn't build in a day
