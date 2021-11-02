@@ -29,6 +29,7 @@ export const OtpVerification = ({ navigation }) => {
             style={{ margin: 90 }}
             pinCount={4}
             autoFocusOnLoad
+            keyboardAppearance={'dark'}
             keyboardType={'number-pad'}
             placeholderCharacter={'0'}
             placeholderTextColor={'#ffffff90'}
