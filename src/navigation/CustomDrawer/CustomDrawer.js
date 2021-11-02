@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo'
 const { width, height } = Dimensions.get('screen')
 
-export const CustomDrawer = () => {
+export const CustomDrawer = ({navigation}) => {
     const Data = [
         {
             title: 'PREFERENCES',
@@ -53,12 +53,9 @@ export const CustomDrawer = () => {
                 flex: 1,
             }}>
 
-
             <View
                 style={styles.mainView}
             >
-
-
 
                 {
                     Data.map((item, i) => {
@@ -67,7 +64,7 @@ export const CustomDrawer = () => {
                             <TouchableOpacity
                                 onPress={() => {
                                     item.navigateTo &&
-                                        // props.navigation.navigate(item.navigateTo);
+                                        // navigation.navigate(item.navigateTo);
                                         alert('Navigate')
                                 }}
                                 activeOpacity={0.7}
@@ -93,7 +90,7 @@ export const CustomDrawer = () => {
                 }
             </View>
             <TouchableOpacity
-
+                onPress={() => navigation.closeDrawer()}
                 style={
                     styles.lastViewStyle
                 }
