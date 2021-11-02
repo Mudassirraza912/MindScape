@@ -96,7 +96,7 @@ export const HomeRoutine = ({ navigation }) => {
                     backgroundColor="transparent"
                 />
             </View>
-        </View>
+    </View>
     )
 }
 
@@ -107,20 +107,20 @@ const styles = StyleSheet.create({
         backgroundColor: "#9493AD",
         paddingHorizontal: "15%"
     },
-    button: {
-        backgroundColor: "#2F2F40",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        borderRadius: 20,
-        paddingHorizontal: 10,
-        marginTop: "15%",
-        width: "80%",
-        height: 20
+    button:{
+        backgroundColor:"#2F2F40",
+        flexDirection:"row",
+        justifyContent:"space-between",
+        borderRadius:20,
+        paddingHorizontal:10,
+        marginTop:"15%",
+        width:"80%",
+        height:20
     },
-    border: {
-        backgroundColor: "#fff",
-        width: "45%",
-        height: 0.5
+    border:{
+        backgroundColor:"#fff",
+        width:"45%",
+        height:0.5
     },
     buttondv: {
         backgroundColor:"#9493AD",

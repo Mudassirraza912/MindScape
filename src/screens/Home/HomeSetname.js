@@ -2,24 +2,25 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput,Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
-import PersonaSVG from '../../assets/images/Name.svg'
+// import PersonaSVG from '../../assets/images/Name.svg'
+import SetNameSvg from '../../assets/SVG/setNameSVG'
 export const HomeSetName = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <PersonaSVG
+            <SetNameSvg
                 // width={"100%"}
                 width={Dimensions.get('screen').width}
                 height={Dimensions.get('screen').height}
                 style={{
                     position: 'absolute',
                     bottom: 0,
-                    top: 0,
-                    right: 0,
-                    left: 0
+                    //  top: 0,
+                    //  right: 0,
+                    //  left: 0
 
                 }}
             />
-            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
+            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
                 <Text >
                     So Daniel,
                 </Text>
@@ -33,7 +34,7 @@ export const HomeSetName = ({ navigation }) => {
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeSetCountry')}
-                    backgroundColor="#9493AD"
+                    backgroundColor="transparent"
                 />
             </View>
         </View>
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        backgroundColor: "#9493AD",
+        // backgroundColor: "#9493AD",
         paddingHorizontal: "15%"
     },
     field: {
