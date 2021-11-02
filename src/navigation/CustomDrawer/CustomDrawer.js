@@ -53,12 +53,9 @@ export const CustomDrawer = ({ navigation }) => {
                 flex: 1,
             }}>
 
-
             <View
                 style={styles.mainView}
             >
-
-
 
                 {
                     Data.map((item, i) => {
@@ -93,7 +90,7 @@ export const CustomDrawer = ({ navigation }) => {
                 }
             </View>
             <TouchableOpacity
-
+                onPress={() => navigation.closeDrawer()}
                 style={
                     styles.lastViewStyle
                 }

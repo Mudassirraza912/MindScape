@@ -45,7 +45,7 @@ export const FreeTrialSubscription = ({ navigation }) => {
 
         <View style={styles.ButtonView}>
           <Button
-            onPress={() => navigation.navigate('AccountSetting')}
+            onPress={() => navigation.navigate('HomeWelcome')}
             title="Start my 7-day free trial"
             buttonStyle={{
               height: 26,

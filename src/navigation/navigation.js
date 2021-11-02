@@ -73,7 +73,10 @@ function MainDrawer() {
         itemStyle: { marginVertical: 8, marginHorizontal: 8 },
       }}
       screenOptions={{
-        headerShown: false
+        headerShown: false,
+        drawerStyle: {
+          width: "100%",
+        },
       }}
       initialRouteName="Home"
       overlayColor="transparent"
@@ -100,9 +103,9 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="HomeWelcome">
-      <AppStack.Screen name="HomeWelcome" component={MainDrawer} />
-      <AppStack.Screen name="Subscription" component={Subscription} />
+      initialRouteName="Subscription">
+      <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
+      <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
