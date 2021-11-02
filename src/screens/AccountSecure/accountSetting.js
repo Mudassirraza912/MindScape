@@ -13,7 +13,7 @@ import Icon from 'react-native-vector-icons/EvilIcons'
 
 export const AccountSetting = ({ navigation }) => {
   const onSelectSwitch = index => {
-    // alert(index === 1 ? 'close' : 'open')
+    // alert(index === 1 ? 'Switch Off' : 'Switch On')
   }
 
   return (
@@ -24,10 +24,10 @@ export const AccountSetting = ({ navigation }) => {
           activeOpacity={0.7}
           style={{
             alignItems: 'flex-end',
-            paddingTop: '10%',
+            paddingTop: '12%',
             paddingRight: '5%'
           }}>
-          <Icon name="close" size={35} color="#8C8BA5" />
+          <Icon name="close" size={40} color="#8C8BA5" />
         </TouchableOpacity>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
@@ -82,7 +82,7 @@ export const AccountSetting = ({ navigation }) => {
             For faster login
           </Text>
           <TouchableOpacity
-          onPress={() => navigation.navigate('EmailVerification')}
+          onPress={() => navigation.navigate('Account')}
           activeOpacity={0.7}
             style={{
               width: '100%',
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#49485F'
   },
   sectionContainer: {
-    paddingTop: 30,
+    paddingTop: 35,
     paddingHorizontal: 40
   },
   input: {
