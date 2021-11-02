@@ -1,18 +1,55 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Dimensions, StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import WelcomeSvg from '../../assets/SVG/WelcomeSvg'
+// import WelcomeSvg from '../../assets/images/Welcome.svg'
+const {width, height} = Dimensions.get('screen')
 export const HomeWelcome = ({navigation}) => {
     return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>
-                Home Welcome page
-            </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('HomeSetName')}>
-                <Text>
-                    NEXT PAGE
+        <View style={{flex: 1}}>
+            <WelcomeSvg 
+                width={Dimensions.get('window').width}
+                height={Dimensions.get('window').height}
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+
+                }}
+          />
+
+          <View style={styles.containerText}>
+                <Text style={styles.text1}>
+                    Welcome to your
                 </Text>
-            </TouchableOpacity>
+                <Text style={styles.text2}>
+                    Mindscape Daniel
+                </Text>
+                <Text onPress={() => navigation.navigate("HomeSetName")} style={styles.text3}>
+                    Ssetup tp begin
+                </Text>
+          </View>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    containerText: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: height/15,
+        alignItems: 'center'
+    },
+    text1: {
+        color: "#fff",
+        fontSize: 18
+    },
+    text2: {
+        color: "#fff",
+        fontSize: 24
+    },
+    text3: {
+        color: "#fff",
+        fontSize: 16
+    }
+})
