@@ -33,6 +33,7 @@ import { TermsCondition } from '../screens/TermsCondition/termsAndCondition'
 import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
+import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -46,15 +47,15 @@ function AuthStackNavigator() {
         headerShown: false,
       }}
       initialRouteName="GetStarted">
-      <AuthStack.Screen name="GetStarted"  component={GetstartedMain} />
-      <AuthStack.Screen name="WalkThrough"  component={WalkThrough} />
-      <AuthStack.Screen name="Login"  component={Login} />
-      <AuthStack.Screen name="SignUp"  component={SignUp} />
-      <AuthStack.Screen name="OtpVerification"  component={OtpVerification} />
-      <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
-      <AuthStack.Screen name="AccountSetting"  component={AccountSetting} />
-      <AuthStack.Screen name="FreeTrialSubscription"  component={FreeTrialSubscription} />
-      <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
+      <AuthStack.Screen name="GetStarted" component={GetstartedMain} />
+      <AuthStack.Screen name="WalkThrough" component={WalkThrough} />
+      <AuthStack.Screen name="Login" component={Login} />
+      <AuthStack.Screen name="SignUp" component={SignUp} />
+      <AuthStack.Screen name="OtpVerification" component={OtpVerification} />
+      <AuthStack.Screen name="AccountSecure" component={AccountSecure} />
+      <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
+      <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
+      <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
     </AuthStack.Navigator>
   );
@@ -64,18 +65,18 @@ function AuthStackNavigator() {
 function MainDrawer() {
   return (
     <Drawer.Navigator
-      // drawerContent={props => <CustomDrawer {...props} />}
+      drawerContent={props => <CustomDrawer {...props} />}
       drawerContentOptions={{
         itemStyle: { marginVertical: 8, marginHorizontal: 8 },
       }}
       initialRouteName="Home"
       overlayColor="transparent"
       drawerType="front">
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard"  component={Dashboard}/>
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Profile"  component={Profile}/>
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting"  component={Setting}/>
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency"  component={Emergency}/>
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter"  component={HelpCenter}/>
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Profile" component={Profile} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter" component={HelpCenter} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Subscription" component={Subscription} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="AboutUs" component={AboutUs} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="TermsCondition" component={TermsCondition} />
@@ -86,24 +87,24 @@ function MainDrawer() {
 }
 
 function AppStackNavigator() {
-  return(
-    <AppStack.Navigator 
+  return (
+    <AppStack.Navigator
       screenOptions={{
         headerShown: false,
       }}
       initialRouteName="HomeWelcome">
-         <AppStack.Screen name="HomeWelcome"  component={HomeWelcome} />
-          <AppStack.Screen name="Subscription" component={Subscription} />
-          <AppStack.Screen name="HomeSetName"  component={HomeSetName} />
-          <AppStack.Screen name="HomeSetCountry"  component={HomeSetCountry} />
-          <AppStack.Screen name="HomeWarning"  component={HomeWarning} />
-          <AppStack.Screen name="HomeCommitment"  component={HomeCommitment} />
-          <AppStack.Screen name="HomeRoutine"  component={HomeRoutine} />
-          <AppStack.Screen name="HomeProgram"  component={HomeProgram} />
-          <AppStack.Screen name="HomePersona"  component={HomePersona} />
-          <AppStack.Screen name="PersonaVirtue"  component={PersonaVirtue} />
-          <AppStack.Screen name="ToolsDashboard"  component={ToolsDashboard} />
-          <AppStack.Screen name="Dashboard"  component={MainDrawer} />
+      <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
+      <AppStack.Screen name="Subscription" component={Subscription} />
+      <AppStack.Screen name="HomeSetName" component={HomeSetName} />
+      <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
+      <AppStack.Screen name="HomeWarning" component={HomeWarning} />
+      <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
+      <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
+      <AppStack.Screen name="HomeProgram" component={HomeProgram} />
+      <AppStack.Screen name="HomePersona" component={HomePersona} />
+      <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
+      <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
+      <AppStack.Screen name="Dashboard" component={MainDrawer} />
     </AppStack.Navigator>
   )
 }
@@ -112,20 +113,20 @@ function AppStackNavigator() {
 const MainNavigation = () => {
   const isLoggedin = false
   return (
-    <NavigationContainer theme={{...DefaultTheme,dark:true,}}>
+    <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isLoggedin ?
-            <Stack.Screen
-              name="Login"
-              options={{ headerShown: false }}
-              component={AuthStackNavigator}
-            />
+          <Stack.Screen
+            name="Login"
+            options={{ headerShown: false }}
+            component={AuthStackNavigator}
+          />
           :
-            <Stack.Screen
-              name="AppStack"
-              options={{ headerShown: false }}
-              component={AppStackNavigator}
-            />}
+          <Stack.Screen
+            name="AppStack"
+            options={{ headerShown: false }}
+            component={AppStackNavigator}
+          />}
         {/* add your another screen here using -> Stack.Screen */}
       </Stack.Navigator>
     </NavigationContainer>
