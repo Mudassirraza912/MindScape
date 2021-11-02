@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TextInput,Image,ImageBackground,StatusBar, Dimensions } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import SetNameSvg from '../../assets/SVG/setNameSVG'
+import PersonaSVG from '../../assets/images/Step1.svg'
 import NewmorphButton from '../../components/NewmorphButton/index'
 const { width, height } = Dimensions.get('screen')
 // import Svg, {
@@ -12,7 +11,7 @@ export const HomePersona = ({ navigation }) => {
     return (
         <View style={{flex: 1}}>
             {/* <Text>Hello</Text> */}
-            <SetNameSvg 
+            <PersonaSVG 
                 style={{
                     position: 'absolute',
                     bottom: 0,
@@ -20,7 +19,7 @@ export const HomePersona = ({ navigation }) => {
                 }}
           />
            
-        {/* <View style={{flex: 1,}}>
+        <View style={{flex: 1,}}>
         <StatusBar hidden={true} />
             <View style={{ flex: 3, justifyContent: "center" }}>
                 <Text style={{color:"#A3A2BA",textAlign:"center"}}>
@@ -44,7 +43,7 @@ export const HomePersona = ({ navigation }) => {
                     backgroundColor={'transparent'}
                 />
             </View>
-        </View> */}
+        </View>
         </View>
     )
 }

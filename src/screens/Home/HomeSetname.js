@@ -14,13 +14,13 @@ export const HomeSetName = ({ navigation }) => {
                 style={{
                     position: 'absolute',
                     bottom: 0,
-                    top: 0,
-                    right: 0,
-                    left: 0
+                    //  top: 0,
+                    //  right: 0,
+                    //  left: 0
 
                 }}
             />
-            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
+            <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
                 <Text >
                     So Daniel,
                 </Text>
@@ -34,7 +34,7 @@ export const HomeSetName = ({ navigation }) => {
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeSetCountry')}
-                    backgroundColor="#9493AD"
+                    backgroundColor="transparent"
                 />
             </View>
         </View>

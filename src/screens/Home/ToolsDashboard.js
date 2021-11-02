@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet } from 'react-native'
+import { View, Text,StyleSheet,Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import ToolSvg from '../../assets/SVG/toolSvg'
 export const ToolsDashboard = ({navigation}) => {
@@ -13,13 +13,15 @@ export const ToolsDashboard = ({navigation}) => {
                 }}
           />
             <Text>
-                Tool 
+                TOOLS
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('HomePersona')}>
                 <Text>
                     NEXT PAGE
                 </Text>
             </TouchableOpacity>
+            <Image style={{marginTop:8,marginLeft:3}} source={require('../../assets/images/Group276.png')}/>
+            <Text>DASHBOARD</Text>
         </View>
     )
 }
