@@ -96,12 +96,6 @@ export const HomeRoutine = ({ navigation }) => {
                     backgroundColor="transparent"
                 />
             </View>
-        <View style={{ flex: 1, alignItems: "center", }}>
-            <NewmorphButton
-                onPress={() => navigation.navigate('HomeCommitment')}
-                backgroundColor="#9493AD"
-            />
-        </View>
     </View>
     )
 }
