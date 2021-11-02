@@ -12,6 +12,7 @@ import { EmailVerification } from '../screens/EmailVerification/EmailVerificatio
 import { FreeTrialSubscription } from '../screens/FreeTrialSubscription/freeTrialSubscription'
 import { AccountSecure } from '../screens/AccountSecure/accountSecure'
 import { AccountSetting } from '../screens/AccountSecure/accountSetting'
+import { Account } from '../screens/AccountSecure/account'
 import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
@@ -53,6 +54,7 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="OtpVerification"  component={OtpVerification} />
       <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
       <AuthStack.Screen name="AccountSetting"  component={AccountSetting} />
+      <AuthStack.Screen name="Account"  component={Account} />
       <AuthStack.Screen name="FreeTrialSubscription"  component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
 
