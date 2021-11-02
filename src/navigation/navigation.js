@@ -122,7 +122,7 @@ function AppStackNavigator() {
 
 
 const MainNavigation = () => {
-  const isLoggedin = true
+  const isLoggedin = false
   return (
     <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
