@@ -26,6 +26,7 @@ import { HomeProgram } from '../screens/Home/HomeProgram'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
 import { Preference } from '../screens/Preference/Preference'
+import { MainAcount } from '../screens/MainAcount/MainAcount'
 import { Profile } from '../screens/Profile/Profile'
 import { Setting } from '../screens/Setting/setting'
 import { Emergency } from '../screens/Emergency/emergency'
@@ -84,7 +85,7 @@ function MainDrawer() {
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
       {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Account" component={Account} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
 
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter" component={HelpCenter} />
@@ -103,7 +104,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Subscription">
+      initialRouteName="Dashboard">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />

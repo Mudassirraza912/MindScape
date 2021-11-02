@@ -12,7 +12,7 @@ export const CustomDrawer = ({ navigation }) => {
         },
         {
             title: 'ACOUNT',
-            navigateTo: 'Account'
+            navigateTo: 'MainAcount'
         },
         {
             title: 'EMERGENCY',
