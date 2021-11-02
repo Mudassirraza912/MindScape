@@ -100,7 +100,7 @@ function MainDrawer() {
 function AppStackNavigator() {
   return (
     <AppStack.Navigator
-      screenOptions={{
+      screenOptions={{ 
         headerShown: false,
       }}
       initialRouteName="Subscription">
