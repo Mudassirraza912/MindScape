@@ -1,15 +1,27 @@
-import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image,ImageBackground,StatusBar, Dimensions } from 'react-native'
+import React, {Component, useState, useEffect} from 'react';
+import { View, Text, StyleSheet, TextInput,Image,ImageBackground,StatusBar, Dimensions,TouchableOpacity } from 'react-native'
 import PersonaSVG from '../../assets/images/Step1.svg'
 import NewmorphButton from '../../components/NewmorphButton/index'
+import { imagePicker } from '../../helper/utils';
 const { width, height } = Dimensions.get('screen')
 // import Svg, {
 //     Use,
 //     Images as SvgImag
 //   } from 'react-native-svg';
 export const HomePersona = ({ navigation }) => {
+
+ const[image, setImage]= useState()
+  const imageSelector = async () => {
+      try {
+          const url = await imagePicker(false)
+          setImage(url[0])
+          console.log("url", url)
+      } catch (error) {
+        
+      }
+  }
     return (
-        <View style={{flex: 1}}>
+        <View style={{flex: 1,}}>
             {/* <Text>Hello</Text> */}
             <PersonaSVG 
                 style={{
@@ -19,19 +31,21 @@ export const HomePersona = ({ navigation }) => {
                 }}
           />
            
-        <View style={{flex: 1,}}>
+        <View style={{flex: 1,paddingHorizontal:"12%"}}>
         <StatusBar hidden={true} />
             <View style={{ flex: 3, justifyContent: "center" }}>
                 <Text style={{color:"#A3A2BA",textAlign:"center"}}>
                     PERSONA
                 </Text>
-                <Text style={{fontSize:22,color:"#BEBBC9",paddingVertical:10}}>Upload your picture to help us customize your Mindscape</Text>
+                <Text style={{fontSize:22,color:"#BEBBC9",paddingVertical:10,paddingLeft:10}}>Upload your picture to help us customize your Mindscape</Text>
                 <View style={styles.circle}>
-            <Image style={styles.img} source={require('../../assets/images/group243.png')}/>
+            <Image style={styles.img}  source= {require('../../assets/images/group243.png')}/>
             <View style={{flex:0,alignItems:"center",position:"absolute",top:"95%",left:"36%"}}>
-            <View style={styles.btn}>
+            <TouchableOpacity 
+            onPress={()=> imageSelector()}
+            style={styles.btn}>
                 <Text style={{textAlign:"center",fontSize:12,color:"#6E6E84"}}>Upload</Text>
-            </View>
+            </TouchableOpacity>
             </View>
             </View>
             <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:20}}>It take up to 24hrs to {'\n'} update your parsona</Text>
@@ -75,7 +89,7 @@ const styles = StyleSheet.create({
         flex:0,
         justifyContent:"center",
         alignItems:"center",
-        marginLeft:15
+        marginLeft:17
     },
     btn:{
         backgroundColor:"#2F2F40",
