@@ -4,43 +4,43 @@ import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo'
 const { width, height } = Dimensions.get('screen')
 
-export const CustomDrawer = () => {
+export const CustomDrawer = ({ navigation }) => {
     const Data = [
         {
             title: 'PREFERENCES',
-            navigateTo: 'PREFERENCES'
+            navigateTo: 'Preference'
         },
         {
             title: 'ACOUNT',
-            navigateTo: 'ACOUNT'
+            navigateTo: 'Account'
         },
         {
             title: 'EMERGENCY',
-            navigateTo: 'EMERGENCY'
+            navigateTo: 'Emergency'
         },
         {
             title: 'HELP CENTER',
-            navigateTo: 'HELP CENTER'
+            navigateTo: 'HelpCenter'
         },
         {
             title: 'SUBSCRIPTION',
-            navigateTo: 'SUBSCRIPTION'
+            navigateTo: 'Subscription'
         },
         {
             title: 'ABOUT US',
-            navigateTo: 'ABOUT US'
+            navigateTo: 'AboutUs'
         },
         {
             title: 'PRIVACY',
-            navigateTo: 'PRIVACY'
+            navigateTo: 'PrivacyPolicy'
         },
         {
             title: 'TERMS OF USE',
-            navigateTo: 'TERMS OF USE'
+            navigateTo: 'TermsCondition'
         },
         {
             title: 'CONTACT US',
-            navigateTo: 'CONTACT US'
+            navigateTo: 'ContactUs'
         },
     ]
 
@@ -53,12 +53,9 @@ export const CustomDrawer = () => {
                 flex: 1,
             }}>
 
-
             <View
                 style={styles.mainView}
             >
-
-
 
                 {
                     Data.map((item, i) => {
@@ -67,8 +64,8 @@ export const CustomDrawer = () => {
                             <TouchableOpacity
                                 onPress={() => {
                                     item.navigateTo &&
-                                        // props.navigation.navigate(item.navigateTo);
-                                        alert('Navigate')
+                                        navigation.navigate(item.navigateTo);
+                                    // alert('Navigate')
                                 }}
                                 activeOpacity={0.7}
                                 key={i}
@@ -93,7 +90,7 @@ export const CustomDrawer = () => {
                 }
             </View>
             <TouchableOpacity
-
+                onPress={() => navigation.closeDrawer()}
                 style={
                     styles.lastViewStyle
                 }

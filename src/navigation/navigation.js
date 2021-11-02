@@ -25,6 +25,7 @@ import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
 import { HomeProgram } from '../screens/Home/HomeProgram'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
+import { Preference } from '../screens/Preference/Preference'
 import { Profile } from '../screens/Profile/Profile'
 import { Setting } from '../screens/Setting/setting'
 import { Emergency } from '../screens/Emergency/emergency'
@@ -48,16 +49,16 @@ function AuthStackNavigator() {
         headerShown: false,
       }}
       initialRouteName="GetStarted">
-      <AuthStack.Screen name="GetStarted"  component={GetstartedMain} />
-      <AuthStack.Screen name="WalkThrough"  component={WalkThrough} />
-      <AuthStack.Screen name="Login"  component={Login} />
-      <AuthStack.Screen name="SignUp"  component={SignUp} />
-      <AuthStack.Screen name="OtpVerification"  component={OtpVerification} />
-      <AuthStack.Screen name="AccountSecure"  component={AccountSecure} />
-      <AuthStack.Screen name="AccountSetting"  component={AccountSetting} />
-      <AuthStack.Screen name="Account"  component={Account} />
-      <AuthStack.Screen name="FreeTrialSubscription"  component={FreeTrialSubscription} />
-      <AuthStack.Screen name="EmailVerification"  component={EmailVerification} />
+      <AuthStack.Screen name="GetStarted" component={GetstartedMain} />
+      <AuthStack.Screen name="WalkThrough" component={WalkThrough} />
+      <AuthStack.Screen name="Login" component={Login} />
+      <AuthStack.Screen name="SignUp" component={SignUp} />
+      <AuthStack.Screen name="OtpVerification" component={OtpVerification} />
+      <AuthStack.Screen name="AccountSecure" component={AccountSecure} />
+      <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
+      <AuthStack.Screen name="Account" component={Account} />
+      <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
+      <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
     </AuthStack.Navigator>
   );
@@ -71,12 +72,20 @@ function MainDrawer() {
       drawerContentOptions={{
         itemStyle: { marginVertical: 8, marginHorizontal: 8 },
       }}
+      screenOptions={{
+        headerShown: false,
+        drawerStyle: {
+          width: "100%",
+        },
+      }}
       initialRouteName="Home"
       overlayColor="transparent"
       drawerType="front">
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Profile" component={Profile} />
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
+      {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Account" component={Account} />
+
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter" component={HelpCenter} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Subscription" component={Subscription} />
@@ -94,9 +103,9 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="HomeWelcome">
+      initialRouteName="Subscription">
+      <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
-      <AppStack.Screen name="Subscription" component={Subscription} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
