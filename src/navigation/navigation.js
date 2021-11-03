@@ -108,7 +108,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Subscription">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
