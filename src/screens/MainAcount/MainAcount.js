@@ -5,7 +5,20 @@ const { width, height } = Dimensions.get('screen')
 import Icon from 'react-native-vector-icons/EvilIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 
-export const MainAcount = () => {
+export const MainAcount = ({ navigation }) => {
+
+
+    const Data = [{
+        title: 'PROFILE',
+        navigateTo: 'Account'
+    },
+    {
+        title: 'SETTING',
+        navigateTo: 'AccountSetting'
+    }
+
+
+    ]
     return (
         <LinearGradient
             colors={['#47465D', '#47465D',]}
@@ -40,75 +53,55 @@ export const MainAcount = () => {
                 </View>
 
 
-                <View
+                {
+                    Data.map((item, i) => {
+                        return (
+                            <TouchableOpacity
+                                onPress={() => {
+                                    item.navigateTo && navigation.navigate(item.navigateTo)
+                                }}
+                                activeOpacity={0.7}
+                                key={i}
+                                style={{
+                                    width: '70%',
+                                    alignSelf: 'center',
+                                    // backgroundColor: 'red',
+                                    marginVertical: i == 1 ? 0 : 10,
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center'
+                                }}
 
-                    style={{
-                        width: '70%',
-                        alignSelf: 'center',
-                        // backgroundColor: 'red',
-                        marginVertical: 10,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center'
-                    }}
-
-                >
-                    <View style={{
-                        width: '40%',
-                        height: 40,
-                        // alignSelf: 'center',
-                        borderBottomWidth: 0.8,
-                        borderTopWidth: 0.8,
-                        borderColor: '#A4A3BC',
-                        justifyContent: 'center'
-
-
-                    }}>
-                        <Text style={{
-                            fontSize: 24,
-                            fontFamily: 'Regulator-Nova',
-                            color: '#FFF',
-
-                        }}>PROFILE</Text>
-
-                    </View>
-                    <Entypo name='chevron-small-right' size={35} color='#FFFFFF' />
-                </View>
-
-                <View
-
-                    style={{
-                        width: '70%',
-                        alignSelf: 'center',
-                        // backgroundColor: 'red',
-                        // marginVertical: 10,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center'
-                    }}
-
-                >
-                    <View style={{
-                        width: '40%',
-                        height: 40,
-                        // alignSelf: 'center',
-                        borderBottomWidth: 0.8,
-                        // borderTopWidth: 0.8,
-                        borderColor: '#A4A3BC',
-                        justifyContent: 'center'
+                            >
+                                <View style={{
+                                    width: '40%',
+                                    height: 40,
+                                    // alignSelf: 'center',
+                                    borderBottomWidth: 0.8,
+                                    borderTopWidth: i == 1 ? 0 : 0.8,
+                                    borderColor: '#A4A3BC',
+                                    justifyContent: 'center'
 
 
-                    }}>
-                        <Text style={{
-                            fontSize: 24,
-                            fontFamily: 'Regulator-Nova',
-                            color: '#FFF',
+                                }}>
+                                    <Text style={{
+                                        fontSize: 24,
+                                        fontFamily: 'Regulator-Nova',
+                                        color: '#FFF',
 
-                        }}>SETTING</Text>
+                                    }}>{item.title}</Text>
 
-                    </View>
-                    <Entypo name='chevron-small-right' size={35} color='#FFFFFF' />
-                </View>
+                                </View>
+                                <Entypo name='chevron-small-right' size={35} color='#FFFFFF' />
+                            </TouchableOpacity>
+
+                        )
+                    })
+                }
+
+
+
+
 
             </ScrollView>
 
