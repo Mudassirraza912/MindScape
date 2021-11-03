@@ -1,11 +1,20 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Image,StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
+import CommitmentSvg from '../../assets/SVG/commitmentSvg'
 export const HomeCommitment = ({ navigation }) => {
     return (
         <View style={styles.container}>
+                 <CommitmentSvg
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+
+                }}
+          />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
+                <StatusBar hidden={true} />
                 <Text style={{fontSize:24,color:"#BFBBCA",paddingVertical:10}}>
                     Always your long activity
                 </Text>
@@ -13,10 +22,11 @@ export const HomeCommitment = ({ navigation }) => {
                 <Text >Completion of a task in only</Text>
                 <Text>recognized once noted.</Text>
             </View>
-            <View style={{ flex: 1, alignItems: "center", }}>
+            <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('ToolsDashboard')}
-                    backgroundColor="#9493AD"
+                    backgroundColor="transparent"
+                    // backgroundColor="red"
                 />
             </View>
         </View>
