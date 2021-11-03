@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Image, Dimensions, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import WarningSvg from '../../assets/SVG/warningSvg'
@@ -18,6 +18,7 @@ export const HomeWarning = ({ navigation }) => {
                 }}
           />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
+                <StatusBar hidden={true} />
                 <Text style={{fontSize:24,color:"#A6A4B9",fontFamily:'Regulator Nova'}}>
                     As they say 'Rome wasn't build in a day
                 </Text>
@@ -25,10 +26,10 @@ export const HomeWarning = ({ navigation }) => {
                     to your lifestyle to help you discover the best version of yourlife.
                 </Text>
             </View>
-            <View style={{ flex: 1, alignItems: "center", }}>
+            <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeRoutine')}
-                    backgroundColor="#9493AD"
+                    backgroundColor="transparent"
                 />
             </View>
         </View>

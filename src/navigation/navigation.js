@@ -20,6 +20,7 @@ import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
 import { HomeWarning } from '../screens/Home/HomeWarning'
 import { HomeCommitment } from '../screens/Home/HomeCommitment'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
+import { HomeMindfulness } from '../screens/Home/HomeMindfulness'
 import { HomePersona } from '../screens/Home/HomePersona'
 import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
 import { HomeProgram } from '../screens/Home/HomeProgram'
@@ -111,6 +112,7 @@ function AppStackNavigator() {
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
       <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
+      <AppStack.Screen name="HomeMindfulness" component={HomeMindfulness} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />
       <AppStack.Screen name="HomePersona" component={HomePersona} />

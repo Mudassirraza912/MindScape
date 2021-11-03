@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TextInput, Image,Platform, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Image,Platform, Dimensions, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -43,6 +43,7 @@ export const HomeRoutine = ({ navigation }) => {
                 }}
           />
             <View style={{ flex: 3, justifyContent: "center", paddingTop: "0%", }}>
+                <StatusBar hidden={true} />
                 <Text style={{ textAlign: "center", paddingBottom: 20, color: "#B6B4C5" }}>
                     COMMITMENT
                 </Text>
