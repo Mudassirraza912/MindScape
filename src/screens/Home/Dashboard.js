@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Dimensions } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export const Dashboard = ({navigation}) => {
     return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <View style={styles.container}>
             <Text>
                 Dashboard page
             </Text>
@@ -16,3 +16,10 @@ export const Dashboard = ({navigation}) => {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:"#9493AD",
+        flex:1,
+    }
+})
