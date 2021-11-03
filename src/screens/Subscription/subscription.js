@@ -27,15 +27,14 @@ export const Subscription = ({ navigation }) => {
     <>
       <ScrollView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <TouchableOpacity
+       <View style={styles.topCutButton}>
+       <TouchableOpacity
+          onPress={()=>navigation.goBack()}
           activeOpacity={0.7}
-          style={{
-            alignItems: 'flex-end',
-            paddingTop: 50,
-            paddingRight: 20
-          }}>
+          >
           <Icon name="close" size={40} color="#8C8BA5" />
         </TouchableOpacity>
+       </View>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
             SUBSCRIPTION
@@ -89,9 +88,9 @@ export const Subscription = ({ navigation }) => {
           <View
             style={{
               width: '100%',
-              flexDirection: 'row'
+              flexDirection: 'row',
             }}>
-            <View style={{ width: '40%' }}>
+            <View style={{ width: '45%',}}>
               <TouchableOpacity
                 onPress={() => imageSelector()}
                 activeOpacity={0.7}
@@ -107,7 +106,7 @@ export const Subscription = ({ navigation }) => {
                 <Text style={{ color: '#8C8BA590', fontSize: 16 }}>Upload</Text>
               </TouchableOpacity>
             </View>
-            <View style={{ width: '50%', justifyContent: 'flex-end' }}>
+            <View style={{ width: '50%', justifyContent: 'flex-end', }}>
               <Text style={{ color: '#E39684', fontSize: 14 }}>
                 Wait for our response via your email
               </Text>
@@ -141,6 +140,11 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#49485F'
+  },
+  topCutButton:{
+    alignItems: 'flex-end',
+    paddingTop: 50,
+    paddingRight: 20
   },
   sectionContainer: {
     paddingTop: 35,
