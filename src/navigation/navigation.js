@@ -38,6 +38,7 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
+import { Emergency2 } from '../screens/Emergency/Emergency2'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -123,6 +124,8 @@ function AppStackNavigator() {
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
       <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
       <AuthStack.Screen name="Account" component={Account} />
+      <AuthStack.Screen name="Emergency2" component={Emergency2} />
+
     </AppStack.Navigator>
   )
 }
