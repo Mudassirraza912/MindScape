@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet,Image } from 'react-native'
+import { View, Text,StyleSheet,Image,StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import ToolSvg from '../../assets/SVG/toolSvg'
 import NewmorphButton from '../../components/NewmorphButton/index'
@@ -14,6 +14,7 @@ export const ToolsDashboard = ({navigation}) => {
                 }}
           />
           <View style={{flex:3,justifyContent:"center",alignItems:"center",paddingHorizontal:20}}>
+          <StatusBar hidden={true} />
             <Text style={{color:"#A3A2BA",paddingBottom:20}}>
                 TOOLS
             </Text>
