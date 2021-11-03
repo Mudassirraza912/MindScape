@@ -61,6 +61,9 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
+
+
+
     </AuthStack.Navigator>
   );
 }
@@ -84,7 +87,6 @@ function MainDrawer() {
       drawerType="front">
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
-      {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
 
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
@@ -117,6 +119,8 @@ function AppStackNavigator() {
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
+      <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
+      <AuthStack.Screen name="Account" component={Account} />
     </AppStack.Navigator>
   )
 }
