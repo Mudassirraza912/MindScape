@@ -19,9 +19,9 @@ export const HomeProgram = ({ navigation }) => {
         stepStrokeFinishedColor: '#ADAABC',
         stepStrokeUnFinishedColor: '#ADAABC',
         separatorFinishedColor: '#ADAABC',
-        separatorUnFinishedColor: '#ADAABCe',
+        separatorUnFinishedColor: '#ADAABC',
         stepIndicatorFinishedColor: '#ADAABC',
-        stepIndicatorUnFinishedColor: 'transparent',
+        stepIndicatorUnFinishedColor: '#ADAABC',
         stepIndicatorCurrentColor: '#E39684',
         stepIndicatorLabelFontSize: 13,
         currentStepIndicatorLabelFontSize: 13,
@@ -36,10 +36,10 @@ export const HomeProgram = ({ navigation }) => {
         <LinearGradient style={styles.container} colors={['#EDE7E4', '#9B98B0']}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{ paddingHorizontal: "14%", paddingTop: "18%" }}>
-                    <Text style={{ paddingVertical: 4, color: "#A3A2BA" }}>PROGRAM</Text>
+                    <Text style={{ paddingVertical: 4, color: "#A3A2BA", fontSize: 24 }}>PROGRAM</Text>
                     <View style={styles.border}></View>
-                    <Text style={{ color: "#A3A2BA" }}>VIRTUE 1</Text>
-                    <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 18 }}>MINDFULNESS</Text>
+                    <Text style={{ color: "#A3A2BA", fontSize: 14 }}>VIRTUE 1</Text>
+                    <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 24 }}>MINDFULNESS</Text>
                     <View style={{ flexDirection: "row", paddingVertical: 10 }}>
                         <View style={{ flex: 1 }}>
                             <StepIndicator
@@ -54,8 +54,8 @@ export const HomeProgram = ({ navigation }) => {
                                 activeOpacity={0.8}
                                 onPress={() => { onStepPress() }}
                                 style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold" }}>Connect</Text>
-                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold" }}>w1</Text>
+                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold", fontSize: 15 }}>Connect</Text>
+                                <Text style={{ color: "#E39684", fontSize: 15, fontWeight: "bold", fontSize: 15  }}>w1</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 activeOpacity={0.8}
@@ -89,20 +89,20 @@ export const HomeProgram = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 2</Text>
-                    <Text style={{ color: "#A8A6B9" }}>CURIOSITY</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 2</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>CURIOSITY</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 3</Text>
-                    <Text style={{ color: "#A8A6B9" }}>COURAGE</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 3</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>COURAGE</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 4</Text>
-                    <Text style={{ color: "#A8A6B9" }}>GRATITUDE</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 4</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>GRATITUDE</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold" }}>VIRTUE 5</Text>
-                    <Text style={{ color: "#A8A6B9" }}>COMPASSION</Text>
+                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 5</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>COMPASSION</Text>
                 </View>
                 <View style={{ justifyContent: "center", alignItems: "center", paddingVertical: 20 }}>
                     <TouchableOpacity
