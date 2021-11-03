@@ -14,15 +14,15 @@ export const HomeProgram = ({ navigation }) => {
         currentStepIndicatorSize: 30,
         separatorStrokeWidth: 2,
         currentStepStrokeWidth: 2,
-        stepStrokeCurrentColor: '#E39684',
+        stepStrokeCurrentColor: 'transparent',
         stepStrokeWidth: 3,
-        stepStrokeFinishedColor: '#ADAABC',
-        stepStrokeUnFinishedColor: '#ADAABC',
+        stepStrokeFinishedColor: 'transparent',
+        stepStrokeUnFinishedColor: 'transparent',
         separatorFinishedColor: '#ADAABC',
         separatorUnFinishedColor: '#ADAABC',
         stepIndicatorFinishedColor: '#ADAABC',
         stepIndicatorUnFinishedColor: '#ADAABC',
-        stepIndicatorCurrentColor: '#E39684',
+        stepIndicatorCurrentColor: 'red',
         stepIndicatorLabelFontSize: 13,
         currentStepIndicatorLabelFontSize: 13,
         stepIndicatorLabelCurrentColor: 'transparent',
@@ -31,6 +31,8 @@ export const HomeProgram = ({ navigation }) => {
         labelColor: '#999999',
         labelSize: 13,
         currentStepLabelColor: '#ADAABC',
+        linearColor1: '#E39684',
+        linearColor2:'#fff'
     }
     return (
         <LinearGradient style={styles.container} colors={['#EDE7E4', '#9B98B0']}>
