@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image,Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Image,Dimensions, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import SetNameSvg from '../../assets/SVG/setNameSVG'
@@ -20,6 +20,7 @@ export const HomeSetCountry = ({ navigation }) => {
                 }}
             />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
+                <StatusBar hidden={true}/>
                 <Text >
                     So Daniel,
                 </Text>
@@ -29,7 +30,7 @@ export const HomeSetCountry = ({ navigation }) => {
                <Image style={{marginTop:8,marginLeft:3}} source={require('../../assets/images/ComponentArrow.png')}/>
             </View>
             </View>
-            <View style={{ flex: 1, alignItems: "center", }}>
+            <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeWarning')}
                     // backgroundColor="#9493AD"

@@ -35,8 +35,11 @@ function WarningSvg(props) {
               y1={0.34}
               x2={0.639}
               y2={0.881}
-              xlinkHref="#prefix__a"
-            />
+              gradientUnits="objectBoundingBox"
+              >
+                <Stop offset={0} stopColor="#ede7e4" />
+                <Stop offset={1} stopColor="#a4a3bc" />
+              </LinearGradient>
             <ClipPath id="prefix__b">
               <Path d="M0 0h375v812H0z" />
             </ClipPath>
