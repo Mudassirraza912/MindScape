@@ -13,12 +13,7 @@ const App = () => {
       {/* <Provider store={store}>
         <MainNavigation />
       </Provider> */}
-       <Text>
-        sad
-      </Text>
       <SleepHours />
-     
-      {/* <Emergency2 /> */}
     </>
   )
 }
