@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient';
 import StepIndicator from 'react-native-step-indicator';
 export const HomeProgram = ({ navigation }) => {
-    const [currentPosition, setCurrentPosition] = useState(0);
+    const [currentPosition, setCurrentPosition] = useState(3);
     const [renderLabel, setRenderLabel] = useState();
     const onStepPress = (position) => {
         setCurrentPosition(currentPosition);
