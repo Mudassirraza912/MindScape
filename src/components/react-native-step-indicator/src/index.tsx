@@ -397,10 +397,10 @@ const StepIndicator = ({
           <Animated.View key={'step-indicator'} style={[styles.step, stepStyle]}>
             <LinearGradient
               colors={
-                ['#fff', '#E39684']
+                [customStyles.linearColor1, customStyles.linearColor2]
               }
-              start={ { x: 0.9, y: 0 }}
-              end={{ x: 0.01, y: 0.5 }} 
+              start={ { x: .5, y: .6 }}
+              end={{ x: 0.1, y: .1 }} 
               key={'step-indicator'} 
               style={{height: "100%", width: "100%"}}>
                 {renderCustomStepIndicator ? (
@@ -444,27 +444,6 @@ const StepIndicator = ({
           </Animated.View>
         );
     }
-    return (
-      <Animated.View key={'step-indicator'} style={[styles.step, stepStyle]}>
-        <LinearGradient
-          colors={
-            ['#fff', '#E39684']
-          }
-          start={ { x: 0.9, y: 0 }}
-          end={{ x: 0.01, y: 0.5 }} 
-          key={'step-indicator'} 
-          style={{height: "100%", width: "100%"}}>
-            {renderCustomStepIndicator ? (
-              renderCustomStepIndicator({
-                position,
-                stepStatus: getStepStatus(position),
-              })
-            ) : (
-              <Text style={indicatorLabelStyle}>{`${position + 1}`}</Text>
-        )}
-        </LinearGradient>
-      </Animated.View>
-    );
   };
 
   const getStepStatus = (stepPosition: number) => {
