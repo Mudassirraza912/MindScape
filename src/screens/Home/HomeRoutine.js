@@ -6,33 +6,46 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import PersonaSVG from '../../assets/images/Step1.svg'
 
 export const HomeRoutine = ({ navigation }) => {
-    const showTimepicker = () => {
+
+    const [date, setDate] = useState(new Date(1598051730000));
+    const [show, setShow] = useState(false);
+    const [mode, setMode] = useState('time');
+    const [currentTime, setCurrentTime]=useState('')
+    const [currentTime2, setCurrentTime2]=useState('')
+    const [currentTime3, setCurrentTime3]=useState('')
+    const [type, setType]=useState('')
+
+
+    const showTimepicker = (type) => {
         showMode('time');
+        setType(type)
     };
+
     const onChange = (event, selectedDate) => {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
-
         let time=currentDate.toString().substring(16,21)
-        setCurrentTime(time)
-        setCurrentTime2(time)
-        setCurrentTime3(time)
+        switch (type) {
+            case 'wakeup':
+                setCurrentTime(time)
+                break;
+            case 'afternoon':
+                setCurrentTime2(time)
+                break;
+            case 'dinner':
+                setCurrentTime3(time)
+                break;
+            default:
+                break;
+        }
         setDate(date);
-
-        // switch () {
-        //     case 'wakeUp':
-        // }
       };
-      const [date, setDate] = useState(new Date(1598051730000));
-    const [show, setShow] = useState(false);
-    const [mode, setMode] = useState('time');
-    const [currentTime,setCurrentTime]=useState('')
-    const [currentTime2,setCurrentTime2]=useState('')
-    const [currentTime3,setCurrentTime3]=useState('')
+
     const showMode = (currentMode) => {
         setShow(true);
         setMode(currentMode);
       };
+      
     return (
         <View style={styles.container}>
                       <PersonaSVG 
@@ -52,7 +65,7 @@ export const HomeRoutine = ({ navigation }) => {
                 <View style={{ marginVertical: 10 }}>
                     <Text style={{ paddingVertical: 6 }}>What time do you wake up?</Text>
                     <TouchableOpacity
-                        onPress={showTimepicker}
+                        onPress={() => {showTimepicker('wakeup')}}
                         style={styles.buttondv}>
                         <Text style={{ color: "#fff" }}>{    currentTime ? currentTime :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
@@ -63,7 +76,7 @@ export const HomeRoutine = ({ navigation }) => {
                 <View style={{ marginVertical: 10 }}>
                     <Text style={{ paddingVertical: 6 }} >Least busy hour in the afternoon?</Text>
                     <TouchableOpacity
-                        onPress={showTimepicker}
+                        onPress={() => {showTimepicker('afternoon')}}
                         style={styles.buttondv}>
                     <Text style={{ color: "#fff" }}>{    currentTime2 ? currentTime2 :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
@@ -73,9 +86,9 @@ export const HomeRoutine = ({ navigation }) => {
                 <View style={{ marginVertical: 10 }}>
                     <Text style={{ paddingVertical: 6 }}>What time do you have dinner</Text>
                     <TouchableOpacity
-                        onPress={showTimepicker}
+                        onPress={() => {showTimepicker('dinner')}}
                         style={styles.buttondv}>
-                <Text style={{ color: "#fff" }}>{    currentTime3 ? currentTime3 :'07:00'}</Text>
+                        <Text style={{ color: "#fff" }}>{    currentTime3 ? currentTime3 :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
                     </TouchableOpacity>
                     {show && (
