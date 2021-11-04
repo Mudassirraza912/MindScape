@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/EvilIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import Header from '../../components/Header/index';
 import Bottom from '../../components/Bottom/index'
+import { ProgressSteps } from '../../components/ProgressSteps';
 export const Dashboard = ({ navigation }) => {
     return (
         <LinearGradient
@@ -72,19 +73,60 @@ export const Dashboard = ({ navigation }) => {
 
 
                 <View style={{
-                    height: 150,
+                    // height: 150,
                     backgroundColor: '#B1B1C7',
                     borderBottomWidth: 1.5,
                     // borderColor: '#B3B3BF'
                     borderBottomColor: '#A3A2BA'
                 }}>
+                    <View style={{
+                        width: '80%',
+                        alignSelf: 'center',
+                        marginTop: 10
+                    }}>
+                        <Text style={{
+                            fontSize: 14,
+                            fontFamily: 'Regulator-Nova',
+                            color: '#575672',
+                            fontWeight: 'bold'
+                        }}>PROGRESS</Text>
+
+                    </View>
+                    <View style={{
+                        width: '80%',
+                        alignSelf: 'center',
+                        height: height * 0.32
+                    }}>
+
+
+                        <ProgressSteps
+                            data={[{ key: "01", title: "Get Started", week: "71%" }, { key: "07", title: "Connect", week: "" }, { key: "14", title: "Manage", week: "Milestone Activity 1" }, { key: "21", title: "Discover", week: "Milestone Activity 2" }, { key: "28", title: "Practice", week: "" }, { key: "35", title: "Become", week: "Milestone Activity 3" }]}
+                            isIndexShow
+                            nonActiveTextColor="#8C8BA5"
+                            activeTextColor="#fff"
+                            indexStyle={{
+                                color: '#8C8BA5'
+                            }}
+                            indicatorCustomStyle={{
+                                linearColor1: '#9C9BB3',
+                                // linearColor12: '#fff',
+                                stepIndicatorUnFinishedColor: '#B6B5CE',
+                                separatorUnFinishedColor: '#A1A0B9',
+                                separatorFinishedColor: '#A1A0B9',
+                                // stepIndicatorSize: 1
+                            }}
+
+
+                        />
+                    </View>
+
 
                 </View>
 
                 <LinearGradient
                     colors={['#B1B1C7', '#E4CBC7',]}
                     style={{
-                        height: 120,
+                        height: height * 0.14,
 
                     }}
 
@@ -122,7 +164,7 @@ export const Dashboard = ({ navigation }) => {
                         style={{
                             width: '80%',
                             alignSelf: 'center',
-                            height: 50,
+                            height: height * 0.065,
                             borderRadius: 25,
                             // alignItems: 'center',
                             justifyContent: 'center'
@@ -150,11 +192,12 @@ export const Dashboard = ({ navigation }) => {
 
 
                 <View style={{
-                    height: 60,
+                    height: height * 0.07,
                     backgroundColor: '#EBEBEC',
                     flexDirection: 'row',
                     justifyContent: 'space-around',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    marginBottom: 2
                 }}>
                     <View style={{
                         flexDirection: 'row',
@@ -206,10 +249,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#B1B1C7'
     },
     curveViewStyle2: {
-        height: 150,
+        height: height * 0.17,
         backgroundColor: '#9695AF',
         // elevation: 5,
-        borderBottomRightRadius: 70,
+        borderBottomRightRadius: height * 0.09,
         alignItems: 'center',
         justifyContent: 'center',
 
