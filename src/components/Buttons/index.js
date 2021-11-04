@@ -2,7 +2,6 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
-export { DoubleButton, SingleButton }
 
 function DoubleButton({
   title1 = 'Yes',
@@ -89,3 +88,6 @@ const styles = StyleSheet.create({
     fontSize: 16
   }
 })
+
+export { DoubleButton, SingleButton }
+
