@@ -10,10 +10,10 @@ import { SleepHours } from './screens/SleepCount/sleepHours'
 const App = () => {
   return (
     <>
-      {/* <Provider store={store}>
+      <Provider store={store}>
         <MainNavigation />
-      </Provider> */}
-      <SleepHours />
+      </Provider>
+      {/* <SleepHours /> */}
     </>
   )
 }
