@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, StyleSheet, TextInput,Image,Dimensions, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
@@ -13,6 +13,9 @@ export const HomeSetCountry = ({ navigation }) => {
     return (
         <View style={styles.container}>
              <CountryPicker 
+                    onClose={() => {
+                        setvisible(false)
+                    }}
                     visible={visible}
                     placeholder={''}
                     onSelect={(country) => {
@@ -27,10 +30,6 @@ export const HomeSetCountry = ({ navigation }) => {
                 style={{
                     position: 'absolute',
                     bottom: 0,
-                    // top: 0,
-                    // right: 0,
-                    // left: 0
-
                 }}
             />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>

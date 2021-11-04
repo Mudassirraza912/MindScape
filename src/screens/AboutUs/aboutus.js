@@ -19,60 +19,44 @@ export const AboutUs = ({ navigation }) => {
         showsVerticalScrollIndicator={false}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <ImageBackground
-          style={{ height: 476, width: '100%' }}
+          style={{ height: 450, width: '100%' }}
           source={require('../../assets/images/aboutUsImg.png')}>
-          <View
-            style={{
-              alignItems: 'flex-end',
-              paddingTop: 20,
-              paddingRight: 20
-            }}>
+          <View style={styles.topCutButton}>
             <TouchableOpacity
-              activeOpacity={0.7}
-              style={{
-                alignItems: 'flex-end',
-                paddingTop: 20
-              }}>
+              onPress={() => navigation.goBack()}
+              activeOpacity={0.7}>
               <Icon name="close" size={40} color="#8C8BA5" />
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              position: 'absolute',
-              height: 476,
-              width: '100%',
-              alignItems: 'center',
-              paddingTop: 90
-            }}>
+          <View style={styles.logoStyle}>
             <Image
               source={require('../../assets/images/logo-37.5.png')}
-              style={{ height: 27, width: 168, tintColor:"#fff" }}
+              style={{ height: 27, width: 168, tintColor: '#fff' }}
             />
           </View>
         </ImageBackground>
-        <View
-          style={{
-            width: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#A1A0B9'
-          }}>
-          <View style={{ padding: 50 }}>
-            <Text style={{ color: '#fff', fontSize: 20, textAlign: 'center' }}>
+        <View style={styles.TextSectionContainer}>
+          <View>
+            <Text
+              style={{
+                color: '#fff',
+                fontSize: 20,
+                textAlign: 'center',
+                padding: 50
+              }}>
               ThirtySevenPointFive is an ideology-driven initiative dedicated to
               providing solutions to address a large spectrum of issues
               concerning Contemporary Wellbeing.
             </Text>
           </View>
-          <View
-            style={{
-              width: '100%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingBottom: 30
-            }}>
+          <View>
             <Text
-              style={{ color: '#49485F', fontSize: 16, textAlign: 'center' }}>
+              style={{
+                color: '#49485F',
+                fontSize: 16,
+                textAlign: 'center',
+                paddingBottom: 30
+              }}>
               Scroll to explore
             </Text>
           </View>
@@ -85,10 +69,22 @@ export const AboutUs = ({ navigation }) => {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#49485F'
+    backgroundColor: '#A1A0B9'
   },
-  sectionContainer: {
-    paddingTop: 35,
-    paddingHorizontal: 60
+  topCutButton: {
+    alignItems: 'flex-end',
+    paddingTop: 50,
+    paddingRight: 20
+  },
+  logoStyle: {
+    position: 'absolute',
+    width: '100%',
+    alignItems: 'center',
+    paddingTop: 95
+  },
+  TextSectionContainer: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
