@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#EBEBEC',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'absolute',
+        // position: 'absolute',
         bottom: 0
     },
     mainView2Style: {
