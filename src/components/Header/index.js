@@ -3,7 +3,9 @@ import { View, Text, SafeAreaView, Image, StyleSheet, TouchableOpacity, Dimensio
 import LinearGradient from 'react-native-linear-gradient'
 const { width, height } = Dimensions.get('screen')
 
-const index = () => {
+const index = ({
+    onChangeTab = (tabIndex) => { }
+}) => {
     const [activeTab, setActiveTab] = useState('')
     const Title = [
         {
@@ -25,7 +27,7 @@ const index = () => {
     return (
         <>
             <LinearGradient
-                colors={['#B1B1C7', '#B1B1C7']}
+                colors={activeTab == 0 ? ['#B1B1C7', '#B1B1C7'] : ['#1A68A6', '#1A68A6']}
 
                 style={styles.topViewStyle}
 
@@ -39,7 +41,7 @@ const index = () => {
 
                         }} />
                     </View>
-                    <Text style={styles.nameTextStyle}>DAN’S MINDSCAPE</Text>
+                    <Text style={{ paddingBottom: 10, fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
 
                 </View>
             </LinearGradient>
@@ -58,9 +60,10 @@ const index = () => {
                         return (
                             <>
                                 <TouchableOpacity
-
+                                    activeOpacity={0.7}
                                     onPress={() => {
                                         setActiveTab(i)
+                                        onChangeTab(i)
                                     }}
                                     style={{
                                         width: activeTab == i ? '30%' : '17.5%',
