@@ -6,25 +6,8 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import PersonaSVG from '../../assets/images/Step1.svg'
 
 export const HomeRoutine = ({ navigation }) => {
-    const showTimepicker = (type) => {
-        showMode('time');
-        setType(type)
-    };
-    const onChange = (event, selectedDate) => {
-        const currentDate = selectedDate || date;
-        setShow(Platform.OS === 'ios');
 
-        let time=currentDate.toString().substring(16,21)
-        setCurrentTime(time)
-        setCurrentTime2(time)
-        setCurrentTime3(time)
-        setDate(date);
-
-        // switch () {
-        //     case 'wakeUp':
-        // }
-      };
-      const [date, setDate] = useState(new Date(1598051730000));
+    const [date, setDate] = useState(new Date(1598051730000));
     const [show, setShow] = useState(false);
     const [mode, setMode] = useState('time');
     const [currentTime, setCurrentTime]=useState('')
@@ -32,10 +15,37 @@ export const HomeRoutine = ({ navigation }) => {
     const [currentTime3, setCurrentTime3]=useState('')
     const [type, setType]=useState('')
 
+
+    const showTimepicker = (type) => {
+        showMode('time');
+        setType(type)
+    };
+
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+        let time=currentDate.toString().substring(16,21)
+        switch (type) {
+            case 'wakeup':
+                setCurrentTime(time)
+                break;
+            case 'afternoon':
+                setCurrentTime2(time)
+                break;
+            case 'dinner':
+                setCurrentTime3(time)
+                break;
+            default:
+                break;
+        }
+        setDate(date);
+      };
+
     const showMode = (currentMode) => {
         setShow(true);
         setMode(currentMode);
       };
+      
     return (
         <View style={styles.container}>
                       <PersonaSVG 
