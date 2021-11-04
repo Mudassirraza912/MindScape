@@ -42,13 +42,13 @@ export const Preference = () => {
                     flexGrow: 1
                 }}
             >
-                <TouchableOpacity
+                <View
                     style={styles.crossViewStyle}
                     activeOpacity={0.7}
 
                 >
                     <Icon name="close" size={40} color="#8C8BA5" />
-                </TouchableOpacity>
+                </View>
                 <View
                     style={styles.preferenceViewStyle}
 
