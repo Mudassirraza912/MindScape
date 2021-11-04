@@ -3,12 +3,23 @@ import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollVie
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 
-const index = () => {
+const index = ({
+    navigation,
+    bottomColor = '#EBEBEC'
+}) => {
     return (
 
 
         <View
-            style={styles.mainViewStyle}
+            style={{
+                width: '100%',
+                height: height * 0.122,
+                backgroundColor: bottomColor,
+                alignItems: 'center',
+                justifyContent: 'center',
+                // position: 'absolute',
+                bottom: 0
+            }}
 
         >
             <View
@@ -35,7 +46,9 @@ const index = () => {
                         Return
                     </Text>
                 </View>
-                <TouchableOpacity activeOpacity={0.7}>
+                <TouchableOpacity activeOpacity={0.7} onPress={() => {
+                    navigation.openDrawer()
+                }}>
                     <Image source={require('../../assets/images/menu.png')} style={{ height: 25, width: 32, }} />
 
                 </TouchableOpacity>
