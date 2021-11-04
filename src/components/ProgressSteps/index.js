@@ -6,12 +6,12 @@ export const ProgressSteps = ({
     data = [],
     currentPosition = 2,
     isIndexShow = false,
-    titleStyle = {}, 
+    titleStyle = {},
     weekStyle = {},
     indexStyle = {},
     indicatorCustomStyle = {},
-    activeTextColor= "#E39684",
-    nonActiveTextColor= '#ADAABC',
+    activeTextColor = "#E39684",
+    nonActiveTextColor = '#ADAABC',
 
 }) => {
 
@@ -38,42 +38,44 @@ export const ProgressSteps = ({
         labelSize: 13,
         currentStepLabelColor: '#ADAABC',
         linearColor1: '#E39684',
-        linearColor2:'#fff'
+        linearColor2: '#fff',
     }
 
     return (
         <View style={{ flexDirection: "row", paddingVertical: 10 }}>
-          {isIndexShow && <View>
-             {data.map((value, index) => {
+            {isIndexShow && <View>
+                {data.map((value, index) => {
                     return (
                         <TouchableOpacity
                             activeOpacity={0.8}
                             // onPress={() => { onStepPress() }}
                             style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                                <Text style={[{ color: "#E39684", fontSize: 15, fontWeight: "bold", fontSize: 15  }, indexStyle]}>{index + 1}</Text>
-                            </TouchableOpacity>
+                            <Text style={[{ color: "#E39684", fontSize: 15, fontWeight: "bold", fontSize: 15, paddingRight: 5 }, indexStyle]}>{value.key}</Text>
+                        </TouchableOpacity>
                     )
                 })}
-           </View>}
+            </View>}
             <View style={{ flex: 1 }}>
                 <StepIndicator
                     stepCount={data.length > 0 ? data.length : 2}
-                    customStyles={{...customStyles, ...indicatorCustomStyle}}
+                    customStyles={{ ...customStyles, ...indicatorCustomStyle }}
                     currentPosition={currentPosition - 1}
                     direction={'vertical'}
                 />
             </View>
-            <View style={{ flex: 3 }}>
+            <View style={{ flex: 8 }}>
                 {data.map((value, index) => {
-                    console.log("(index+1 == currentPosition)", (index+1 == currentPosition), (index+1 < currentPosition))
+                    console.log("(index+1 == currentPosition)", (index + 1 == currentPosition), (index + 1 < currentPosition))
                     return (
                         <TouchableOpacity
                             activeOpacity={0.8}
                             // onPress={() => { onStepPress() }}
                             style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                                <Text style={[{ color: (((index+1 == currentPosition) || (index+1 < currentPosition)) ? activeTextColor :  nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15 }, titleStyle]}>{value.title}</Text>
-                                <Text style={[{ color: (((index+1 == currentPosition) || (index+1 < currentPosition)) ? activeTextColor :  nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15  }, weekStyle]}>{value.week}</Text>
-                            </TouchableOpacity>
+                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15 }, titleStyle]}>{value.title}</Text>
+                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15 }, weekStyle]}>{value.week}</Text>
+                        </TouchableOpacity>
+                        //  || (index + 1 < currentPosition)
+                        //  || (index + 1 < currentPosition)
                     )
                 })}
             </View>
