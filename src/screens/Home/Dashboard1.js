@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ImageBackground, Dimensions, Image, StatusBar, 
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import CircleButton from '../../components/circleButton/index'
 import LinearGradient from 'react-native-linear-gradient';
-import DashboardSvg from '../../assets/SVG/dashboardSvg';
+import Modal from 'react-native-modal';
 export const Dashboard1 = ({ navigation }) => {
     const [reason, setReason] = useState([{ title: "01",},
     { title: "02",},
@@ -36,6 +36,8 @@ export const Dashboard1 = ({ navigation }) => {
     const [tick,setTick] = useState ()
     const [tick2,setTick2] = useState ()
     const [tick3,setTick3] = useState ()
+    const [modalVisible, setModalVisible] = useState(false);
+    console.log (modalVisible)
     return (
         <LinearGradient style={styles.container} colors={['#707091', '#A1A0B9']}>
             <StatusBar hidden={true} />
@@ -140,6 +142,7 @@ export const Dashboard1 = ({ navigation }) => {
                             </TouchableOpacity>
                             <TouchableOpacity
                             activeOpacity={0.9}
+                            onPress={() => setModalVisible(true)} 
                             >
                             <Image source={require('../../assets/images/small.png')} />
                             </TouchableOpacity>
@@ -195,6 +198,20 @@ export const Dashboard1 = ({ navigation }) => {
                     </View>
                 </View>
             </ImageBackground>
+            <Modal
+                animationIn="zoomIn"
+                animationOut="zoomOut"
+                animationInTiming={600}
+                animationOutTiming={600}
+                transparent={true}
+                isVisible={modalVisible}
+                onBackButtonPress={() => setModalVisible(!modalVisible)}
+                onBackdropPress={() => setModalVisible(!modalVisible)}
+            >
+                <View style={styles.modalView}>
+                    <Text>yyy</Text>
+                </View>
+            </Modal>
         </LinearGradient>
     )
 }
@@ -276,5 +293,10 @@ const styles = StyleSheet.create({
         fontSize: 84,
         color: "#fff",
         top:14,
+    },
+    modalView: {
+        backgroundColor: '#fff',
+        borderRadius: 15,
+        paddingTop: "8%"
     },
 })

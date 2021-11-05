@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Dimensions, StyleSheet, StatusBar, Image, ImageBackground,ScrollView } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient';
-// import WelcomeSvg from '../../assets/images/Welcome.svg'
+import Bottom from '../../components/Bottom/index'
 const { width, height } = Dimensions.get('screen')
 export const BreathingStarted = ({ navigation }) => {
     return (
@@ -25,8 +25,11 @@ export const BreathingStarted = ({ navigation }) => {
                 <Text style={styles.text2}>Mindful Breathing is a lifestyle Tool designed to integrate in your everyday life.
                 </Text>
                 <Text style={styles.text3}>Achieved through a set of simple stretches and movements that enhance your breathing rhythm and help oxygenate your muscles, brain, and heart.</Text>
+                <View style={{height:40}}></View>
             </ScrollView>
-            <View style={styles.footer}></View>
+            <Bottom
+            bottomColor={"treansparent"}
+            />
         </LinearGradient>
     )
 }
