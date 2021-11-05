@@ -60,7 +60,7 @@ const index = ({
                         return (
                             <>
                                 <TouchableOpacity
-                                    activeOpacity={0.7}
+                                    activeOpacity={1}
                                     onPress={() => {
                                         setActiveTab(i)
                                         onChangeTab(i)
