@@ -32,15 +32,13 @@ export const HelpCenter = ({ navigation }) => {
     <>
       <ScrollView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={{
-            alignItems: 'flex-end',
-            paddingTop: 50,
-            paddingRight: 20
-          }}>
-          <Icon name="close" size={40} color="#8C8BA5" />
-        </TouchableOpacity>
+        <View style={styles.topCutButton}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            activeOpacity={0.7}>
+            <Icon name="close" size={40} color="#8C8BA5" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
             HELP CENTRE
@@ -65,7 +63,7 @@ export const HelpCenter = ({ navigation }) => {
                   key={i}
                   //   onPress={onPress}
                 >
-                  <View style={{ width: '90%', justifyContent: 'center' }}>
+                  <View style={{ width: '90%' }}>
                     <Text
                       style={{
                         color: '#fff',
@@ -78,7 +76,7 @@ export const HelpCenter = ({ navigation }) => {
                   </View>
                   <View
                     style={{
-                      width: '10%',
+                      width: '11%',
                       justifyContent: 'center',
                       alignItems: 'flex-end'
                     }}>
@@ -93,8 +91,8 @@ export const HelpCenter = ({ navigation }) => {
           onPress={() => navigation.goBack()}
           activeOpacity={0.7}
           style={{
-            marginTop: 50,
-            height: height * 0.15,
+            paddingBottom: 60,
+            height: height * 0.35,
             justifyContent: 'flex-end',
             alignItems: 'center'
           }}>
@@ -117,6 +115,11 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#49485F'
+  },
+  topCutButton:{
+    alignItems: 'flex-end',
+    paddingTop: 50,
+    paddingRight: 20
   },
   sectionContainer: {
     paddingTop: 35,

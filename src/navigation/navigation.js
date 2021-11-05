@@ -28,6 +28,7 @@ import { HomeProgram } from '../screens/Home/HomeProgram'
 import { BreathingStarted } from '../screens/Home/BreathingStarted'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
+import { Dashboard1 } from '../screens/Home/Dashboard1'
 import { Preference } from '../screens/Preference/Preference'
 import { MainAcount } from '../screens/MainAcount/MainAcount'
 import { Profile } from '../screens/Profile/Profile'
@@ -40,6 +41,7 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
+import { Emergency2 } from '../screens/Emergency/Emergency2'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -64,6 +66,9 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
+
+
+
     </AuthStack.Navigator>
   );
 }
@@ -86,8 +91,8 @@ function MainDrawer() {
       overlayColor="transparent"
       drawerType="front">
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard1" component={Dashboard1} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
-      {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
 
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
@@ -107,7 +112,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Subscription                                                                                                                ">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -123,6 +128,10 @@ function AppStackNavigator() {
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
+      <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
+      <AuthStack.Screen name="Account" component={Account} />
+      <AuthStack.Screen name="Emergency2" component={Emergency2} />
+
     </AppStack.Navigator>
   )
 }

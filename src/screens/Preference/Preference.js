@@ -1,14 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollView, StyleSheet, Dimensions } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/EvilIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import ToggleButton from '../../components/ToggleButton/index'
+import DateTimePicker from '@react-native-community/datetimepicker';
 const { width, height } = Dimensions.get('screen')
 
 
 export const Preference = () => {
+    const showTimepicker = () => {
+        showMode('time');
+    };
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+
+        let time=currentDate.toString().substring(16,21)
+        setCurrentTime(time)
+        setCurrentTime2(time)
+        setCurrentTime3(time)
+        setDate(date);
+
+        // switch () {
+        //     case 'wakeUp':
+        // }
+      };
+      const [date, setDate] = useState(new Date(1598051730000));
+    const [show, setShow] = useState(false);
+    const [mode, setMode] = useState('time');
+    const [currentTime,setCurrentTime]=useState('')
+    const [currentTime2,setCurrentTime2]=useState('')
+    const [currentTime3,setCurrentTime3]=useState('')
+    const showMode = (currentMode) => {
+        setShow(true);
+        setMode(currentMode);
+      };
+
     const onSelectSwitch = index => {
         // alert(index === 1 ? 'Switch Off' : 'Switch On')
     }
@@ -42,13 +71,13 @@ export const Preference = () => {
                     flexGrow: 1
                 }}
             >
-                <TouchableOpacity
+                <View
                     style={styles.crossViewStyle}
                     activeOpacity={0.7}
 
                 >
                     <Icon name="close" size={40} color="#8C8BA5" />
-                </TouchableOpacity>
+                </View>
                 <View
                     style={styles.preferenceViewStyle}
 
@@ -109,7 +138,9 @@ export const Preference = () => {
                                     style={styles.timerMainViewStyle}
 
                                 >
-                                    <View
+                                    <TouchableOpacity
+                                    onPress={showTimepicker}
+                                    activeOpacity={0.7}
 
                                         style={styles.timeIconMainViewStyle}
 
@@ -121,7 +152,18 @@ export const Preference = () => {
                                             {item.time}
                                         </Text>
                                         <Entypo name="chevron-thin-down" size={15} color="#fff" style={{ paddingLeft: 5 }} />
-                                    </View>
+                                    </TouchableOpacity>
+                                    {show && (
+                        <DateTimePicker
+                        //   timeZoneOffsetInMinutes={0}
+                            testID="dateTimePicker"
+                            value={date}
+                            mode={mode}
+                            is24Hour={true}
+                            display="default"
+                            onChange={onChange}
+                        />
+                    )}
                                     <ToggleButton selectionMode={2} onSelectSwitch={onSelectSwitch} />
                                 </View>
                             </View>
@@ -290,6 +332,7 @@ const styles = StyleSheet.create({
     lastTextStyle: {
         fontSize: 22,
         fontFamily: 'Optima-Regular',
-        color: '#D99888'
+        color: '#D99888',
+        marginBottom:50
     }
 })
