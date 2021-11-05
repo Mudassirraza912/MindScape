@@ -33,7 +33,7 @@ export const HomeProgram = ({ navigation }) => {
         labelSize: 13,
         currentStepLabelColor: '#ADAABC',
         linearColor1: '#E39684',
-        linearColor2:'#fff'
+        linearColor2: '#fff'
     }
     return (
         <LinearGradient style={styles.container} colors={['#EDE7E4', '#9B98B0']}>
@@ -44,30 +44,30 @@ export const HomeProgram = ({ navigation }) => {
                     <Text style={{ color: "#A3A2BA", fontSize: 14 }}>VIRTUE 1</Text>
                     <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 24 }}>MINDFULNESS</Text>
 
-                    <ProgressSteps 
-                        data={[{title : 'Connect', week: 'w1'},{title : 'Manage ', week: 'w2'},{title : 'Discover', week: 'w3'},{title : 'Practice', week: 'w4'},{title : 'Become', week: 'w5'}]}  
+                    <ProgressSteps
+                        data={[{ title: 'Connect', week: 'w1' }, { title: 'Manage ', week: 'w2' }, { title: 'Discover', week: 'w3' }, { title: 'Practice', week: 'w4' }, { title: 'Become', week: 'w5' }]}
                     />
 
                 </View>
                 <View style={styles.textBorder}>
                     <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 2</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>CURIOSITY</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>CURIOSITY</Text>
                 </View>
                 <View style={styles.textBorder}>
                     <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 3</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>COURAGE</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>COURAGE</Text>
                 </View>
                 <View style={styles.textBorder}>
                     <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 4</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>GRATITUDE</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>GRATITUDE</Text>
                 </View>
                 <View style={styles.textBorder}>
                     <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 5</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24  }}>COMPASSION</Text>
+                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>COMPASSION</Text>
                 </View>
                 <View style={{ justifyContent: "center", alignItems: "center", paddingVertical: 20 }}>
                     <TouchableOpacity
-                    onPress={()=> navigation.navigate('HomeMindfulness')}
+                        onPress={() => navigation.navigate('Dashboard')}
                         style={styles.buttondv}
                     >
                         <Text style={{ color: "#A3A2BA" }}>GET STARTED</Text>

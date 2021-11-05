@@ -34,14 +34,14 @@ const index = ({
             >
                 <View
                     style={styles.rowViewStyle}>
-                    <View style={{ marginTop: 35 }} >
+                    <View style={{ marginTop: height * 0.045 }} >
                         <Image source={require('../../assets/images/women.png')} style={{
                             width: 100,
                             height: 100,
 
                         }} />
                     </View>
-                    <Text style={{ paddingBottom: 10, fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
+                    <Text style={{ paddingBottom: height * 0.015, fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
 
                 </View>
             </LinearGradient>
@@ -60,7 +60,7 @@ const index = ({
                         return (
                             <>
                                 <TouchableOpacity
-                                    activeOpacity={0.7}
+                                    activeOpacity={1}
                                     onPress={() => {
                                         setActiveTab(i)
                                         onChangeTab(i)
