@@ -17,6 +17,7 @@ import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
 import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
+import { Breathing } from '../screens/Home/Breathing'
 import { HomeWarning } from '../screens/Home/HomeWarning'
 import { HomeCommitment } from '../screens/Home/HomeCommitment'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
@@ -24,6 +25,7 @@ import { HomeMindfulness } from '../screens/Home/HomeMindfulness'
 import { HomePersona } from '../screens/Home/HomePersona'
 import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
 import { HomeProgram } from '../screens/Home/HomeProgram'
+import { BreathingStarted } from '../screens/Home/BreathingStarted'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
 import { Preference } from '../screens/Preference/Preference'
@@ -112,6 +114,8 @@ function AppStackNavigator() {
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
       <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
+      <AppStack.Screen name="BreathingStarted" component={BreathingStarted} />
+      <AppStack.Screen name="Breathing" component={Breathing} />
       <AppStack.Screen name="HomeMindfulness" component={HomeMindfulness} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />
