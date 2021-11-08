@@ -17,13 +17,14 @@ import { Subscription } from '../screens/Subscription/subscription'
 import { HomeWelcome } from '../screens/Home/Welcome'
 import { HomeSetName } from '../screens/Home/HomeSetname'
 import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
+import { Breathing } from '../screens/Home/Breathing'
 import { HomeWarning } from '../screens/Home/HomeWarning'
 import { HomeCommitment } from '../screens/Home/HomeCommitment'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
-import { HomeMindfulness } from '../screens/Home/HomeMindfulness'
 import { HomePersona } from '../screens/Home/HomePersona'
 import { PersonaVirtue } from '../screens/Home/PersonaVirtue'
 import { HomeProgram } from '../screens/Home/HomeProgram'
+import { BreathingStarted } from '../screens/Home/BreathingStarted'
 import { ToolsDashboard } from '../screens/Home/ToolsDashboard'
 import { Dashboard } from '../screens/Home/Dashboard'
 import { Preference } from '../screens/Preference/Preference'
@@ -38,7 +39,6 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
-import { Emergency2 } from '../screens/Emergency/Emergency2'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -63,9 +63,6 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
       <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
-
-
-
     </AuthStack.Navigator>
   );
 }
@@ -89,6 +86,7 @@ function MainDrawer() {
       drawerType="front">
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
+      {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
 
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
@@ -115,17 +113,14 @@ function AppStackNavigator() {
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
       <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
-      <AppStack.Screen name="HomeMindfulness" component={HomeMindfulness} />
+      <AppStack.Screen name="BreathingStarted" component={BreathingStarted} />
+      <AppStack.Screen name="Breathing" component={Breathing} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />
       <AppStack.Screen name="HomePersona" component={HomePersona} />
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
-      <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
-      <AuthStack.Screen name="Account" component={Account} />
-      <AuthStack.Screen name="Emergency2" component={Emergency2} />
-
     </AppStack.Navigator>
   )
 }

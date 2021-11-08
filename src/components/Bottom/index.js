@@ -5,11 +5,11 @@ const { width, height } = Dimensions.get('screen')
 
 const index = ({
     navigation,
-    bottomColor = '#EBEBEC'
+    bottomColor = '#EBEBEC',
+    borderTop = 1,
+    borderColor = "#9393AE"
 }) => {
     return (
-
-
         <View
             style={{
                 width: '100%',
@@ -18,7 +18,9 @@ const index = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 // position: 'absolute',
-                bottom: 0
+                bottom: 0,
+                borderTopWidth: borderTop,
+                borderTopColor: borderColor
             }}
 
         >
