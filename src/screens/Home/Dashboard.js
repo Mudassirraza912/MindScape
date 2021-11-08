@@ -9,8 +9,11 @@ import Bottom from '../../components/Bottom/index'
 import { ProgressSteps } from '../../components/ProgressSteps';
 import { MindfullnessData } from './DashboardScreens/MindfullnessData';
 import { CuriosityData } from './DashboardScreens/CuriosityData';
+import { TourGuide } from '../../components/TourGuide';
 export const Dashboard = ({ navigation }) => {
     const [activeTab, setActiveTab] = useState('')
+    const [step, setStep] = useState(0)
+    console.log("step", step)
     return (
         <LinearGradient
             colors={activeTab == 0 ? ['#9695AF', '#9695AF',] : ['#2469A4', '#706F93']}
@@ -18,13 +21,13 @@ export const Dashboard = ({ navigation }) => {
             style={{
                 flex: 1
             }}>
-            <StatusBar backgroundColor={'transparent'} translucent={true} />
-            <Header onChangeTab={(e) => { setActiveTab(e) }} />
-            {
-                activeTab == 0 ? <MindfullnessData navigation={navigation} /> : activeTab == 1 ? <CuriosityData /> : null
-            }
-
-
+            
+                <TourGuide onChange={(step => setStep(step))} />
+                <StatusBar backgroundColor={'transparent'} translucent={true} />
+                <Header onChangeTab={(e) => { setActiveTab(e) }} />
+                {
+                    activeTab == 0 ? <MindfullnessData step={step} navigation={navigation} /> : activeTab == 1 ? <CuriosityData /> : null
+                }
         </LinearGradient>
     )
 }

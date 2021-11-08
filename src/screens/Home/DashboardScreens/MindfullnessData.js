@@ -9,7 +9,7 @@ import Header from '../../../components/Header/index';
 import Bottom from '../../../components/Bottom/index'
 import { ProgressSteps } from '../../../components/ProgressSteps';
 
-export const MindfullnessData = ({ navigation }) => {
+export const MindfullnessData = ({ navigation, step  }) => {
     return (
         <>
             <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
@@ -20,7 +20,6 @@ export const MindfullnessData = ({ navigation }) => {
                     style={styles.curveViewStyle}>
                     <View
                         style={styles.curveViewStyle2}
-
                     >
                         <View
 
