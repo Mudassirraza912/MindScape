@@ -24,7 +24,7 @@ export const PYT3 = () => {
                     <ImageBackground source={require('../../assets/images/pyt3.png')} style={{ width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
 
                         <View style={{
-                            height: 400,
+                            height: height * 0.45,
                             // backgroundColor: 'red',
                             justifyContent: 'space-between'
 
@@ -51,7 +51,8 @@ export const PYT3 = () => {
                                     color: '#F8F7F4',
                                     fontSize: 15,
                                     fontFamily: 'OPTIMA',
-                                    textAlign: 'center'
+                                    textAlign: 'center',
+                                    lineHeight: 10
                                 }}>
                                     ___
                                 </Text>
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     },
     discliamerTextStyle: {
         color: '#FFFF',
-        fontSize: 22,
+        fontSize: 20,
         fontFamily: 'OPTIMA',
         textAlign: 'center'
     },
