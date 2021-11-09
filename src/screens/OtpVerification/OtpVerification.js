@@ -45,7 +45,7 @@ export const OtpVerification = ({ navigation }) => {
         </View>
         <View style={styles.sectionContainer}>
           <Button
-            // onPress={() => navigation.navigate('AccountSecure')}
+            onPress={() => navigation.navigate('AccountSecure')}
             title="Resend"
             buttonStyle={{ width: 85, height: 25, borderColor: '#fff' }}
             textStyle={{ fontSize: 16, color: '#fff' }}
