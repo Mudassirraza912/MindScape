@@ -6,7 +6,8 @@ import {
   StatusBar,
   TextInput,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from 'react-native'
 import ToggleButton from '../../components/ToggleButton/index'
 import Icon from 'react-native-vector-icons/EvilIcons'
@@ -24,17 +25,15 @@ export const Account = ({ navigation }) => {
 
   return (
     <>
-      <View style={styles.mainContainer}>
+      <SafeAreaView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={{
-            alignItems: 'flex-end',
-            paddingTop: 50,
-            paddingRight: 20,
-          }}>
-          <Icon name="close" size={40} color="#8C8BA5" />
-        </TouchableOpacity>
+        <View style={styles.topCutButton}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            activeOpacity={0.7}>
+            <Icon name="close" size={40} color="#A3A2BA" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
             ACCOUNT
@@ -85,9 +84,8 @@ export const Account = ({ navigation }) => {
             </View>
           </View>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('AccountSetting')}
-            activeOpacity={0.7}
+          <View
+            
             style={{
               width: '100%',
               alignSelf: 'center',
@@ -100,15 +98,17 @@ export const Account = ({ navigation }) => {
                 Refresh Your Silhouette
               </Text>
             </View>
-            <View
+            <TouchableOpacity
+            // onPress={() => navigation.navigate('AccountSetting')}
+            activeOpacity={0.7}
               style={{ width: '30%', alignItems: 'flex-end', paddingRight: 4 }}>
               <Image source={require('../../assets/images/group-244.png')} />
               <Image
                 source={require('../../assets/images/group-245.png')}
                 style={{ position: 'absolute', top: 5, right: 10, bottom: 0 }}
               />
-            </View>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </View>
 
           <View
             style={{
@@ -155,7 +155,7 @@ export const Account = ({ navigation }) => {
             </View>
           </View>
         </View>
-      </View>
+      </SafeAreaView>
     </>
   )
 }
@@ -164,6 +164,11 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#49485F'
+  },
+  topCutButton:{
+    alignItems: 'flex-end',
+    marginTop: 40,
+    paddingRight: 20
   },
   sectionContainer: {
     paddingTop: 35,

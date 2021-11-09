@@ -12,12 +12,11 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/EvilIcons'
 import { imagePicker } from '../../helper/utils'
-import { Emergency2 } from './Emergency2'
+import { Emergency2 } from '../../screens/Emergency/Emergency2'
 const { width, height } = Dimensions.get('screen')
 import EmergencySvg from '../../assets/SVG/EmergencySvg'
 
 export const Emergency = ({ navigation }) => {
-
   return (
     <>
       <SafeAreaView style={styles.mainContainer}>
@@ -30,7 +29,6 @@ export const Emergency = ({ navigation }) => {
             //   top: 0,
             //   right: 0,
             //   left: 0
-
           }}
         />
         <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'dark-content'} />
@@ -70,8 +68,6 @@ export const Emergency = ({ navigation }) => {
             </Text>
           </TouchableOpacity>
         </View>
-
-
       </SafeAreaView>
     </>
   )
@@ -79,12 +75,11 @@ export const Emergency = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
-    // backgroundColor: 'red'
+    flex: 1
   },
   topCutButton: {
     alignItems: 'flex-end',
-    marginTop: 5,
+    marginTop: 40,
     paddingRight: 20
   },
   sectionContainer: {
@@ -93,21 +88,10 @@ const styles = StyleSheet.create({
   },
   backButtonView: {
     paddingBottom: 60,
-    height: height * 0.40,
+    height: height * 0.4,
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
 })
 
 
-
-
-
-{/* <View style={styles.backButtonView}>
-<TouchableOpacity
-   onPress={() => navigation.goBack()}
-   activeOpacity={0.7}>
-   <Image style={{height: 30, width: 15, tintColor: '#A3A2BA', transform: [{ rotate: '180deg' }] }}
-     source={require('../../assets/images/arrow-right.png')}/>
- </TouchableOpacity>
-</View> */}

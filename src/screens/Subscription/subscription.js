@@ -7,11 +7,12 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
-  ScrollView
+  SafeAreaView
 } from 'react-native'
 import ToggleButton from '../../components/ToggleButton/index'
 import Icon from 'react-native-vector-icons/EvilIcons'
 import { imagePicker } from '../../helper/utils'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export const Subscription = ({ navigation }) => {
   const [image, setImage] = useState()
@@ -25,112 +26,119 @@ export const Subscription = ({ navigation }) => {
 
   return (
     <>
-      <ScrollView style={styles.mainContainer}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <View style={styles.topCutButton}>
-          <TouchableOpacity
-            onPress={() => navigation.goBack()}
-            activeOpacity={0.7}
-          >
-            <Icon name="close" size={40} color="#8C8BA5" />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
-            SUBSCRIPTION
-          </Text>
-          <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: 'Regulator-Nova' }}>
-            YOUR MEMBERSHIP
-          </Text>
-          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", fontFamily: 'Optima-Regular' }}>
-            <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
-              Monthly
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
+        <SafeAreaView style={styles.mainContainer}>
+          <StatusBar backgroundColor={'transparent'} translucent={true} />
+          <View style={styles.topCutButton}>
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              activeOpacity={0.7}
+            >
+              <Icon name="close" size={40} color="#8C8BA5" />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
+              SUBSCRIPTION
             </Text>
-            <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, fontFamily: 'Regulator-Nova' }}>
-              Change Plan
+            <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: 'Regulator-Nova' }}>
+              YOUR MEMBERSHIP
             </Text>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", fontFamily: 'Optima-Regular' }}>
+              <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
+                Monthly
+              </Text>
+              <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, fontFamily: 'Regulator-Nova' }}>
+                Change Plan
+              </Text>
 
-          </View>
-          <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>Renewal Date</Text>
-            <View>
-              <Text style={styles.input}>25/9/2022</Text>
             </View>
-            <View style={styles.BorderView} />
-          </View>
-          <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>App User ID</Text>
-            <View>
-              <Text style={styles.input}>Xxxxxxx</Text>
-            </View>
-          </View>
-          <View>
-            <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8, fontFamily: 'Optima-Regular' }}>
-              Validate your Student ID
-            </Text>
             <View style={{ justifyContent: 'space-between' }}>
-              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
-                Institution Name
-              </Text>
+              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>Renewal Date</Text>
+              <View>
+                <Text style={styles.input}>25/9/2022</Text>
+              </View>
+              <View style={styles.BorderView} />
+            </View>
+            <View style={{ justifyContent: 'space-between' }}>
+              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>App User ID</Text>
               <View>
                 <Text style={styles.input}>Xxxxxxx</Text>
               </View>
             </View>
-            <View style={{ justifyContent: 'space-between' }}>
-              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
-                Student Identification Number
+            <View>
+              <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8, fontFamily: 'Optima-Regular' }}>
+                Validate your Student ID
               </Text>
-              <View>
-                <Text style={styles.input}>Xxxxxxx</Text>
+              <View style={{ justifyContent: 'space-between' }}>
+                <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
+                  Institution Name
+                </Text>
+                <View>
+                  <Text style={styles.input}>Xxxxxxx</Text>
+                </View>
+              </View>
+              <View style={{ justifyContent: 'space-between' }}>
+                <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
+                  Student Identification Number
+                </Text>
+                <View>
+                  <Text style={styles.input}>Xxxxxxx</Text>
+                </View>
               </View>
             </View>
-          </View>
-          <View
-            style={{
-              width: '100%',
-              flexDirection: 'row',
-            }}>
-            <View style={{ width: '45%', }}>
-              <TouchableOpacity
-                onPress={() => imageSelector()}
-                activeOpacity={0.7}
-                style={{
-                  marginTop: 25,
-                  width: 100,
-                  height: 35,
-                  borderRadius: 20,
-                  backgroundColor: '#2F2F40',
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
-                <Text style={{ color: '#8C8BA590', fontSize: 16, fontFamily: 'Regulator-Nova' }}>Upload</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={{ width: '50%', justifyContent: 'flex-end', }}>
-              <Text style={{ color: '#E39684', fontSize: 14, fontFamily: 'Optima-Regular' }}>
-                Wait for our response via your email
-              </Text>
-            </View>
-          </View>
-          <TouchableOpacity
-            onPress={() => navigation.goBack()}
-            activeOpacity={0.7}
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginVertical: 60
-            }}>
-            <Image
+            <View
               style={{
-                height: 30,
-                width: 15,
-                tintColor: '#A3A2BA',
-                transform: [{ rotate: '180deg' }]
-              }}
-              source={require('../../assets/images/arrow-right.png')}
-            />
-          </TouchableOpacity>
-        </View>
+                width: '100%',
+                flexDirection: 'row',
+              }}>
+              <View style={{ width: '45%', }}>
+                <TouchableOpacity
+                  onPress={() => imageSelector()}
+                  activeOpacity={0.7}
+                  style={{
+                    marginTop: 25,
+                    width: 100,
+                    height: 35,
+                    borderRadius: 20,
+                    backgroundColor: '#2F2F40',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}>
+                  <Text style={{ color: '#8C8BA590', fontSize: 16, fontFamily: 'Regulator-Nova' }}>Upload</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={{ width: '50%', justifyContent: 'flex-end', }}>
+                <Text style={{ color: '#E39684', fontSize: 14, fontFamily: 'Optima-Regular' }}>
+                  Wait for our response via your email
+                </Text>
+              </View>
+            </View>
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              activeOpacity={0.7}
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginVertical: 60,
+              }}>
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                activeOpacity={0.7}
+              >
+                <Image
+                  style={{
+                    height: 30,
+                    width: 15,
+                    tintColor: '#A3A2BA',
+                    transform: [{ rotate: '180deg' }]
+                  }}
+                  source={require('../../assets/images/arrow-right.png')}
+                />
+              </TouchableOpacity>
+            </TouchableOpacity>
+          </View>
+        </SafeAreaView>
       </ScrollView>
     </>
   )
@@ -143,7 +151,7 @@ const styles = StyleSheet.create({
   },
   topCutButton: {
     alignItems: 'flex-end',
-    paddingTop: 50,
+    marginTop: 40,
     paddingRight: 20
   },
   sectionContainer: {

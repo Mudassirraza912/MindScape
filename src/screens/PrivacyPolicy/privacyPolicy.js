@@ -4,20 +4,21 @@ import {
   Text,
   StyleSheet,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
 
 export const PrivacyPolicy = ({ navigation }) => {
   return (
     <>
-      <View style={styles.mainContainer}>
+      <SafeAreaView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.topCutButton}>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
             activeOpacity={0.7}>
-            <Icon name="close" size={40} color="#8C8BA5" />
+            <Icon name="close" size={40} color="#A3A2BA" />
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
@@ -47,7 +48,7 @@ export const PrivacyPolicy = ({ navigation }) => {
             Donec nunc quam, finibus viverra est a, ultrices fringilla diam.
           </Text>
         </View>
-      </View>
+      </SafeAreaView>
     </>
   )
 }
@@ -57,9 +58,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#49485F'
   },
-  topCutButton: {
+  topCutButton:{
     alignItems: 'flex-end',
-    paddingTop: 50,
+    marginTop: 40,
     paddingRight: 20
   },
   sectionContainer: {

@@ -7,17 +7,17 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
-  ScrollView
+  ScrollView,
+  SafeAreaView
 } from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
 
 export const AboutUs = ({ navigation }) => {
   return (
     <>
-      <ScrollView
-        style={styles.mainContainer}
-        showsVerticalScrollIndicator={false}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
+      <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false}>
+        <SafeAreaView style={styles.mainContainer}>
+        <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'light-content'}/>
         <ImageBackground
           style={{ height: 450, width: '100%' }}
           source={require('../../assets/images/aboutUsImg.png')}>
@@ -63,6 +63,7 @@ export const AboutUs = ({ navigation }) => {
             </Text>
           </View>
         </View>
+        </SafeAreaView>
       </ScrollView>
     </>
   )
@@ -73,9 +74,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#A1A0B9'
   },
-  topCutButton: {
+  topCutButton:{
     alignItems: 'flex-end',
-    paddingTop: 50,
+    marginTop: 40,
     paddingRight: 20
   },
   logoStyle: {

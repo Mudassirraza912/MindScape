@@ -6,7 +6,8 @@ import {
   StatusBar,
   TextInput,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from 'react-native'
 import ToggleButton from '../../components/ToggleButton/index'
 import Icon from 'react-native-vector-icons/EvilIcons'
@@ -18,17 +19,15 @@ export const AccountSetting = ({ navigation }) => {
 
   return (
     <>
-      <View style={styles.mainContainer}>
+      <SafeAreaView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={{
-            alignItems: 'flex-end',
-            paddingTop: 50,
-            paddingRight: 20,
-          }}>
-          <Icon name="close" size={40} color="#8C8BA5" />
-        </TouchableOpacity>
+        <View style={styles.topCutButton}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            activeOpacity={0.7}>
+            <Icon name="close" size={40} color="#A3A2BA" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
             SETTING
@@ -102,7 +101,7 @@ export const AccountSetting = ({ navigation }) => {
             </View>
           </TouchableOpacity>
         </View>
-      </View>
+      </SafeAreaView>
     </>
   )
 }
@@ -115,6 +114,11 @@ const styles = StyleSheet.create({
   sectionContainer: {
     paddingTop: 35,
     paddingHorizontal: 40
+  },
+  topCutButton:{
+    alignItems: 'flex-end',
+    marginTop: 40,
+    paddingRight: 20
   },
   input: {
     width: 236,
