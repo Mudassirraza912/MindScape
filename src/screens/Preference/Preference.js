@@ -9,7 +9,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 const { width, height } = Dimensions.get('screen')
 
 
-export const Preference = () => {
+export const Preference = ({ navigation }) => {
     const showTimepicker = () => {
         showMode('time');
     };
@@ -17,7 +17,7 @@ export const Preference = () => {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
 
-        let time=currentDate.toString().substring(16,21)
+        let time = currentDate.toString().substring(16, 21)
         setCurrentTime(time)
         setCurrentTime2(time)
         setCurrentTime3(time)
@@ -26,17 +26,17 @@ export const Preference = () => {
         // switch () {
         //     case 'wakeUp':
         // }
-      };
-      const [date, setDate] = useState(new Date(1598051730000));
+    };
+    const [date, setDate] = useState(new Date(1598051730000));
     const [show, setShow] = useState(false);
     const [mode, setMode] = useState('time');
-    const [currentTime,setCurrentTime]=useState('')
-    const [currentTime2,setCurrentTime2]=useState('')
-    const [currentTime3,setCurrentTime3]=useState('')
+    const [currentTime, setCurrentTime] = useState('')
+    const [currentTime2, setCurrentTime2] = useState('')
+    const [currentTime3, setCurrentTime3] = useState('')
     const showMode = (currentMode) => {
         setShow(true);
         setMode(currentMode);
-      };
+    };
 
     const onSelectSwitch = index => {
         // alert(index === 1 ? 'Switch Off' : 'Switch On')
@@ -76,7 +76,9 @@ export const Preference = () => {
                     activeOpacity={0.7}
 
                 >
-                    <Icon name="close" size={40} color="#8C8BA5" />
+                    <Icon name="close" size={40} color="#8C8BA5" onPress={() => {
+                        navigation.goBack()
+                    }} />
                 </View>
                 <View
                     style={styles.preferenceViewStyle}
@@ -139,8 +141,8 @@ export const Preference = () => {
 
                                 >
                                     <TouchableOpacity
-                                    onPress={showTimepicker}
-                                    activeOpacity={0.7}
+                                        onPress={showTimepicker}
+                                        activeOpacity={0.7}
 
                                         style={styles.timeIconMainViewStyle}
 
@@ -154,16 +156,16 @@ export const Preference = () => {
                                         <Entypo name="chevron-thin-down" size={15} color="#fff" style={{ paddingLeft: 5 }} />
                                     </TouchableOpacity>
                                     {show && (
-                        <DateTimePicker
-                        //   timeZoneOffsetInMinutes={0}
-                            testID="dateTimePicker"
-                            value={date}
-                            mode={mode}
-                            is24Hour={true}
-                            display="default"
-                            onChange={onChange}
-                        />
-                    )}
+                                        <DateTimePicker
+                                            //   timeZoneOffsetInMinutes={0}
+                                            testID="dateTimePicker"
+                                            value={date}
+                                            mode={mode}
+                                            is24Hour={true}
+                                            display="default"
+                                            onChange={onChange}
+                                        />
+                                    )}
                                     <ToggleButton selectionMode={2} onSelectSwitch={onSelectSwitch} />
                                 </View>
                             </View>
@@ -333,6 +335,6 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontFamily: 'Optima-Regular',
         color: '#D99888',
-        marginBottom:50
+        marginBottom: 50
     }
 })
