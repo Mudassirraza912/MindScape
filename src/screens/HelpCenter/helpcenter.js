@@ -6,7 +6,7 @@ import {
   StatusBar,
   Image,
   TouchableOpacity,
-  ScrollView,
+  SafeAreaView,
   Dimensions
 } from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
@@ -30,7 +30,7 @@ export const HelpCenter = ({ navigation }) => {
 
   return (
     <>
-      <ScrollView style={styles.mainContainer}>
+      <SafeAreaView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.topCutButton}>
           <TouchableOpacity
@@ -87,15 +87,16 @@ export const HelpCenter = ({ navigation }) => {
             )
           })}
         </View>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          activeOpacity={0.7}
-          style={{
+        <View style={{
             paddingBottom: 60,
             height: height * 0.35,
             justifyContent: 'flex-end',
             alignItems: 'center'
           }}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          activeOpacity={0.7}
+          >
           <Image
             style={{
               height: 30,
@@ -106,7 +107,8 @@ export const HelpCenter = ({ navigation }) => {
             source={require('../../assets/images/arrow-right.png')}
           />
         </TouchableOpacity>
-      </ScrollView>
+        </View>
+      </SafeAreaView>
     </>
   )
 }
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
   },
   topCutButton:{
     alignItems: 'flex-end',
-    paddingTop: 50,
+    marginTop: 40,
     paddingRight: 20
   },
   sectionContainer: {
