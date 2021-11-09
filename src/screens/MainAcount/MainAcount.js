@@ -36,13 +36,15 @@ export const MainAcount = ({ navigation }) => {
                 }}
             >
 
-                <TouchableOpacity
+                <View
                     style={styles.crossViewStyle}
                     activeOpacity={0.7}
 
                 >
-                    <Icon name="close" size={40} color="#8C8BA5" />
-                </TouchableOpacity>
+                    <Icon name="close" size={40} color="#8C8BA5" onPress={() => {
+                        navigation.goBack()
+                    }} />
+                </View>
 
 
                 <View

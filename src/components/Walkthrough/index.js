@@ -7,14 +7,14 @@ import Button from '../../components/button'
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 
-export const WalkThroughComponent =  ({
+export const WalkThroughComponent = ({
     data = [
         { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'If you want to use Reanimated 2 then go through our installation steps https://docs.swmansion.com/react-native-reanimated/docs/installation' },
         { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'If you want to use Reanimated 2 then go through our installation steps https://docs.swmansion.com/react-native-reanimated/docs/installation' },
         { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'If you want to use Reanimated 2 then go through our installation steps https://docs.swmansion.com/react-native-reanimated/docs/installation' }
     ],
     navigation
-    
+
 }) => {
 
     const slider = useRef(null)
@@ -53,14 +53,14 @@ export const WalkThroughComponent =  ({
                         <View style={{ flex: 1, width: width }}>
                             <Image source={{ uri: item.img }} style={{ height: "65%", width: width }} />
                             <View style={{ padding: 30 }}>
-                                <Text style={{ letterSpacing: 2, textAlign: 'center',color:"#74727d" }}>
+                                <Text style={{ letterSpacing: 2, textAlign: 'center', color: "#74727d", fontFamily: 'Regulator-Nova' }}>
                                     {item.text}
                                 </Text>
                             </View>
-                            <View style={{flex:0,justifyContent:"center",alignItems:"center"}}>
-                            <Button
-                                buttonStyle={{ borderColor: "#afafb7" }}
-                                onPress={() => navigation.navigate('SignUp')} title={"SIGN UP"} textStyle={{ color: '#a4a4ae' }} />
+                            <View style={{ flex: 0, justifyContent: "center", alignItems: "center" }}>
+                                <Button
+                                    buttonStyle={{ borderColor: "#afafb7" }}
+                                    onPress={() => navigation.navigate('SignUp')} title={"SIGN UP"} textStyle={{ color: '#a4a4ae', fontFamily: 'Optima-Regular' }} />
                             </View>
                         </View>
                     )
