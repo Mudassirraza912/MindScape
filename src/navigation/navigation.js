@@ -62,7 +62,7 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="AccountSecure" component={AccountSecure} />
       <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
       <AuthStack.Screen name="Account" component={Account} />
-      <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
+      <AuthStack.Screen name="FreeTrialSubscription" component={AppStackNavigator} />
       <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
     </AuthStack.Navigator>
@@ -108,7 +108,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Subscription">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -131,22 +131,22 @@ function AppStackNavigator() {
 
 
 const MainNavigation = () => {
-  const isLoggedin = false
+  const isLoggedin = true
   return (
     <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {isLoggedin ?
+        {/* {isLoggedin ? */}
           <Stack.Screen
             name="Login"
             options={{ headerShown: false }}
             component={AuthStackNavigator}
           />
-          :
+          {/* : */}
           <Stack.Screen
             name="AppStack"
             options={{ headerShown: false }}
             component={AppStackNavigator}
-          />}
+          />
         {/* add your another screen here using -> Stack.Screen */}
       </Stack.Navigator>
     </NavigationContainer>

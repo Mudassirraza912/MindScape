@@ -22,7 +22,7 @@ export const Dashboard = ({ navigation }) => {
                 flex: 1
             }}>
 
-            {/* <TourGuide onChangeStep={(step => setStep(step))} /> */}
+            <TourGuide onChangeStep={(step => setStep(step))} />
             <StatusBar backgroundColor={'transparent'} translucent={true} />
             <Header onChangeTab={(e) => { setActiveTab(e) }} />
             {
