@@ -6,10 +6,9 @@ import { Provider } from 'react-redux'
 import { store } from './stores'
 import 'react-native-gesture-handler';
 import { SleepHours } from './screens/SleepCount/sleepHours'
-import { PYT2 } from './screens/PYTScreens/PYT2'
+import { PYT3 } from './screens/PYTScreens/PYT3'
 import { MorningMessage } from './screens/SleepCount/MorningMessage'
 import { SleepMsg } from './screens/SleepCount/SleepMsg'
-import { PYT4 } from './screens/PYTScreens/PYT4'
 
 const App = () => {
   return (
@@ -17,7 +16,7 @@ const App = () => {
       {/* <Provider store={store}>
         <MainNavigation />
       </Provider> */}
-      <PYT2 />
+      <PYT3 />
     </>
   )
 }

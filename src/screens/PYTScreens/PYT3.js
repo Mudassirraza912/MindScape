@@ -39,45 +39,34 @@ export const PYT3 = () => {
 
                             <View>
 
-                                <Text style={{
-                                    color: '#FFFF',
-                                    fontSize: 18,
-                                    fontFamily: 'OPTIMA',
-                                    textAlign: 'center'
-                                }}>
+                                <Text
+                                    style={styles.footerTextStyle}
+
+                                >
                                     Take a deep breathe
                                 </Text>
-                                <Text style={{
-                                    color: '#F8F7F4',
-                                    fontSize: 15,
-                                    fontFamily: 'OPTIMA',
-                                    textAlign: 'center',
-                                    lineHeight: 10
-                                }}>
+                                <Text
+                                    style={styles.lineStyle}
+
+                                >
                                     ___
                                 </Text>
-                                <Text style={{
-                                    color: '#FFFF',
-                                    fontSize: 18,
-                                    fontFamily: 'OPTIMA',
-                                    textAlign: 'center'
-                                }}>
+                                <Text
+                                    style={styles.footerTextStyle}
+
+                                >
                                     Call a close friend
                                 </Text>
-                                <Text style={{
-                                    color: '#F8F7F4',
-                                    fontSize: 15,
-                                    fontFamily: 'OPTIMA',
-                                    textAlign: 'center'
-                                }}>
+                                <Text
+                                    style={styles.lineStyle}
+
+                                >
                                     ___
                                 </Text>
-                                <Text style={{
-                                    color: '#FFFF',
-                                    fontSize: 18,
-                                    fontFamily: 'OPTIMA',
-                                    textAlign: 'center'
-                                }}>
+                                <Text
+                                    style={styles.footerTextStyle}
+
+                                >
                                     Play your favorite music
                                 </Text>
 
@@ -122,29 +111,19 @@ const styles = StyleSheet.create({
         fontFamily: 'OPTIMA',
         textAlign: 'center'
     },
-    centerTextViewStyle: {
-        marginVertical: height * 0.12,
-        width: '80%',
-        // fontFamily: 'Optima'
+    footerTextStyle: {
+        color: '#FFFF',
+        fontSize: 18,
+        fontFamily: 'OPTIMA',
+        textAlign: 'center'
     },
-    centerTextStyle: {
-        color: '#706F93',
-        fontSize: 20,
+    lineStyle: {
+        color: '#F8F7F4',
+        fontSize: 15,
+        fontFamily: 'OPTIMA',
         textAlign: 'center',
-        lineHeight: 27,
-        // fontFamily: 'Regulator-Nova',
-    },
-    buttonViewStyle: {
-        marginTop: height * 0.01
-    },
-    Button: {
-        height: 24,
-        width: 131,
-        backgroundColor: '#EEE8E5',
-        borderRadius: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-        elevation: 1
+        lineHeight: 15,
+        opacity: 0.5
     }
 
 })
