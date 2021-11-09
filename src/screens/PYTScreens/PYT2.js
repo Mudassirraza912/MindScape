@@ -40,10 +40,7 @@ export const PYT2 = () => {
                     }}>
                         <View
 
-                            style={styles.buttonViewStyle}
-
-
-                        >
+                            style={styles.buttonViewStyle}>
 
 
                             <TouchableOpacity
@@ -63,10 +60,7 @@ export const PYT2 = () => {
                     }}>
                         <View
 
-                            style={styles.buttonViewStyle}
-
-
-                        >
+                            style={styles.buttonViewStyle}>
 
 
                             <TouchableOpacity

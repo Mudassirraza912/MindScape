@@ -21,13 +21,13 @@ export const Dashboard = ({ navigation }) => {
             style={{
                 flex: 1
             }}>
-            
-                {/* <TourGuide onChangeStep={(step => setStep(step))} /> */}
-                <StatusBar backgroundColor={'transparent'} translucent={true} />
-                <Header onChangeTab={(e) => { setActiveTab(e) }} />
-                {
-                    activeTab == 0 ? <MindfullnessData step={step} navigation={navigation} /> : activeTab == 1 ? <CuriosityData /> : null
-                }
+
+            {/* <TourGuide onChangeStep={(step => setStep(step))} /> */}
+            <StatusBar backgroundColor={'transparent'} translucent={true} />
+            <Header onChangeTab={(e) => { setActiveTab(e) }} />
+            {
+                activeTab == 0 ? <MindfullnessData step={step} navigation={navigation} /> : activeTab == 1 ? <CuriosityData /> : null
+            }
         </LinearGradient>
     )
 }
