@@ -7,11 +7,12 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
-  ScrollView
+  SafeAreaView
 } from 'react-native'
 import ToggleButton from '../../components/ToggleButton/index'
 import Icon from 'react-native-vector-icons/EvilIcons'
 import { imagePicker } from '../../helper/utils'
+import { ScrollView } from 'react-native-gesture-handler'
 
 export const Subscription = ({ navigation }) => {
   const [image, setImage] = useState()
@@ -25,16 +26,16 @@ export const Subscription = ({ navigation }) => {
 
   return (
     <>
-      <ScrollView style={styles.mainContainer}>
+<ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false}>
+      <SafeAreaView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-       <View style={styles.topCutButton}>
-       <TouchableOpacity
-          onPress={()=>navigation.goBack()}
-          activeOpacity={0.7}
-          >
-          <Icon name="close" size={40} color="#8C8BA5" />
-        </TouchableOpacity>
-       </View>
+        <View style={styles.topCutButton}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            activeOpacity={0.7}>
+            <Icon name="close" size={40} color="#A3A2BA" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContainer}>
           <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
             SUBSCRIPTION
@@ -46,9 +47,13 @@ export const Subscription = ({ navigation }) => {
           <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
             Monthly
           </Text>
+          <TouchableOpacity 
+          // onPress={() => navigation.goBack()}
+          activeOpacity={0.7}>
           <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, }}>
           Change Plan
           </Text>
+          </TouchableOpacity>
 
           </View>
            <View style={{ justifyContent: 'space-between' }}>
@@ -112,14 +117,15 @@ export const Subscription = ({ navigation }) => {
               </Text>
             </View>
           </View>
+          <View  style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginVertical: 60,              
+            }}>
           <TouchableOpacity
              onPress={() => navigation.goBack()}
             activeOpacity={0.7}
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginVertical: 60
-            }}>
+            >
             <Image
               style={{
                 height: 30,
@@ -130,7 +136,9 @@ export const Subscription = ({ navigation }) => {
               source={require('../../assets/images/arrow-right.png')}
             />
           </TouchableOpacity>
+          </View>
         </View>
+      </SafeAreaView>
       </ScrollView>
     </>
   )
@@ -143,7 +151,7 @@ const styles = StyleSheet.create({
   },
   topCutButton:{
     alignItems: 'flex-end',
-    paddingTop: 50,
+    marginTop: 40,
     paddingRight: 20
   },
   sectionContainer: {

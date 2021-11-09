@@ -32,6 +32,7 @@ import { MainAcount } from '../screens/MainAcount/MainAcount'
 import { Profile } from '../screens/Profile/Profile'
 import { Setting } from '../screens/Setting/setting'
 import { Emergency } from '../screens/Emergency/emergency'
+import { Emergency2 } from '../screens/Emergency/Emergency2'
 import { HelpCenter } from '../screens/HelpCenter/helpcenter'
 import { AboutUs } from '../screens/AboutUs/aboutus'
 import { TermsCondition } from '../screens/TermsCondition/termsAndCondition'
@@ -90,8 +91,8 @@ function MainDrawer() {
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
       {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
-
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency2" component={Emergency2} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter" component={HelpCenter} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Subscription" component={Subscription} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="AboutUs" component={AboutUs} />
