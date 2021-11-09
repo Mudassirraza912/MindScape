@@ -9,7 +9,7 @@ import {
   ScrollView,
   Dimensions
 } from 'react-native'
-const { width, height } = Dimensions.get('screen')
+const { width, height } = Dimensions.get('window')
 import LinearGradient from 'react-native-linear-gradient'
 import ImageBackground from 'react-native/Libraries/Image/ImageBackground'
 import Slider from 'react-native-slider'
@@ -19,7 +19,7 @@ export const ArticleScreen = ({ navigation }) => {
   const [state, setState] = useState({
     value: 0.2
   })
-  const thumbImage = require('../../assets/images/play.png')
+  
 
   return (
     <>
@@ -33,7 +33,7 @@ export const ArticleScreen = ({ navigation }) => {
 
           <View>
             <ImageBackground
-              style={{}}
+              style={{height: height}}
               source={require('../../assets/images/artBg1.png')}>
               <View style={styles.section1}>
                 <View>
@@ -72,41 +72,44 @@ export const ArticleScreen = ({ navigation }) => {
                   </Text>
                 </View>
 
-                <View style={styles.sliderView}>
-                  <Slider
-                    thumbImage={thumbImage}
-                    minimumTrackTintColor={'#ffffff'}
-                    maximumTrackTintColor={'#ffffff98'}
-                    thumbTintColor={'transparent'}
-                    trackStyle={{ height: 2 }}
-                    thumbTouchSize={{ width: 40, height: 60 }}
-                    value={state.value}
-                    onValueChange={e => setState({ e })}
-                  />
-                  <Text
-                    style={{
-                      color: '#fff',
-                      fontSize: 14,
-                      textAlign: 'center'
-                    }}>
-                    03:21
-                  </Text>
-                </View>
 
-                <View style={styles.libraryView}>
-                  <TouchableOpacity
-                    activeOpacity={0.7}
-                    onPress={() => navigation.goBack()}>
-                    <Entypo
-                      name="chevron-thin-left"
-                      size={30}
-                      color="#FFFFFF"
+                <View style={{top: (height/2.28) + 35}}>
+                  <View style={styles.sliderView}>
+                    <Slider
+                      thumbImage={require('../../assets/images/play1.png')}
+                      minimumTrackTintColor={'#ffffff'}
+                      maximumTrackTintColor={'#ffffff98'}
+                      thumbTintColor={'transparent'}
+                      trackStyle={{ height: 2 }}
+                      thumbTouchSize={{ width: 40, height: 60 }}
+                      value={state.value}
+                      onValueChange={e => setState({ e })}
                     />
-                  </TouchableOpacity>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 14,
+                        textAlign: 'center'
+                      }}>
+                      03:21
+                    </Text>
+                  </View>
 
-                  <TouchableOpacity activeOpacity={0.7}>
-                    <Text style={styles.lestgoTextStyle}>LIBRARY</Text>
-                  </TouchableOpacity>
+                  <View style={styles.libraryView}>
+                    <TouchableOpacity
+                      activeOpacity={0.7}
+                      onPress={() => navigation.goBack()}>
+                      <Entypo
+                        name="chevron-thin-left"
+                        size={30}
+                        color="#FFFFFF"
+                      />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.7}>
+                      <Text style={styles.lestgoTextStyle}>LIBRARY</Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               </View>
             </ImageBackground>
@@ -115,13 +118,14 @@ export const ArticleScreen = ({ navigation }) => {
           <View style={styles.section2}>
             <LinearGradient
               colors={['#707070', '#ECE4E0']}
-              start={{ x: 6, y: 3 }}
+              start={{ x: 6, y: 9 }}
               end={{ x: 3, y: 0 }}>
               <View>
                 <LinearGradient
                   colors={['#EDE7E46E', '#ffffff', '#EDE7E460']}
                   start={{ x: 1, y: 1 }}
-                  end={{ x: 1, y: 0 }}>
+                  end={{ x: 1, y: 0 }}
+                  style={{paddingVertical:20}}                >
                   <Text
                     style={{
                       color: '#706F93',
@@ -152,7 +156,7 @@ export const ArticleScreen = ({ navigation }) => {
 
               <View style={styles.sliderView2}>
                 <Slider
-                  thumbImage={thumbImage}
+                  thumbImage={require('../../assets/images/play.png')}
                   minimumTrackTintColor={'#706F93'}
                   maximumTrackTintColor={'#706F9390'}
                   thumbTintColor={'transparent'}
@@ -258,28 +262,29 @@ const styles = StyleSheet.create({
     flex: 1
   },
   section1: {
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     paddingTop: 100,
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    // height: Dimensions.get('window').height
   },
 
   sliderView: {
     justifyContent: 'center',
     paddingHorizontal: 60,
-    marginTop: '80%'
+    // marginTop: '80%'
   },
   sliderView2: {
     justifyContent: 'center',
     paddingHorizontal: 60,
-    marginTop: 30
+    marginTop: 10
   },
   libraryView: {
     height: 40,
     justifyContent: 'space-between',
     flexDirection: 'row',
-    margin: 20,
-    alignItems: 'center'
+    marginHorizontal: 20,
+    alignItems: 'center',
+    top: height/24
   },
 
   lestgoTextStyle: {
