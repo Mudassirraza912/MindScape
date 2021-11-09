@@ -108,13 +108,13 @@ const styles = StyleSheet.create({
     discliamerTextStyle: {
         color: '#FFFF',
         fontSize: 20,
-        fontFamily: 'OPTIMA',
+        fontFamily: 'Optima-Regular',
         textAlign: 'center'
     },
     footerTextStyle: {
         color: '#FFFF',
         fontSize: 18,
-        fontFamily: 'OPTIMA',
+        fontFamily: 'Regulator-Nova',
         textAlign: 'center'
     },
     lineStyle: {
