@@ -184,12 +184,12 @@ export const MindfullnessData = ({ navigation, step }) => {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     alignItems: 'center',
-                    marginBottom: 2
+                    marginBottom: 2,
                 }}>
                     <View style={{
                         flexDirection: 'row',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
                     }}>
                         <Text style={{
                             fontFamily: 'Regulator-Nova',
@@ -213,7 +213,7 @@ export const MindfullnessData = ({ navigation, step }) => {
                             <Image source={require('../../../assets/images/mikes.png')} style={{ height: 16, width: 53, }} />
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.7}>
-                            <Image source={require('../../../assets/images/plusCir.png')} style={{ height: 32, width: 28, marginLeft: 5 }} />
+                            <Image source={require('../../../assets/images/plusCir.png')} style={{ height: 32, width: 28, marginLeft: 5}} />
                         </TouchableOpacity>
                     </View>
                 </View>
