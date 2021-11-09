@@ -39,6 +39,8 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
+import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
+import { ArticleScreen }  from  '../screens/LoadingArticleScreens/ArticleScreen'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -106,7 +108,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Loading1">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -121,7 +123,9 @@ function AppStackNavigator() {
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
-    </AppStack.Navigator>
+      <AppStack.Screen name="Loading1" component={Loading1} />
+      <AppStack.Screen name="ArticleScreen" component={ArticleScreen} />
+      </AppStack.Navigator>
   )
 }
 
