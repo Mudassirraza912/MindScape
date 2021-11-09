@@ -13,10 +13,10 @@ import { SleepMsg } from './screens/SleepCount/SleepMsg'
 const App = () => {
   return (
     <>
-      {/* <Provider store={store}>
+      <Provider store={store}>
         <MainNavigation />
-      </Provider> */}
-      <PYT3 />
+      </Provider>
+      {/* <PYT3 /> */}
     </>
   )
 }

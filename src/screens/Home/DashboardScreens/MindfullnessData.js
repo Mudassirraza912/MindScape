@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollView, StyleSheet, Dimensions } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
@@ -8,15 +8,19 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import Header from '../../../components/Header/index';
 import Bottom from '../../../components/Bottom/index'
 import { ProgressSteps } from '../../../components/ProgressSteps';
+import Slider from 'react-native-slider'
 
-export const MindfullnessData = ({ navigation, step  }) => {
-
+export const MindfullnessData = ({ navigation, step }) => {
+    const [state, setState] = useState({
+        value: 0.2
+    })
+    const thumbImage = require('../../../assets/images/play.png')
     const scroll = useRef()
     useEffect(() => {
-        if(step >= 3) {
+        if (step >= 3) {
             scroll.current.scrollToEnd({ animated: true })
-        }else {
-            scroll.current.scrollTo({x: 0, y: 0, animated: true});
+        } else {
+            scroll.current.scrollTo({ x: 0, y: 0, animated: true });
         }
     }, [step])
 
@@ -45,14 +49,21 @@ export const MindfullnessData = ({ navigation, step  }) => {
                             </LinearGradient>
                         </View>
 
+
                         <View
-                            style={styles.barViewStyle}
+                            style={styles.barIconViewStyle}
                         >
-                            <View
-                                style={styles.barIconViewStyle}
-                            >
-                                <Image source={require('../../../assets/images/play.png')} style={{ height: 25, width: 25, position: 'absolute', top: -10, bottom: 0 }} />
-                            </View>
+                            <Slider
+                                thumbImage={thumbImage}
+                                minimumTrackTintColor={'#ffffff60'}
+                                maximumTrackTintColor={'#ffffff60'}
+                                thumbTintColor={'transparent'}
+                                trackStyle={{ height: 2 }}
+                                thumbTouchSize={{ width: 30, height: 30 }}
+                                value={state.value}
+                                onValueChange={e => setState({ e })}
+                            />
+                            {/* <Image source={require('../../../assets/images/play.png')} style={{ height: 25, width: 25, position: 'absolute', top: -10, bottom: 0 }} /> */}
                         </View>
                     </View>
                 </View>
@@ -81,7 +92,7 @@ export const MindfullnessData = ({ navigation, step  }) => {
                     <View style={{
                         width: '80%',
                         alignSelf: 'center',
-                        height: height * 0.32
+                        // height: height * 0.2
                     }}>
                         <ProgressSteps
                             data={[{ key: "01", title: "Get Started", week: "71%" }, { key: "07", title: "Connect", week: "" }, { key: "14", title: "Manage", week: "Milestone Activity 1" }, { key: "21", title: "Discover", week: "Milestone Activity 2" }, { key: "28", title: "Practice", week: "" }, { key: "35", title: "Become", week: "Milestone Activity 3" }]}
@@ -107,6 +118,8 @@ export const MindfullnessData = ({ navigation, step  }) => {
                     colors={['#B1B1C7', '#E4CBC7',]}
                     style={{
                         height: height * 0.14,
+                        // backgroundColor: 'green'
+                        // marginVertical: 5
                     }}
                 >
                     <View style={{
@@ -114,7 +127,8 @@ export const MindfullnessData = ({ navigation, step  }) => {
                         alignSelf: 'center',
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        marginVertical: 10
+                        marginVertical: 3,
+                        // backgroundColor: 'green'
                     }}>
                         <View style={{
                             flexDirection: 'row',
@@ -143,7 +157,9 @@ export const MindfullnessData = ({ navigation, step  }) => {
                             height: height * 0.065,
                             borderRadius: 25,
                             // alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            // marginBottom: 15
+                            // backgroundColor: 'red'
                         }}
                     >
                         <View style={{
@@ -151,7 +167,8 @@ export const MindfullnessData = ({ navigation, step  }) => {
                             alignSelf: 'center',
                             flexDirection: 'row',
                             alignItems: 'center',
-                            justifyContent: 'space-evenly'
+                            justifyContent: 'space-evenly',
+                            // marginBottom: 10
                         }}>
                             <Image source={require('../../../assets/images/bottle.png')} style={{ height: 42, width: 19, }} />
                             <Image source={require('../../../assets/images/moon.png')} style={{ height: 35, width: 38, }} />
@@ -214,10 +231,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#B1B1C7'
     },
     curveViewStyle2: {
-        height: height * 0.17,
+        height: height * 0.16,
         backgroundColor: '#9695AF',
         // elevation: 5,
-        borderBottomRightRadius: height * 0.09,
+        borderBottomRightRadius: height * 0.08,
         alignItems: 'center',
         justifyContent: 'center',
 
@@ -225,7 +242,8 @@ const styles = StyleSheet.create({
     rowViewStyle1: {
         width: '80%',
         alignSelf: 'center',
-        marginVertical: height * 0.024,
+        // marginVertical: height * 0.03,
+        marginBottom: height * 0.02,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
@@ -250,7 +268,7 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     barIconViewStyle: {
-        width: '50%',
+        width: '76%',
         alignSelf: 'center'
     }
 })
