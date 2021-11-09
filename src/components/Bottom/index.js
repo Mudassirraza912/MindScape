@@ -7,7 +7,9 @@ const index = ({
     navigation,
     bottomColor = '#EBEBEC',
     borderTop = 1,
-    borderColor = "#9393AE"
+    borderColor = "#9393AE",
+    iconText = '04',
+    textRetrun = ''
 }) => {
     return (
         <View
@@ -39,13 +41,13 @@ const index = ({
                         <Text
                             style={styles.centerTextStyle}
 
-                        >04</Text>
+                        >{iconText}</Text>
                     </ImageBackground>
                     <Text
                         style={styles.returnTextStyle}
 
                     >
-                        Return
+                        {textRetrun}
                     </Text>
                 </View>
                 <TouchableOpacity activeOpacity={0.7} onPress={() => {
