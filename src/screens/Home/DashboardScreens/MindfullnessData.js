@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollView, StyleSheet, Dimensions } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
@@ -9,27 +9,30 @@ import Header from '../../../components/Header/index';
 import Bottom from '../../../components/Bottom/index'
 import { ProgressSteps } from '../../../components/ProgressSteps';
 
-export const MindfullnessData = ({ navigation }) => {
+export const MindfullnessData = ({ navigation, step  }) => {
+
+    const scroll = useRef()
+    useEffect(() => {
+        if(step >= 3) {
+            scroll.current.scrollToEnd({ animated: true })
+        }else {
+            scroll.current.scrollTo({x: 0, y: 0, animated: true});
+        }
+    }, [step])
+
     return (
         <>
-            <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
-
-
+            <ScrollView ref={scroll} contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
                 <View
-
                     style={styles.curveViewStyle}>
                     <View
                         style={styles.curveViewStyle2}
-
                     >
                         <View
-
                             style={styles.rowViewStyle1}
-
                         >
                             <Text
                                 style={styles.dailyTextStyle}
-
                             >
                                 Connect with your {'\n'}emotions
                             </Text>
@@ -37,7 +40,6 @@ export const MindfullnessData = ({ navigation }) => {
                                 colors={['#D99888', '#F8EAE7',]}
                                 start={{ x: 1, y: 1 }} end={{ x: 0, y: 1 }}
                                 style={styles.linearCircleViewStyle1}
-
                             >
                                 <Image source={require('../../../assets/images/group-245.png')} style={{ width: 15.83, height: 17.28 }} />
                             </LinearGradient>
@@ -45,24 +47,14 @@ export const MindfullnessData = ({ navigation }) => {
 
                         <View
                             style={styles.barViewStyle}
-
                         >
                             <View
                                 style={styles.barIconViewStyle}
-
                             >
                                 <Image source={require('../../../assets/images/play.png')} style={{ height: 25, width: 25, position: 'absolute', top: -10, bottom: 0 }} />
-
                             </View>
-
-
                         </View>
-
-
-
                     </View>
-
-
                 </View>
 
 
@@ -91,8 +83,6 @@ export const MindfullnessData = ({ navigation }) => {
                         alignSelf: 'center',
                         height: height * 0.32
                     }}>
-
-
                         <ProgressSteps
                             data={[{ key: "01", title: "Get Started", week: "71%" }, { key: "07", title: "Connect", week: "" }, { key: "14", title: "Manage", week: "Milestone Activity 1" }, { key: "21", title: "Discover", week: "Milestone Activity 2" }, { key: "28", title: "Practice", week: "" }, { key: "35", title: "Become", week: "Milestone Activity 3" }]}
                             isIndexShow
@@ -109,21 +99,15 @@ export const MindfullnessData = ({ navigation }) => {
                                 separatorFinishedColor: '#A1A0B9',
                                 // stepIndicatorSize: 1
                             }}
-
-
                         />
                     </View>
-
-
                 </View>
 
                 <LinearGradient
                     colors={['#B1B1C7', '#E4CBC7',]}
                     style={{
                         height: height * 0.14,
-
                     }}
-
                 >
                     <View style={{
                         width: '80%',
@@ -131,7 +115,6 @@ export const MindfullnessData = ({ navigation }) => {
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         marginVertical: 10
-
                     }}>
                         <View style={{
                             flexDirection: 'row',
@@ -150,7 +133,6 @@ export const MindfullnessData = ({ navigation }) => {
                         <View>
                             <Image source={require('../../../assets/images/mark.png')} style={{ height: 32, width: 28, }} />
                         </View>
-
                     </View>
 
                     <LinearGradient
@@ -162,7 +144,6 @@ export const MindfullnessData = ({ navigation }) => {
                             borderRadius: 25,
                             // alignItems: 'center',
                             justifyContent: 'center'
-
                         }}
                     >
                         <View style={{
@@ -176,14 +157,9 @@ export const MindfullnessData = ({ navigation }) => {
                             <Image source={require('../../../assets/images/moon.png')} style={{ height: 35, width: 38, }} />
                             <Image source={require('../../../assets/images/tea.png')} style={{ height: 40, width: 39, }} />
                             <Image source={require('../../../assets/images/circles.png')} style={{ height: 41, width: 41, }} />
-
                         </View>
-
                     </LinearGradient>
-
                 </LinearGradient>
-
-
 
                 <View style={{
                     height: height * 0.07,
@@ -197,7 +173,6 @@ export const MindfullnessData = ({ navigation }) => {
                         flexDirection: 'row',
                         alignItems: 'center',
                         justifyContent: 'center'
-
                     }}>
                         <Text style={{
                             fontFamily: 'Regulator-Nova',
@@ -210,14 +185,12 @@ export const MindfullnessData = ({ navigation }) => {
                             fontFamily: 'Regulator-Nova',
                             color: '#706F93',
                             fontSize: 14,
-
                         }}>Read or Hear</Text>
                     </View>
                     <View style={{
                         flexDirection: 'row',
                         alignItems: 'center',
                         justifyContent: 'center'
-
                     }}>
                         <TouchableOpacity activeOpacity={0.7}>
                             <Image source={require('../../../assets/images/mikes.png')} style={{ height: 16, width: 53, }} />
@@ -226,8 +199,6 @@ export const MindfullnessData = ({ navigation }) => {
                             <Image source={require('../../../assets/images/plusCir.png')} style={{ height: 32, width: 28, marginLeft: 5 }} />
                         </TouchableOpacity>
                     </View>
-
-
                 </View>
             </ScrollView>
             <Bottom navigation={navigation} />
