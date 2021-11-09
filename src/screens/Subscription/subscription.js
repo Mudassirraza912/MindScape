@@ -20,56 +20,56 @@ export const Subscription = ({ navigation }) => {
       const url = await imagePicker(false)
       setImage(url[0])
       console.log('url', url)
-    } catch (error) {}
+    } catch (error) { }
   }
 
   return (
     <>
       <ScrollView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
-       <View style={styles.topCutButton}>
-       <TouchableOpacity
-          onPress={()=>navigation.goBack()}
-          activeOpacity={0.7}
+        <View style={styles.topCutButton}>
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            activeOpacity={0.7}
           >
-          <Icon name="close" size={40} color="#8C8BA5" />
-        </TouchableOpacity>
-       </View>
+            <Icon name="close" size={40} color="#8C8BA5" />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
             SUBSCRIPTION
           </Text>
-          <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6 }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: 'Regulator-Nova' }}>
             YOUR MEMBERSHIP
           </Text>
-          <View style={{flexDirection:"row" ,alignItems:"center", justifyContent:"space-between"}}>
-          <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
-            Monthly
-          </Text>
-          <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, }}>
-          Change Plan
-          </Text>
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", fontFamily: 'Optima-Regular' }}>
+            <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
+              Monthly
+            </Text>
+            <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, fontFamily: 'Regulator-Nova' }}>
+              Change Plan
+            </Text>
 
           </View>
-           <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Renewal Date</Text>
+          <View style={{ justifyContent: 'space-between' }}>
+            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>Renewal Date</Text>
             <View>
               <Text style={styles.input}>25/9/2022</Text>
             </View>
             <View style={styles.BorderView} />
           </View>
           <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16 }}>App User ID</Text>
+            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>App User ID</Text>
             <View>
               <Text style={styles.input}>Xxxxxxx</Text>
             </View>
           </View>
           <View>
-            <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
+            <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8, fontFamily: 'Optima-Regular' }}>
               Validate your Student ID
             </Text>
             <View style={{ justifyContent: 'space-between' }}>
-              <Text style={{ color: '#FFFFFF', fontSize: 16 }}>
+              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
                 Institution Name
               </Text>
               <View>
@@ -77,7 +77,7 @@ export const Subscription = ({ navigation }) => {
               </View>
             </View>
             <View style={{ justifyContent: 'space-between' }}>
-              <Text style={{ color: '#FFFFFF', fontSize: 16 }}>
+              <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'Optima-Regular' }}>
                 Student Identification Number
               </Text>
               <View>
@@ -90,7 +90,7 @@ export const Subscription = ({ navigation }) => {
               width: '100%',
               flexDirection: 'row',
             }}>
-            <View style={{ width: '45%',}}>
+            <View style={{ width: '45%', }}>
               <TouchableOpacity
                 onPress={() => imageSelector()}
                 activeOpacity={0.7}
@@ -103,17 +103,17 @@ export const Subscription = ({ navigation }) => {
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}>
-                <Text style={{ color: '#8C8BA590', fontSize: 16 }}>Upload</Text>
+                <Text style={{ color: '#8C8BA590', fontSize: 16, fontFamily: 'Regulator-Nova' }}>Upload</Text>
               </TouchableOpacity>
             </View>
             <View style={{ width: '50%', justifyContent: 'flex-end', }}>
-              <Text style={{ color: '#E39684', fontSize: 14 }}>
+              <Text style={{ color: '#E39684', fontSize: 14, fontFamily: 'Optima-Regular' }}>
                 Wait for our response via your email
               </Text>
             </View>
           </View>
           <TouchableOpacity
-             onPress={() => navigation.goBack()}
+            onPress={() => navigation.goBack()}
             activeOpacity={0.7}
             style={{
               justifyContent: 'center',
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#49485F'
   },
-  topCutButton:{
+  topCutButton: {
     alignItems: 'flex-end',
     paddingTop: 50,
     paddingRight: 20
@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
     height: 24,
     marginVertical: 5,
     color: '#8C8BA590',
-    fontSize: 16
+    fontSize: 16,
+    fontFamily: 'Regulator-Nova'
   },
   BorderView: {
     borderBottomColor: '#9493AD90',

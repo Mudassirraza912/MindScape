@@ -40,10 +40,10 @@ export const HelpCenter = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
             HELP CENTRE
           </Text>
-          <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 10 }}>
+          <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 10, fontFamily: 'Optima-Regular' }}>
             Welcome Dan {'\n'}How can we help you?
           </Text>
 
@@ -61,7 +61,7 @@ export const HelpCenter = ({ navigation }) => {
                   }}
                   activeOpacity={0.7}
                   key={i}
-                  //   onPress={onPress}
+                //   onPress={onPress}
                 >
                   <View style={{ width: '90%' }}>
                     <Text
@@ -69,7 +69,8 @@ export const HelpCenter = ({ navigation }) => {
                         color: '#fff',
                         fontSize: 16,
                         marginVertical: 8,
-                        paddingRight: 40
+                        paddingRight: 40,
+                        fontFamily: 'Optima-Regular'
                       }}>
                       {item.title}
                     </Text>
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#49485F'
   },
-  topCutButton:{
+  topCutButton: {
     alignItems: 'flex-end',
     paddingTop: 50,
     paddingRight: 20

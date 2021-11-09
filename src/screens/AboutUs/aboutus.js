@@ -42,7 +42,8 @@ export const AboutUs = ({ navigation }) => {
                 color: '#fff',
                 fontSize: 20,
                 textAlign: 'center',
-                padding: 50
+                padding: 50,
+                fontFamily: 'Regulator-Nova'
               }}>
               ThirtySevenPointFive is an ideology-driven initiative dedicated to
               providing solutions to address a large spectrum of issues
@@ -55,7 +56,8 @@ export const AboutUs = ({ navigation }) => {
                 color: '#49485F',
                 fontSize: 16,
                 textAlign: 'center',
-                paddingBottom: 30
+                paddingBottom: 30,
+                fontFamily: 'Optima-Regular'
               }}>
               Scroll to explore
             </Text>
