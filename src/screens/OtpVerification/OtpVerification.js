@@ -30,7 +30,7 @@ export const OtpVerification = ({ navigation }) => {
           <OTPInputView
             style={{ margin: 90 }}
             pinCount={4}
-            autoFocusOnLoad
+            autoFocusOnLoad={true}
             keyboardAppearance={'dark'}
             keyboardType={'number-pad'}
             placeholderCharacter={'0'}
