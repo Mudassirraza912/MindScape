@@ -13,7 +13,7 @@ import { TourGuide } from '../../components/TourGuide';
 export const Dashboard = ({ navigation }) => {
     const [activeTab, setActiveTab] = useState('')
     const [step, setStep] = useState(0)
-    console.log("step", step)
+
     return (
         <LinearGradient
             colors={activeTab == 0 ? ['#9695AF', '#9695AF',] : ['#2469A4', '#706F93']}
@@ -22,7 +22,7 @@ export const Dashboard = ({ navigation }) => {
                 flex: 1
             }}>
             
-                <TourGuide onChange={(step => setStep(step))} />
+                {/* <TourGuide onChangeStep={(step => setStep(step))} /> */}
                 <StatusBar backgroundColor={'transparent'} translucent={true} />
                 <Header onChangeTab={(e) => { setActiveTab(e) }} />
                 {
