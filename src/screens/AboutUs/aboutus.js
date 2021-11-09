@@ -17,7 +17,7 @@ export const AboutUs = ({ navigation }) => {
       <ScrollView
         style={styles.mainContainer}
         showsVerticalScrollIndicator={false}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'light-content'}/>
         <ImageBackground
           style={{ height: 450, width: '100%' }}
           source={require('../../assets/images/aboutUsImg.png')}>
