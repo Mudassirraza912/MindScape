@@ -29,6 +29,7 @@ export const BreathingStarted = ({ navigation }) => {
             </ScrollView>
             <Bottom
             bottomColor={"treansparent"}
+            textRetrun = "Return"
             />
         </LinearGradient>
     )

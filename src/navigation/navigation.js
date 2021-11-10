@@ -19,6 +19,8 @@ import { HomeSetName } from '../screens/Home/HomeSetname'
 import { HomeSetCountry } from '../screens/Home/HomeSetCountry'
 import { Breathing } from '../screens/Home/Breathing'
 import { HomeWarning } from '../screens/Home/HomeWarning'
+import { WeeklyProgress } from '../screens/Home/WeeklyProgress'
+import { WeeklyProgress2 } from '../screens/Home/WeeklyProgress2'
 import { HomeCommitment } from '../screens/Home/HomeCommitment'
 import { HomeRoutine } from '../screens/Home/HomeRoutine'
 import { HomePersona } from '../screens/Home/HomePersona'
@@ -40,6 +42,7 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
+import {Dashboard1} from '../screens/Home/Dashboard1'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
 import { Dashboard1 } from '../screens/Home/Dashboard1'
@@ -117,7 +120,9 @@ function AppStackNavigator() {
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
       <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
+      <AppStack.Screen name="WeeklyProgress" component={WeeklyProgress} />
       <AppStack.Screen name="BreathingStarted" component={BreathingStarted} />
+      <AppStack.Screen name="WeeklyProgress2" component={WeeklyProgress2} />
       <AppStack.Screen name="Breathing" component={Breathing} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />

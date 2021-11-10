@@ -47,7 +47,7 @@ export const ProgressSteps = ({
                 {data.map((value, index) => {
                     return (
                         <TouchableOpacity
-                            activeOpacity={0.8}
+                            activeOpacity={0}
                             // onPress={() => { onStepPress() }}
                             style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
                             <Text style={[{ color: "#E39684", fontSize: 15, fontWeight: "bold", fontSize: 15, paddingRight: 5 }, indexStyle]}>{value.key}</Text>
