@@ -1,6 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
 import { View, Text, StyleSheet, TextInput,Image,ImageBackground,StatusBar, Dimensions,TouchableOpacity } from 'react-native'
-import PersonaSVG from '../../assets/images/Step1.svg'
+import PersonaSVG from '../../assets/SVG/personaSvg';
+// import PersonaSVG from '../../assets/images/Step1.svg'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import { imagePicker } from '../../helper/utils';
 const { width, height } = Dimensions.get('screen')

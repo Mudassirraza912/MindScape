@@ -42,6 +42,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
+import { Dashboard1 } from '../screens/Home/Dashboard1'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -87,7 +88,7 @@ function MainDrawer() {
       initialRouteName="Home"
       overlayColor="transparent"
       drawerType="front">
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard1} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
       {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />

@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: '#686584',
         paddingBottom: height * 0.04,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
     },
     imgViewStyle: {
         width: height * 0.35,

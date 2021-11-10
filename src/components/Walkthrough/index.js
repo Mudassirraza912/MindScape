@@ -53,7 +53,7 @@ export const WalkThroughComponent = ({
                         <View style={{ flex: 1, width: width }}>
                             <Image source={{ uri: item.img }} style={{ height: "65%", width: width }} />
                             <View style={{ padding: 30 }}>
-                                <Text style={{ letterSpacing: 2, textAlign: 'center', color: "#74727d", fontFamily: 'Regulator-Nova' }}>
+                                <Text style={{ letterSpacing: 2, textAlign: 'center', color: "#74727d", fontFamily: 'Regulator Nova Medium' }}>
                                     {item.text}
                                 </Text>
                             </View>

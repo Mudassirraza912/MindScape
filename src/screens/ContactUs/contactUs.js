@@ -22,8 +22,8 @@ export const ContactUs = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, fontFamily: 'Regulator-Nova' }}>CONTACT US</Text>
-          <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, fontFamily: 'Regulator Nova Medium' }}>CONTACT US</Text>
+          <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: 'Regulator Nova Medium' }}>
             Last Update: June 11, 2021
           </Text>
         </View>

@@ -88,7 +88,7 @@ export const MainAcount = ({ navigation }) => {
                                 }}>
                                     <Text style={{
                                         fontSize: 24,
-                                        fontFamily: 'Regulator-Nova',
+                                        fontFamily: 'Regulator Nova Medium',
                                         color: '#FFF',
 
                                     }}>{item.title}</Text>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     preferenceTextStyle: {
         fontSize: 24,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#8C8BA5'
     },
 

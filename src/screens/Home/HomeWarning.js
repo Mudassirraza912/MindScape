@@ -9,8 +9,8 @@ export const HomeWarning = ({ navigation }) => {
     return (
         <View style={styles.container}>
                <WarningSvg
-                width={width}
-                height={height}
+                // width={width}
+                // height={height}
                 style={{
                     position: 'absolute',
                     bottom: 0,

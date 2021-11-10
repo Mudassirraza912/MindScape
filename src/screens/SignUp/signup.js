@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
         paddingBottom: "18%",
         color: "#fff",
         fontSize: 17,
-        fontFamily: 'Regulator-Nova'
+        fontFamily: 'Regulator Nova Medium'
     },
     field: {
         borderBottomWidth: 1,
         textAlign: "center",
         borderBottomColor: "#CCCBD8",
         fontSize: 22,
-        fontFamily: 'Regulator-Nova'
+        fontFamily: 'Regulator Nova Medium'
 
     }
 })

@@ -16,7 +16,7 @@ export const OtpVerification = ({ navigation }) => {
       <KeyboardAvoidingView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: 'Regulator Nova Medium' }}>
             Enter 4 digit code {'\n'}to authenticate
           </Text>
           <Text style={{ color: '#000', fontSize: 16, textAlign: 'center', fontFamily: 'Optima-Regular' }}>

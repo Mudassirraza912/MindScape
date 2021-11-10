@@ -21,8 +21,8 @@ export const Emergency = ({ navigation }) => {
     <>
       <SafeAreaView style={styles.mainContainer}>
         <EmergencySvg
-          width={Dimensions.get('screen').width}
-          height={Dimensions.get('screen').height}
+          // width={Dimensions.get('screen').width}
+          // height={Dimensions.get('screen').height}
           style={{
             position: 'absolute',
             //   bottom: 0,
@@ -42,10 +42,10 @@ export const Emergency = ({ navigation }) => {
 
 
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#fff', fontSize: 24, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#fff', fontSize: 24, fontFamily: 'Regulator Nova Medium' }}>
             HEY DANIEL
           </Text>
-          <Text style={{ color: '#49485F', fontSize: 60, lineHeight: 60, marginVertical: 15, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#49485F', fontSize: 60, lineHeight: 60, marginVertical: 15, fontFamily: 'Regulator Nova Medium' }}>
             Take a {'\n'}Deep {'\n'}Breathe
           </Text>
           <Text style={{ color: '#49485F', fontSize: 22, fontFamily: 'Optima-Regular' }}>

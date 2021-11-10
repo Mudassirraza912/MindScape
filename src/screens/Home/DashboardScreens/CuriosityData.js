@@ -18,7 +18,7 @@ export const CuriosityData = () => {
 
                     <Text style={{
                         fontSize: 24,
-                        fontFamily: 'Regulator-Nova',
+                        fontFamily: 'Regulator Nova Medium',
                         color: '#FFFFFF'
                     }}>You’re so curious and we {'\n'}love it! But you need to hold {'\n'}on a little longer, let’s finish {'\n'}mindfulness first, it will be {'\n'}worth it!</Text>
                 </View>

@@ -83,7 +83,7 @@ export const MindfullnessData = ({ navigation, step }) => {
                     }}>
                         <Text style={{
                             fontSize: 14,
-                            fontFamily: 'Regulator-Nova',
+                            fontFamily: 'Regulator Nova Medium',
                             color: '#575672',
                             fontWeight: 'bold'
                         }}>PROGRESS</Text>
@@ -138,7 +138,7 @@ export const MindfullnessData = ({ navigation, step }) => {
                             <Image source={require('../../../assets/images/tool.png')} style={{ height: 16, width: 27, }} />
                             <Text style={{
                                 paddingLeft: 5,
-                                fontFamily: 'Regulator-Nova',
+                                fontFamily: 'Regulator Nova Medium',
                                 color: '#E39684',
                                 fontSize: 14,
                                 fontWeight: 'bold'
@@ -192,14 +192,14 @@ export const MindfullnessData = ({ navigation, step }) => {
                         justifyContent: 'center',
                     }}>
                         <Text style={{
-                            fontFamily: 'Regulator-Nova',
+                            fontFamily: 'Regulator Nova Medium',
                             color: '#575672',
                             fontSize: 14,
                             fontWeight: 'bold'
                         }}>LIBRARY</Text>
                         <Text style={{
                             paddingLeft: 5,
-                            fontFamily: 'Regulator-Nova',
+                            fontFamily: 'Regulator Nova Medium',
                             color: '#706F93',
                             fontSize: 14,
                         }}>Read or Hear</Text>
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     },
     dailyTextStyle: {
         fontSize: 26,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#FFFFFF'
     },
     linearCircleViewStyle1: {

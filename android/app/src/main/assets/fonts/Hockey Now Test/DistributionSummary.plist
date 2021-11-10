@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hockey Now.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>0.0.32</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>750862F1C599D08D7A8929A5054455F355DEBCB1</string>
+				<key>dateExpires</key>
+				<string>22/12/2021</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>ZRDHLJT243.com.appstirr.hockeynowgame</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>ZRDHLJT243</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Hockey Now.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>76c0d631-ffad-48eb-872d-3fd27837587c</string>
+				<key>dateExpires</key>
+				<string>17/08/2022</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.appstirr.hockeynowgame</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>ZRDHLJT243</string>
+				<key>name</key>
+				<string>Thomas Miskavige</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>0.0.32</string>
+		</dict>
+	</array>
+</dict>
+</plist>

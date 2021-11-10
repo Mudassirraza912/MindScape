@@ -9,6 +9,7 @@ import { SleepHours } from './screens/SleepCount/sleepHours'
 import { PYT4 } from './screens/PYTScreens/PYT4'
 import { MorningMessage } from './screens/SleepCount/MorningMessage'
 import { SleepMsg } from './screens/SleepCount/SleepMsg'
+import { HomeWelcome } from './screens/Home/Welcome'
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <Provider store={store}>
         <MainNavigation />
       </Provider>
-      {/* <PYT4 /> */}
+      {/* <HomeWelcome /> */}
     </>
   )
 }

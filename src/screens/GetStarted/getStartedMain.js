@@ -27,7 +27,7 @@ export const GetstartedMain = ({ navigation }) => {
         </View>
         <View
           style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: '#fff', fontSize: 15, fontFamily: 'Regulator-Nova' }}>Learn About</Text>
+          <Text style={{ color: '#fff', fontSize: 15, fontFamily: 'Regulator Nova Medium' }}>Learn About</Text>
           <Text style={styles.mindScape}>MINDSCAPE</Text>
           <View style={{ marginVertical: 10 }}>
             <Button
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     fontSize: 32,
     color: '#fff',
-    fontFamily: 'Regulator-Nova'
+    fontFamily: 'Regulator Nova Medium'
   }
 })

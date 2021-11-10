@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         lineHeight: 27,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
     },
     buttonViewStyle: {
         marginTop: height * 0.01
