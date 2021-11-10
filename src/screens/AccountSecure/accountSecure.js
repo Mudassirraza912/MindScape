@@ -13,7 +13,7 @@ export const AccountSecure = ({ navigation }) => {
               color: 'rgba(255, 255, 255, 1)',
               fontSize: 24,
               textAlign: 'center',
-              fontFamily: 'Regulator-Nova'
+              fontFamily: 'Regulator Nova Medium'
             }}>
             KEEP YOUR {'\n'}ACCOUT SECURE
           </Text>
@@ -29,7 +29,7 @@ export const AccountSecure = ({ navigation }) => {
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginVertical: 15
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator-Nova' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
           />
           <Button
             onPress={() => navigation.navigate('FreeTrialSubscription')}
@@ -39,7 +39,7 @@ export const AccountSecure = ({ navigation }) => {
               width: 235,
               borderColor: 'rgba(255, 255, 255, 1)'
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator-Nova' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
           />
         </View>
       </View>

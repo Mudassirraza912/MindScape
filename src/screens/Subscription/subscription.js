@@ -38,17 +38,17 @@ export const Subscription = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <View style={styles.sectionContainer}>
-            <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
+            <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator Nova Medium' }}>
               SUBSCRIPTION
             </Text>
-            <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: 'Regulator-Nova' }}>
+            <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: 'Regulator Nova Medium' }}>
               YOUR MEMBERSHIP
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", fontFamily: 'Optima-Regular' }}>
               <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
                 Monthly
               </Text>
-              <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, fontFamily: 'Regulator-Nova' }}>
+              <Text style={{ color: '#A4A3BC90', fontSize: 16, margin: 8, fontFamily: 'Regulator Nova Medium' }}>
                 Change Plan
               </Text>
 
@@ -105,7 +105,7 @@ export const Subscription = ({ navigation }) => {
                     justifyContent: 'center',
                     alignItems: 'center'
                   }}>
-                  <Text style={{ color: '#8C8BA590', fontSize: 16, fontFamily: 'Regulator-Nova' }}>Upload</Text>
+                  <Text style={{ color: '#8C8BA590', fontSize: 16, fontFamily: 'Regulator Nova Medium' }}>Upload</Text>
                 </TouchableOpacity>
               </View>
               <View style={{ width: '50%', justifyContent: 'flex-end', }}>
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     color: '#8C8BA590',
     fontSize: 16,
-    fontFamily: 'Regulator-Nova'
+    fontFamily: 'Regulator Nova Medium'
   },
   BorderView: {
     borderBottomColor: '#9493AD90',

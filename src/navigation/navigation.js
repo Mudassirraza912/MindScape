@@ -45,6 +45,7 @@ import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 import {Dashboard1} from '../screens/Home/Dashboard1'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
+import { Dashboard1 } from '../screens/Home/Dashboard1'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()

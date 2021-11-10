@@ -12,6 +12,15 @@ export const HomeSetCountry = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <SetNameSvg
+                // width={100}
+                // width={Dimensions.get('screen').width}
+                // height={Dimensions.get('screen').height}
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+                }}
+            />
              <CountryPicker 
                     onClose={() => {
                         setvisible(false)
@@ -23,15 +32,6 @@ export const HomeSetCountry = ({ navigation }) => {
                         setCountry(country.name)
                     }}
                 />
-                   <SetNameSvg
-                width={100}
-                width={Dimensions.get('screen').width}
-                height={Dimensions.get('screen').height}
-                style={{
-                    position: 'absolute',
-                    bottom: 0,
-                }}
-            />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
                 <StatusBar hidden={true}/>
                 <Text >
@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         // backgroundColor: "#9493AD",
-        // paddingHorizontal: "15%"
-        alignItems:'center'
+        paddingHorizontal: "15%"
     },
     button:{
         backgroundColor:"#2F2F40",

@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     dailyTextStyle: {
         fontSize: 26,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#FFFFFF'
     },
     linearCircleViewStyle1: {

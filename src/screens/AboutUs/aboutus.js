@@ -43,7 +43,7 @@ export const AboutUs = ({ navigation }) => {
                 fontSize: 20,
                 textAlign: 'center',
                 padding: 50,
-                fontFamily: 'Regulator-Nova'
+                fontFamily: 'Regulator Nova Medium'
               }}>
               ThirtySevenPointFive is an ideology-driven initiative dedicated to
               providing solutions to address a large spectrum of issues

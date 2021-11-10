@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     textTitleStyle: {
         fontSize: 24,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#6B6B8D',
         paddingBottom: 5
     },

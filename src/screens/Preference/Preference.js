@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     },
     preferenceTextStyle: {
         fontSize: 24,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#8C8BA5'
     },
     rowViewStyle1: {
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     },
     dailyTextStyle: {
         fontSize: 18,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#D99888'
     },
     linearCircleViewStyle1: {
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     },
     simpleTextStyle1: {
         fontSize: 22,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#D99888'
     },
     mapMainViewStyle: {
@@ -311,7 +311,7 @@ const styles = StyleSheet.create({
     },
     timeTextStyle: {
         fontSize: 16,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#fff'
     },
     remainderTextStyle: {
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
     },
     musicStyleText: {
         fontSize: 18,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#FFFF'
     },
     lastTextStyle: {

@@ -9,8 +9,8 @@ export const HomeSetName = ({ navigation }) => {
         <View style={styles.container}>
             <SetNameSvg
                 // width={"100%"}
-                width={Dimensions.get('screen').width}
-                height={Dimensions.get('screen').height}
+                // width={Dimensions.get('screen').width}
+                // height={Dimensions.get('screen').height}
                 style={{
                     position: 'absolute',
                     bottom: 0,

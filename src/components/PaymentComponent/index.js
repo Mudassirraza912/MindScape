@@ -23,7 +23,7 @@ export default function PaymentComponent({
               alignItems: 'flex-start',
               paddingVertical: 3,
               marginTop: 15,
-              fontFamily: 'Regulator-Nova'
+              fontFamily: 'Regulator Nova Medium'
             }}>
             {title}
           </Text>
@@ -34,13 +34,13 @@ export default function PaymentComponent({
               alignItems: 'flex-end',
               marginTop: 15
             }}>
-            <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3, fontFamily: 'Regulator-Nova' }}>
+            <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3, fontFamily: 'Regulator Nova Medium' }}>
               {payment}
             </Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ flex: 1, fontSize: 16, color: '#E39684', fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ flex: 1, fontSize: 16, color: '#E39684', fontFamily: 'Regulator Nova Medium' }}>
             {description}
           </Text>
         </View>

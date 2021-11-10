@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, TextInput, Image,Platform, Dimensions, StatusBa
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import DateTimePicker from '@react-native-community/datetimepicker';
-import PersonaSVG from '../../assets/images/Step1.svg'
+import PersonaSVG from '../../assets/SVG/personaSvg';
+// import PersonaSVG from '../../assets/images/Step1.svg'
 
 export const HomeRoutine = ({ navigation }) => {
 
@@ -49,12 +50,14 @@ export const HomeRoutine = ({ navigation }) => {
     return (
         <View style={styles.container}>
                       <PersonaSVG 
-                style={{
-                    position: 'absolute',
-                    bottom: 0,
+                        // height={Dimensions.get('screen').height}
+                        // width={Dimensions.get('screen').height}
+                        style={{
+                            position: 'absolute',
+                            bottom: 0,
 
-                }}
-          />
+                        }}
+                />
             <View style={{ flex: 3, justifyContent: "center", paddingTop: "0%", }}>
                 <StatusBar hidden={true} />
                 <Text style={{ textAlign: "center", paddingBottom: 20, color: "#B6B4C5" }}>

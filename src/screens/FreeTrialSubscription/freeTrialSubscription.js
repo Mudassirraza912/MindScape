@@ -23,11 +23,11 @@ export const FreeTrialSubscription = ({ navigation }) => {
               fontSize: 24,
               paddingVertical: 5,
               marginTop: 20,
-              fontFamily: 'Regulator-Nova'
+              fontFamily: 'Regulator Nova Medium'
             }}>
             7 DAY FREE TRIAL
           </Text>
-          <Text style={{ color: '#fff', fontSize: 17, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#fff', fontSize: 17, fontFamily: 'Regulator Nova Medium' }}>
             SUBSCRIPTION OPTIONS
           </Text>
         </View>
@@ -55,7 +55,7 @@ export const FreeTrialSubscription = ({ navigation }) => {
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginTop: 25
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator-Nova' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
           />
         </View>
       </ImageBackground>

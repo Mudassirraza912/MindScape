@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     },
     dangerTextStyle: {
         fontSize: 46,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#49485F'
     },
     centerTextViewStyle: {
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     },
     buttonTextStyle: {
         fontSize: 16,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#FFF'
     },
     lastViewStytle: {

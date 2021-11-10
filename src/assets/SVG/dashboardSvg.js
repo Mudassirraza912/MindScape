@@ -12,7 +12,11 @@ import Svg, {
 
 function DashboardSvg(props) {
     return (
-        <Svg xmlns="http://www.w3.org/2000/svg" width={375} height={812} {...props}>
+        <Svg xmlns="http://www.w3.org/2000/svg" 
+          width={420}
+          height={840}
+          viewBox="0 0 399 800"
+          {...props}>
         <Defs>
           <LinearGradient
             id="prefix__b"

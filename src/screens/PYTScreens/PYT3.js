@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     footerTextStyle: {
         color: '#FFFF',
         fontSize: 18,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         textAlign: 'center'
     },
     lineStyle: {

@@ -40,7 +40,7 @@ export const HelpCenter = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: 'Regulator Nova Medium' }}>
             HELP CENTRE
           </Text>
           <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 10, fontFamily: 'Optima-Regular' }}>

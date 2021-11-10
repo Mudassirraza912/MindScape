@@ -9,12 +9,12 @@ export const HomeWelcome = ({navigation}) => {
         <View style={{flex: 1}}>
         <StatusBar hidden={true} />
             <WelcomeSvg 
-                width={Dimensions.get('window').width}
-                height={Dimensions.get('window').height}
+                // width={Dimensions.get('window').width + 100}
+                // height={Dimensions.get('window').height}
                 style={{
                     position: 'absolute',
                     bottom: 0,
-
+                    // left: 0
                 }}
           />
 

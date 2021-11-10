@@ -7,15 +7,17 @@ import Svg, {
   Path,
   G,
 } from "react-native-svg"
+import { Dimensions } from 'react-native'
 /* SVGR has dropped some elements not supported by react-native-svg: filter */
-
+const {height, width} = Dimensions.get('screen')
 function WelcomeSvg(props) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={375}
-      height={812}
+      width={420}
+      height={840}
+      viewBox="0 0 399 800"
       {...props}
     >
       <Defs>

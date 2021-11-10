@@ -53,6 +53,11 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+    <string>Optima-Bold.ttf</string>
+    <string>Optima-Medium.ttf</string>
+    <string>Optima-Regular.ttf</string>
+    <string>Regulator-Nova.otf</string>
+    <string>Regulator Nova Medium.otf</string>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>

@@ -83,7 +83,7 @@ const index = ({
                                             // marginTop: 10
                                         }}
                                     >
-                                        <Text style={{ fontSize: activeTab == i ? 12 : 10, fontFamily: 'Regulator-Nova', color: '#FFFFFF' }}>{item.title}</Text>
+                                        <Text style={{ fontSize: activeTab == i ? 12 : 10, fontFamily: 'Regulator Nova Medium', color: '#FFFFFF' }}>{item.title}</Text>
 
 
                                     </LinearGradient>

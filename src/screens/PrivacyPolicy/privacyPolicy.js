@@ -22,11 +22,11 @@ export const PrivacyPolicy = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, fontFamily: 'Regulator-Nova' }}>PRIVACY POLICY</Text>
-          <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, fontFamily: 'Regulator Nova Medium' }}>PRIVACY POLICY</Text>
+          <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: 'Regulator Nova Medium' }}>
             Last Update: June 11, 2021
           </Text>
-          <Text style={{ color: '#fff', fontSize: 14, marginTop: 20, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#fff', fontSize: 14, marginTop: 20, fontFamily: 'Regulator Nova Medium' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
             metus vitae nunc suscipit fermentum in id nisl. Vestibulum ac risus
             quis justo volutpat auctor ut aliquet libero. Donec enim tortor,
@@ -38,7 +38,7 @@ export const PrivacyPolicy = ({ navigation }) => {
           <Text style={{ color: '#E39684', fontSize: 18, marginTop: 20, fontFamily: 'Optima-Regular' }}>
             What information we collect {'\n'}and maintain about you
           </Text>
-          <Text style={{ color: '#fff', fontSize: 14, fontFamily: 'Regulator-Nova' }}>
+          <Text style={{ color: '#fff', fontSize: 14, fontFamily: 'Regulator Nova Medium' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
             metus vitae nunc suscipit fermentum in id nisl. Vestibulum ac risus
             quis justo volutpat auctor ut aliquet libero. Donec enim tortor,
