@@ -65,7 +65,6 @@ export const ProgressSteps = ({
             </View>
             <View style={{ flex: 8 }}>
                 {data.map((value, index) => {
-                    console.log("(index+1 == currentPosition)", (index + 1 == currentPosition), (index + 1 < currentPosition))
                     return (
                         <TouchableOpacity
                             activeOpacity={0.8}

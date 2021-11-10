@@ -48,7 +48,7 @@ export const PYT4 = () => {
                             <TouchableOpacity
                                 style={styles.Button}
                                 activeOpacity={0.8}>
-                                <Text style={{ color: '#A3A2BA', fontSize: 16 }}>Yes</Text>
+                                <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>Yes</Text>
                             </TouchableOpacity>
 
                         </View>
@@ -71,7 +71,7 @@ export const PYT4 = () => {
                             <TouchableOpacity
                                 style={styles.Button}
                                 activeOpacity={0.8}>
-                                <Text style={{ color: '#A3A2BA', fontSize: 16 }}>No</Text>
+                                <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>No</Text>
                             </TouchableOpacity>
 
                         </View>
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     discliamerTextStyle: {
         color: '#6B6B8D',
         fontSize: 22,
-        fontFamily: 'OPTIMA',
+        fontFamily: 'Optima-Regular',
         textAlign: 'center'
     },
     centerTextViewStyle: {
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         lineHeight: 27,
-        // fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator-Nova',
     },
     buttonViewStyle: {
         marginTop: height * 0.01

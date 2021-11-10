@@ -27,7 +27,7 @@ export const GetstartedMain = ({ navigation }) => {
         </View>
         <View
           style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: '#fff', fontSize: 15 }}>Learn About</Text>
+          <Text style={{ color: '#fff', fontSize: 15, fontFamily: 'Regulator-Nova' }}>Learn About</Text>
           <Text style={styles.mindScape}>MINDSCAPE</Text>
           <View style={{ marginVertical: 10 }}>
             <Button
@@ -35,7 +35,7 @@ export const GetstartedMain = ({ navigation }) => {
               onPress={() => navigation.navigate('WalkThrough')}
               // onPress={() => navigation.navigate('EmailVerification')}
               title={'Get Started'}
-              textStyle={{ color: '#7f83a0' }}
+              textStyle={{ color: '#7f83a0', fontFamily: 'Optima-Regular' }}
             />
           </View>
         </View>
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   mindScape: {
     paddingBottom: 10,
     fontSize: 32,
-    color: '#fff'
+    color: '#fff',
+    fontFamily: 'Regulator-Nova'
   }
 })

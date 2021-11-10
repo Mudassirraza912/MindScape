@@ -34,6 +34,7 @@ import { MainAcount } from '../screens/MainAcount/MainAcount'
 import { Profile } from '../screens/Profile/Profile'
 import { Setting } from '../screens/Setting/setting'
 import { Emergency } from '../screens/Emergency/emergency'
+import { Emergency2 } from '../screens/Emergency/Emergency2'
 import { HelpCenter } from '../screens/HelpCenter/helpcenter'
 import { AboutUs } from '../screens/AboutUs/aboutus'
 import { TermsCondition } from '../screens/TermsCondition/termsAndCondition'
@@ -42,6 +43,9 @@ import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 import {Dashboard1} from '../screens/Home/Dashboard1'
+import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
+import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
+
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
 const AppStack = createStackNavigator()
@@ -62,7 +66,7 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="AccountSecure" component={AccountSecure} />
       <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
       <AuthStack.Screen name="Account" component={Account} />
-      <AuthStack.Screen name="FreeTrialSubscription" component={FreeTrialSubscription} />
+      <AuthStack.Screen name="FreeTrialSubscription" component={AppStackNavigator} />
       <AuthStack.Screen name="EmailVerification" component={EmailVerification} />
 
     </AuthStack.Navigator>
@@ -90,8 +94,8 @@ function MainDrawer() {
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
       {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
-
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency" component={Emergency} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Emergency2" component={Emergency2} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="HelpCenter" component={HelpCenter} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Subscription" component={Subscription} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="AboutUs" component={AboutUs} />
@@ -108,7 +112,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Subscription">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -125,28 +129,30 @@ function AppStackNavigator() {
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
+      <AppStack.Screen name="Loading1" component={Loading1} />
+      <AppStack.Screen name="ArticleScreen" component={ArticleScreen} />
     </AppStack.Navigator>
   )
 }
 
 
 const MainNavigation = () => {
-  const isLoggedin = false
+  const isLoggedin = true
   return (
     <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {isLoggedin ?
+        {/* {isLoggedin ? */}
           <Stack.Screen
             name="Login"
             options={{ headerShown: false }}
             component={AuthStackNavigator}
           />
-          :
+          {/* : */}
           <Stack.Screen
             name="AppStack"
             options={{ headerShown: false }}
             component={AppStackNavigator}
-          />}
+          />
         {/* add your another screen here using -> Stack.Screen */}
       </Stack.Navigator>
     </NavigationContainer>

@@ -16,19 +16,21 @@ export const OtpVerification = ({ navigation }) => {
       <KeyboardAvoidingView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center' }}>
+          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: 'Regulator-Nova' }}>
             Enter 4 digit code {'\n'}to authenticate
           </Text>
-          <Text style={{ color: '#000', fontSize: 16, textAlign: 'center' }}>
+          <Text style={{ color: '#000', fontSize: 16, textAlign: 'center', fontFamily: 'Optima-Regular' }}>
             Check your email
           </Text>
         </View>
-        <View style={{ flex: 1,justifyContent: 'center',
-    alignItems: 'center' }}>
+        <View style={{
+          flex: 1, justifyContent: 'center',
+          alignItems: 'center'
+        }}>
           <OTPInputView
             style={{ margin: 90 }}
             pinCount={4}
-            autoFocusOnLoad
+            autoFocusOnLoad={true}
             keyboardAppearance={'dark'}
             keyboardType={'number-pad'}
             placeholderCharacter={'0'}
@@ -48,7 +50,7 @@ export const OtpVerification = ({ navigation }) => {
             // onPress={() => navigation.navigate('AccountSecure')}
             title="Resend"
             buttonStyle={{ width: 85, height: 25, borderColor: '#fff' }}
-            textStyle={{ fontSize: 16, color: '#fff' }}
+            textStyle={{ fontSize: 16, color: '#fff', fontFamily: 'Optima-Regular' }}
           />
         </View>
       </KeyboardAvoidingView>

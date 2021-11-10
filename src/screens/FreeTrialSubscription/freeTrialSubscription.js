@@ -15,18 +15,19 @@ export const FreeTrialSubscription = ({ navigation }) => {
       <ImageBackground
         style={{ height: '100%', width: '100%' }}
         source={require('../../assets/images/FTSImg.png')}>
-        <StatusBar  backgroundColor={'transparent'} translucent={true}/>
+        <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.TextView}>
           <Text
             style={{
               color: '#fff',
               fontSize: 24,
               paddingVertical: 5,
-              marginTop: 20
+              marginTop: 20,
+              fontFamily: 'Regulator-Nova'
             }}>
             7 DAY FREE TRIAL
           </Text>
-          <Text style={{ color: '#fff', fontSize: 17 }}>
+          <Text style={{ color: '#fff', fontSize: 17, fontFamily: 'Regulator-Nova' }}>
             SUBSCRIPTION OPTIONS
           </Text>
         </View>
@@ -54,7 +55,7 @@ export const FreeTrialSubscription = ({ navigation }) => {
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginTop: 25
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator-Nova' }}
           />
         </View>
       </ImageBackground>

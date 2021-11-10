@@ -27,21 +27,25 @@ const index = ({
     return (
         <>
             <LinearGradient
-                colors={activeTab == 0 ? ['#B1B1C7', '#B1B1C7'] : ['#1A68A6', '#1A68A6']}
+                colors={activeTab == 0 ? ['#B1B1C7', '#B1B1C7'] : ['#1A68A6', '#1A68A6']}>
 
-                style={styles.topViewStyle}
-
-            >
                 <View
                     style={styles.rowViewStyle}>
-                    <View style={{ marginTop: height * 0.045 }} >
+                    <View style={{ top: height * 0.01 }} >
                         <Image source={require('../../assets/images/women.png')} style={{
-                            width: 100,
-                            height: 100,
+                            width: 80,
+                            height: 80,
+
 
                         }} />
                     </View>
-                    <Text style={{ paddingBottom: height * 0.015, fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
+                    <View style={{
+                        marginTop: 50
+
+                    }}>
+                        <Text style={{ fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
+                    </View>
+
 
                 </View>
             </LinearGradient>
@@ -75,7 +79,7 @@ const index = ({
 
                                             alignItems: 'center',
                                             justifyContent: 'center',
-                                            height: activeTab == i ? 60 : 50
+                                            height: activeTab == i ? 60 : 40
                                             // marginTop: 10
                                         }}
                                     >
@@ -102,7 +106,7 @@ export default index
 
 const styles = StyleSheet.create({
     topViewStyle: {
-        height: height * 0.16,
+        // height: height * 0.15,
         // backgroundColor: '#B3B3C9'
     },
     rowViewStyle: {
@@ -110,7 +114,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '85%',
         alignSelf: 'center',
-        alignItems: 'flex-end'
+
+        marginTop: height * 0.04
     },
     nameTextStyle: {
         paddingBottom: 10, fontSize: 16, color: '#706F93'

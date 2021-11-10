@@ -8,8 +8,10 @@ function DoubleButton({
   title2 = 'No',
   onPress1 = () => {},
   onPress2 = () => {},
-  textStyle = {},
-  buttonStyle = {}
+  textStyle1 = {},
+  textStyle2 = {},
+  buttonStyle1 = {},  
+  buttonStyle2 = {}
 }) {
   return (
     <>
@@ -19,8 +21,8 @@ function DoubleButton({
             colors={['#fff', '#EDE7E4']}
             start={{ x: 1, y: 0 }}
             end={{ x: 1, y: 1 }}
-            style={[styles.button1, buttonStyle]}>
-            <Text style={[styles.text, textStyle]}>{title1}</Text>
+            style={[styles.button1, buttonStyle1]}>
+            <Text style={[styles.text, textStyle1]}>{title1}</Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>
@@ -31,8 +33,8 @@ function DoubleButton({
             colors={['#fff', '#EDE7E4']}
             start={{ x: 1, y: 0 }}
             end={{ x: 1, y: 1 }}
-            style={[styles.button2, buttonStyle]}>
-            <Text style={[styles.text, textStyle]}>{title2}</Text>
+            style={[styles.button2, buttonStyle2]}>
+            <Text style={[styles.text, textStyle2]}>{title2}</Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>

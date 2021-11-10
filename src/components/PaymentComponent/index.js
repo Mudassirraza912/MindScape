@@ -5,7 +5,7 @@ export default function PaymentComponent({
   title = 'title',
   payment = 'AED payment',
   description = 'description',
-  onPress = () => {},
+  onPress = () => { },
   textStyle = {}
 }) {
   return (
@@ -22,7 +22,8 @@ export default function PaymentComponent({
               color: '#fff',
               alignItems: 'flex-start',
               paddingVertical: 3,
-              marginTop: 15
+              marginTop: 15,
+              fontFamily: 'Regulator-Nova'
             }}>
             {title}
           </Text>
@@ -33,13 +34,13 @@ export default function PaymentComponent({
               alignItems: 'flex-end',
               marginTop: 15
             }}>
-            <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3 }}>
+            <Text style={{ fontSize: 20, color: '#fff', paddingVertical: 3, fontFamily: 'Regulator-Nova' }}>
               {payment}
             </Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ flex: 1, fontSize: 16, color: '#E39684' }}>
+          <Text style={{ flex: 1, fontSize: 16, color: '#E39684', fontFamily: 'Regulator-Nova' }}>
             {description}
           </Text>
         </View>

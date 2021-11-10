@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { View, Text, StyleSheet, ImageBackground, Dimensions, Image, StatusBar, FlatList, ScrollView, Touchable } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import CircleButton from '../../components/circleButton/index'
@@ -39,7 +39,18 @@ export const Dashboard1 = ({ navigation }) => {
     const [tick3, setTick3] = useState()
     const [drink, setDrink] = useState()
     const [modalVisible, setModalVisible] = useState(false);
+    const [changeImage, setChangeImage] = useState ()
     console.log(modalVisible)
+    useEffect(() => {
+        setTimeout(() => {
+            require('../../assets/images/logo01.png')
+        }, 2000);
+      }, []);
+
+      const doubleCall = () => {
+        setChangeImage(!changeImage);
+        require('../../assets/images/logo01.png')
+    }
     return (
         <LinearGradient style={styles.container} colors={['#707091', '#A1A0B9']}>
             <StatusBar hidden={true} />
@@ -160,6 +171,7 @@ export const Dashboard1 = ({ navigation }) => {
                             </TouchableOpacity>
                             <TouchableOpacity
                                 activeOpacity={0.9}
+                                onPress={() => doubleCall()}
                             >
                                 <Image source={require('../../assets/images/exclaim.png')} />
                             </TouchableOpacity>
@@ -212,9 +224,9 @@ export const Dashboard1 = ({ navigation }) => {
             </ImageBackground>
             {/* </ImageBackground> */}
             <Modal
-                // style={{ backgroundColor:"#70709280",}}
                 animationIn="zoomIn"
                 animationOut="zoomOut"
+                backdropColor="#717192"
                 animationInTiming={600}
                 animationOutTiming={600}
                 transparent={true}
@@ -224,9 +236,9 @@ export const Dashboard1 = ({ navigation }) => {
             >
                 <View style={styles.modalView}>
                     <TouchableOpacity
-                        style={{ alignSelf: "flex-end" }}
+                        style={{ alignSelf: "flex-end",marginRight:10 }}
                         activeOpacity={0.9}
-                        onPress={() => setModalVisible(false)}
+                        onPress={() => setModalVisible(!modalVisible)}
                     >
                         <Image source={require('../../assets/images/cancel.png')} />
                     </TouchableOpacity>
