@@ -1,8 +1,9 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Image, Dimensions, StatusBar } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Image, Dimensions, StatusBar,Platform } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import WarningSvg from '../../assets/SVG/warningSvg'
+import { fonts } from '../../utils/fonts'
 
 const { width, height } = Dimensions.get('screen')
 export const HomeWarning = ({ navigation }) => {
@@ -19,17 +20,17 @@ export const HomeWarning = ({ navigation }) => {
           />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%" }}>
                 <StatusBar hidden={true} />
-                <Text style={{fontSize:24,color:"#A6A4B9",fontFamily:'Regulator Nova'}}>
+                <Text style={{fontSize:24,color:"#A6A4B9",fontFamily:fonts.regulatorLight}}>
                     As they say 'Rome wasn't build in a day
                 </Text>
-                <Text style={{color:"#49485F"}}>This evolution entirely depends on your commmitment.We sutable incremental changes
+                <Text style={{color:"#49485F",fontFamily:fonts.OptimaRegular,paddingVertical:8}}>This evolution entirely depends on your commmitment.We sutable incremental changes
                     to your lifestyle to help you discover the best version of yourlife.
                 </Text>
             </View>
             <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeRoutine')}
-                    backgroundColor="transparent"
+                    backgroundColor= {Platform.OS === 'ios' ? "#A4A3BC": "transparent"}
                 />
             </View>
         </View>

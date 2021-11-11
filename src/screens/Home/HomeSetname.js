@@ -1,9 +1,10 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput,Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TextInput,Dimensions, Platform } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 // import PersonaSVG from '../../assets/images/Name.svg'
 import SetNameSvg from '../../assets/SVG/setNameSVG'
+import { fonts } from '../../utils/fonts'
 export const HomeSetName = ({ navigation }) => {
     return (
         <View style={styles.container}>
@@ -21,21 +22,21 @@ export const HomeSetName = ({ navigation }) => {
                 }}
             />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20, overflow: 'hidden' }}>
-                <Text >
+                <Text style={{fontFamily: fonts.OptimaRegular}}>
                     So Daniel,
                 </Text>
-                <Text>What do your friend call you?</Text>
+                <Text style={{fontFamily: fonts.OptimaRegular}}>What do your friend call you?</Text>
                 <TextInput
                     placeholder="Nick Name"
                     placeholderTextColor="#9493AD"
                     style={styles.field}
                 ></TextInput>
-                <Text numberOfLines={1} ellipsizeMode="clip" style={{color: "#9493AD", top: -15}}>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
+                <Text numberOfLines={1} ellipsizeMode="clip" style={{color: "#9493AD", top: -15, paddingVertical: Platform.OS == "ios" ? 10 : 0}}>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</Text>
             </View>
             <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeSetCountry')}
-                    backgroundColor="transparent"
+                    backgroundColor="#A4A3BC"
                 />
             </View>
         </View>
@@ -56,6 +57,7 @@ const styles = StyleSheet.create({
         borderRadius: 1,
         borderBottomColor: "#000",
         // borderStyle:"dashed",
-        fontSize: 22
+        fontSize: 22,
+        fontFamily: fonts.regulatorLight
     }
 })

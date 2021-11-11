@@ -45,7 +45,7 @@ import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 import {Dashboard1} from '../screens/Home/Dashboard1'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
-import { Dashboard1 } from '../screens/Home/Dashboard1'
+// import { Dashboard1 } from '../screens/Home/Dashboard1'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -91,7 +91,7 @@ function MainDrawer() {
       initialRouteName="Home"
       overlayColor="transparent"
       drawerType="front">
-      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard" component={Dashboard1} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="c" component={Dashboard} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Preference" component={Preference} />
       {/* <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Setting" component={Setting} /> */}
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="MainAcount" component={MainAcount} />
@@ -130,6 +130,7 @@ function AppStackNavigator() {
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
       <AppStack.Screen name="Dashboard" component={MainDrawer} />
+      <AppStack.Screen name="Dashboard1" component={Dashboard1} />
       <AppStack.Screen name="Loading1" component={Loading1} />
       <AppStack.Screen name="ArticleScreen" component={ArticleScreen} />
     </AppStack.Navigator>

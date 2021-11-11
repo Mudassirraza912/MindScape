@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
         right: 0
     },
     activeIndicatorStyle : {
-        height: 12,
-        width: 12,
+        height: 8,
+        width: 8,
         borderRadius: 100,
         backgroundColor: "#FFF",
         margin: 10

@@ -26,7 +26,7 @@ export const Subscription = ({ navigation }) => {
 
   return (
     <>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
+      <ScrollView bounces={false} contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
         <SafeAreaView style={styles.mainContainer}>
           <StatusBar backgroundColor={'transparent'} translucent={true} />
           <View style={styles.topCutButton}>

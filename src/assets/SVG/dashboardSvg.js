@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Platform } from "react-native"
 import Svg, {
   Defs,
   LinearGradient,
@@ -13,9 +14,10 @@ import Svg, {
 function DashboardSvg(props) {
     return (
         <Svg xmlns="http://www.w3.org/2000/svg" 
-          width={420}
-          height={840}
-          viewBox="0 0 399 800"
+          width={Platform.OS == "ios" ? 545 : 420}
+          height={Platform.OS == "ios" ? 900 : 840}
+          viewBox={Platform.OS == "ios" ? "70 0 210 690" : "0 0 399 800"}
+          {...props}
           {...props}>
         <Defs>
           <LinearGradient

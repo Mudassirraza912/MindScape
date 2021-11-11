@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     bodyContainerStyle : {flex: 1, alignItems: 'center', marginTop: "40%"},
     textStyle: {
         color: "#fff",
-        fontFamily: "Regulator-Nova",
+        fontFamily: "Regulator Nova Medium",
         fontSize: 18
     }
 })

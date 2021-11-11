@@ -13,9 +13,9 @@ function WarningSvg(props) {
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
-          width={420}
-          height={840}
-          viewBox="0 0 399 800"
+          width={695}
+          height={890}
+          viewBox="70 0 310 690"
           {...props}
         >
           <Defs>

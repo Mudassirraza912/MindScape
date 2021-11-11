@@ -95,6 +95,7 @@ export const MindfullnessData = ({ navigation, step }) => {
                         // height: height * 0.2
                     }}>
                         <ProgressSteps
+                        onPress={()=>navigation.navigate('Dashboard1')}
                             data={[{ key: "01", title: "Get Started", week: "71%" }, { key: "07", title: "Connect", week: "" }, { key: "14", title: "Manage", week: "Milestone Activity 1" }, { key: "21", title: "Discover", week: "Milestone Activity 2" }, { key: "28", title: "Practice", week: "" }, { key: "35", title: "Become", week: "Milestone Activity 3" }]}
                             isIndexShow
                             nonActiveTextColor="#8C8BA5"

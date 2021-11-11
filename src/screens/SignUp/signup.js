@@ -2,16 +2,21 @@ import React from 'react'
 import { View, Text, StyleSheet, TextInput } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
-
+import LinearGradient from 'react-native-linear-gradient';
+import { fonts } from '../../utils/fonts';
 export const SignUp = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        // <View style={styles.container}>
+        <LinearGradient
+            colors={['#E5E4F7', '#9493AD', '#9493AD', '#9493AD','#9493AD', ]}
+            start={{ x: 1, y: 0 }} end={{ x: 1, y: 1}}
+            style={styles.container}>
             <View style={{ flex: 0, justifyContent: "center", alignItems: "center" }}>
                 <Text style={styles.helloText}>
                     Hello!
                 </Text>
                 <TouchableOpacity  >
-                    <Text style={{ paddingBottom: 6, fontFamily: 'Optima-Regular' }}>
+                    <Text style={{ paddingBottom: 6, fontFamily: fonts.OptimaRegular}}>
                         Top to type
                     </Text>
                 </TouchableOpacity>
@@ -43,7 +48,7 @@ export const SignUp = ({ navigation }) => {
                     backgroundColor="#9493AD"
                 />
             </View>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -65,7 +70,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         borderBottomColor: "#CCCBD8",
         fontSize: 22,
-        fontFamily: 'Regulator Nova Medium'
-
+        fontFamily: fonts.regulatorLight,
+        paddingVertical: 10
     }
 })

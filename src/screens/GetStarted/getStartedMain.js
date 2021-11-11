@@ -8,6 +8,7 @@ import {
   ImageBackground
 } from 'react-native'
 import Button from '../../components/button'
+import { fonts } from '../../utils/fonts'
 
 export const GetstartedMain = ({ navigation }) => {
   return (
@@ -27,7 +28,7 @@ export const GetstartedMain = ({ navigation }) => {
         </View>
         <View
           style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: '#fff', fontSize: 15, fontFamily: 'Regulator Nova Medium' }}>Learn About</Text>
+          <Text style={{ color: '#fff', fontSize: 15, fontFamily: fonts.regulatorLight }}>Learn About</Text>
           <Text style={styles.mindScape}>MINDSCAPE</Text>
           <View style={{ marginVertical: 10 }}>
             <Button
@@ -35,7 +36,7 @@ export const GetstartedMain = ({ navigation }) => {
               onPress={() => navigation.navigate('WalkThrough')}
               // onPress={() => navigation.navigate('EmailVerification')}
               title={'Get Started'}
-              textStyle={{ color: '#7f83a0', fontFamily: 'Optima-Regular' }}
+              textStyle={{ color: '#7f83a0', fontFamily: fonts.OptimaRegular }}
             />
           </View>
         </View>

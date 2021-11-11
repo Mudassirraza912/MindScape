@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     centerTextStyle: {
         fontSize: 24,
-        fontFamily: 'Regulator-Nova',
+        fontFamily: 'Regulator Nova Medium',
         color: '#F7F7F7',
         paddingRight: 5
     },

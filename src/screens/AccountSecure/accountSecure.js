@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import Button from '../../components/button/index'
+import { fonts } from '../../utils/fonts'
 
 export const AccountSecure = ({ navigation }) => {
   return (
@@ -13,7 +14,7 @@ export const AccountSecure = ({ navigation }) => {
               color: 'rgba(255, 255, 255, 1)',
               fontSize: 24,
               textAlign: 'center',
-              fontFamily: 'Regulator Nova Medium'
+              fontFamily: fonts.regulatorLight
             }}>
             KEEP YOUR {'\n'}ACCOUT SECURE
           </Text>
@@ -29,7 +30,7 @@ export const AccountSecure = ({ navigation }) => {
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginVertical: 15
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: fonts.regulatorDemiBold }}
           />
           <Button
             onPress={() => navigation.navigate('FreeTrialSubscription')}
@@ -39,7 +40,7 @@ export const AccountSecure = ({ navigation }) => {
               width: 235,
               borderColor: 'rgba(255, 255, 255, 1)'
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: fonts.regulatorDemiBold }}
           />
         </View>
       </View>

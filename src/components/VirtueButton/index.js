@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Image,StyleSheet } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Neomorph } from 'react-native-neomorph-shadows';
+import { fonts } from '../../utils/fonts';
 
 export default function VirtueButton ({
     onPress,
@@ -40,6 +41,8 @@ export default function VirtueButton ({
 
 const styles = StyleSheet.create ({
     text:{
-        color:"#A3A2BA"
+        color:"#A3A2BA",
+        fontSize:16,
+        fontFamily:fonts.regulatorMedium
     }
 })

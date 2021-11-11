@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     bodyContainerStyle: { flex: 1, alignItems: 'center', justifyContent: 'center' },
     textStyle: {
         color: "#fff",
-        fontFamily: "Regulator-Nova",
+        fontFamily: "Regulator Nova Medium",
         fontSize: 18,
         textAlign:'center'
     },

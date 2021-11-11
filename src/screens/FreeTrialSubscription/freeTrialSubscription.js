@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import Button from '../../components/button/index'
 import PaymentComponent from '../../components/PaymentComponent/index'
+import { fonts } from '../../utils/fonts'
 
 export const FreeTrialSubscription = ({ navigation }) => {
   return (
@@ -15,7 +16,7 @@ export const FreeTrialSubscription = ({ navigation }) => {
       <ImageBackground
         style={{ height: '100%', width: '100%' }}
         source={require('../../assets/images/FTSImg.png')}>
-        <StatusBar backgroundColor={'transparent'} translucent={true} />
+        <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'light-content'} />
         <View style={styles.TextView}>
           <Text
             style={{
@@ -23,11 +24,11 @@ export const FreeTrialSubscription = ({ navigation }) => {
               fontSize: 24,
               paddingVertical: 5,
               marginTop: 20,
-              fontFamily: 'Regulator Nova Medium'
+              fontFamily: fonts.regulatorLight
             }}>
             7 DAY FREE TRIAL
           </Text>
-          <Text style={{ color: '#fff', fontSize: 17, fontFamily: 'Regulator Nova Medium' }}>
+          <Text style={{ color: '#fff', fontSize: 17, fontFamily: fonts.regulatorDemiBold }}>
             SUBSCRIPTION OPTIONS
           </Text>
         </View>
@@ -55,7 +56,7 @@ export const FreeTrialSubscription = ({ navigation }) => {
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginTop: 25
             }}
-            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: 'Regulator Nova Medium' }}
+            textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: fonts.regulatorDemiBold }}
           />
         </View>
       </ImageBackground>

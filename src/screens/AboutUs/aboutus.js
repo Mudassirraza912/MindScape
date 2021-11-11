@@ -14,9 +14,9 @@ import Icon from 'react-native-vector-icons/EvilIcons'
 
 export const AboutUs = ({ navigation }) => {
   return (
-    <>
-      <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false}>
-        <SafeAreaView style={styles.mainContainer}>
+    <> 
+      <ScrollView bounces={false} contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false}>
+        <View style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'light-content'}/>
         <ImageBackground
           style={{ height: 450, width: '100%' }}
@@ -63,7 +63,7 @@ export const AboutUs = ({ navigation }) => {
             </Text>
           </View>
         </View>
-        </SafeAreaView>
+        </View>
       </ScrollView>
     </>
   )
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   topCutButton:{
     alignItems: 'flex-end',
     marginTop: 40,
-    paddingRight: 20
+    paddingRight: 20,
   },
   logoStyle: {
     position: 'absolute',

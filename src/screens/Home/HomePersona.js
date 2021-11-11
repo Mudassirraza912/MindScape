@@ -4,6 +4,7 @@ import PersonaSVG from '../../assets/SVG/personaSvg';
 // import PersonaSVG from '../../assets/images/Step1.svg'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import { imagePicker } from '../../helper/utils';
+import { fonts } from '../../utils/fonts';
 const { width, height } = Dimensions.get('screen')
 // import Svg, {
 //     Use,
@@ -35,21 +36,21 @@ export const HomePersona = ({ navigation }) => {
         <View style={{flex: 1,paddingHorizontal:"12%"}}>
         <StatusBar hidden={true} />
             <View style={{ flex: 3, justifyContent: "center" }}>
-                <Text style={{color:"#A3A2BA",textAlign:"center"}}>
+                <Text style={{color:"#A3A2BA",textAlign:"center",fontSize:16,fontFamily:fonts.OptimaRegular}}>
                     PERSONA
                 </Text>
-                <Text style={{fontSize:22,color:"#BEBBC9",paddingVertical:10,paddingLeft:10}}>Upload your picture to help us customize your Mindscape</Text>
+                <Text style={{fontSize:24,color:"#BEBBC9",paddingVertical:10,paddingLeft:10,fontFamily:fonts.regulatorLight}}>Upload your picture to help us customize your Mindscape</Text>
                 <View style={styles.circle}>
             <Image style={styles.img}  source= {require('../../assets/images/group243.png')}/>
             <View style={{flex:0,alignItems:"center",position:"absolute",top:"95%",left:"36%"}}>
             <TouchableOpacity 
             onPress={()=> imageSelector()}
             style={styles.btn}>
-                <Text style={{textAlign:"center",fontSize:12,color:"#6E6E84"}}>Upload</Text>
+                <Text style={{textAlign:"center",fontSize:16,color:"#6E6E84",fontFamily:fonts.regulatorLight}}>Upload</Text>
             </TouchableOpacity>
             </View>
             </View>
-            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:20}}>It take up to 24hrs to {'\n'} update your parsona</Text>
+            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:20,fontFamily:fonts.OptimaRegular}}>It take up to 24hrs to {'\n'} update your parsona</Text>
             </View>
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
@@ -82,9 +83,9 @@ const styles = StyleSheet.create({
     },
     circle:{
         borderWidth:1,
-        borderRadius:140,
+        borderRadius:180,
         borderColor:"#A09EB4",
-        width:"80%",
+        width:"85%",
         height:"40%",
         marginTop:10,
         flex:0,
@@ -95,8 +96,9 @@ const styles = StyleSheet.create({
     btn:{
         backgroundColor:"#2F2F40",
         width:70,
-        paddingVertical:5,
-        borderRadius:30
+        paddingVertical:6,
+        borderRadius:30,
+        paddingHorizontal:2
     },
     img:{
         width:"90%",

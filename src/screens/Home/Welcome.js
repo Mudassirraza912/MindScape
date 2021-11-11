@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, Dimensions, StyleSheet, StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import WelcomeSvg from '../../assets/SVG/WelcomeSvg'
+import { fonts } from '../../utils/fonts'
 // import WelcomeSvg from '../../assets/images/Welcome.svg'
 const {width, height} = Dimensions.get('screen')
 export const HomeWelcome = ({navigation}) => {
@@ -9,7 +10,7 @@ export const HomeWelcome = ({navigation}) => {
         <View style={{flex: 1}}>
         <StatusBar hidden={true} />
             <WelcomeSvg 
-                // width={Dimensions.get('window').width + 100}
+                // width={Dimensions.get('window').width}
                 // height={Dimensions.get('window').height}
                 style={{
                     position: 'absolute',
@@ -43,14 +44,17 @@ const styles = StyleSheet.create({
     },
     text1: {
         color: "#fff",
-        fontSize: 18
+        fontSize: 18,
+        fontFamily: fonts.regulatorLight
     },
     text2: {
         color: "#fff",
-        fontSize: 24
+        fontSize: 24,
+        fontFamily: fonts.regulatorLight
     },
     text3: {
         color: "#fff",
-        fontSize: 16
+        fontSize: 16,
+        fontFamily: fonts.regulatorLight
     }
 })

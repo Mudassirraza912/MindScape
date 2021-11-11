@@ -17,7 +17,7 @@ const App = () => {
       <Provider store={store}>
         <MainNavigation />
       </Provider>
-      {/* <HomeWelcome /> */}
+      {/* <MorningMessage /> */}
     </>
   )
 }

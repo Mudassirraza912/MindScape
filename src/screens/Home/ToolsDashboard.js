@@ -3,6 +3,7 @@ import { View, Text,StyleSheet,Image,StatusBar } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import ToolSvg from '../../assets/SVG/toolSvg'
 import NewmorphButton from '../../components/NewmorphButton/index'
+import { fonts } from '../../utils/fonts'
 export const ToolsDashboard = ({navigation}) => {
     return (
         <View style={styles.container}>
@@ -18,13 +19,15 @@ export const ToolsDashboard = ({navigation}) => {
             <Text style={{color:"#A3A2BA",paddingBottom:20}}>
                 TOOLS
             </Text>
-            <Text style={{color:"#A3A2BA",paddingBottom:15,fontSize:20}}>Virtues are equipped with {'\n'} a set of tools.</Text>
-            <Text style={{paddingBottom:10,color:"#E39684",paddingLeft:17,fontSize:18}}>These tools are designed and destined to become your life long compassion.</Text>
+            <Text style={{color:"#A3A2BA",paddingBottom:15,fontSize:24,fontFamily:fonts.regulatorLight,paddingLeft:14}}>Virtues are equipped with {'\n'} a set of tools.</Text>
+            <Text style={{paddingBottom:10,color:"#E39684",paddingLeft:15,fontSize:16,fontFamily:fonts.OptimaRegular}}>These tools are designed and destined to become your life long compassion.</Text>
+            <View style={{paddingTop:30,alignItems:"center"}}>
             <Image style={{marginTop:8,marginLeft:3}} source={require('../../assets/images/Group276.png')}/>
             <Text style={styles.toolbox}>Toolbox</Text>
-            <Text style={{paddingVertical:20,color:"#E39684"}}>DASHBOARD</Text>
+            <Text style={{paddingVertical:30,color:"#E39684",fontSize:16,fontFamily:fonts.OptimaRegular}}>DASHBOARD</Text>
             </View>
-            <View style={{flex:1}}>
+            </View>
+            <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
             <NewmorphButton
                     onPress={() => navigation.navigate('HomePersona')}
                     // backgroundColor="#9493AD"
@@ -40,12 +43,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         backgroundColor: "#9493AD",
-        paddingHorizontal: "15%"
+        paddingHorizontal: 20
     },
     toolbox:{
         position:"absolute",
         zIndex:30,
-        top:"65%",
-        color:"#fff"
+        top:"55%",
+        color:"#fff",
+        fontFamily:fonts.OptimaRegular,
+        fontSize:18
     }
 })

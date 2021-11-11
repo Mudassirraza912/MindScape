@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import Button from '../../components/button/index'
 import OTPInputView from '@twotalltotems/react-native-otp-input'
+import { fonts } from '../../utils/fonts'
 
 export const OtpVerification = ({ navigation }) => {
   return (
@@ -16,10 +17,10 @@ export const OtpVerification = ({ navigation }) => {
       <KeyboardAvoidingView style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} />
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: 'Regulator Nova Medium' }}>
+          <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: fonts.regulatorLight }}>
             Enter 4 digit code {'\n'}to authenticate
           </Text>
-          <Text style={{ color: '#000', fontSize: 16, textAlign: 'center', fontFamily: 'Optima-Regular' }}>
+          <Text style={{ color: '#000', fontSize: 16, textAlign: 'center', fontFamily: fonts.OptimaRegular, paddingVertical: 10 }}>
             Check your email
           </Text>
         </View>
@@ -50,7 +51,7 @@ export const OtpVerification = ({ navigation }) => {
             onPress={() => navigation.navigate('AccountSecure')}
             title="Resend"
             buttonStyle={{ width: 85, height: 25, borderColor: '#fff' }}
-            textStyle={{ fontSize: 16, color: '#fff', fontFamily: 'Optima-Regular' }}
+            textStyle={{ fontSize: 16, color: '#fff', fontFamily: fonts.regulatorMedium }}
           />
         </View>
       </KeyboardAvoidingView>
