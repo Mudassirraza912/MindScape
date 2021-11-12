@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "mindscape.app"
-               BlueprintName = "mindscape"
-               ReferencedContainer = "container:mindscape.xcodeproj">
+               BuildableName = "MindScape.app"
+               BlueprintName = "MindScape"
+               ReferencedContainer = "container:MindScape.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "mindscapeTests.xctest"
-               BlueprintName = "mindscapeTests"
-               ReferencedContainer = "container:mindscape.xcodeproj">
+               BuildableName = "MindScapeTests.xctest"
+               BlueprintName = "MindScapeTests"
+               ReferencedContainer = "container:MindScape.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mindscape.app"
-            BlueprintName = "mindscape"
-            ReferencedContainer = "container:mindscape.xcodeproj">
+            BuildableName = "MindScape.app"
+            BlueprintName = "MindScape"
+            ReferencedContainer = "container:MindScape.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "mindscape.app"
-            BlueprintName = "mindscape"
-            ReferencedContainer = "container:mindscape.xcodeproj">
+            BuildableName = "MindScape.app"
+            BlueprintName = "MindScape"
+            ReferencedContainer = "container:MindScape.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
