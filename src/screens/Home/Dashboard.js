@@ -10,6 +10,7 @@ import { ProgressSteps } from '../../components/ProgressSteps';
 import { MindfullnessData } from './DashboardScreens/MindfullnessData';
 import { CuriosityData } from './DashboardScreens/CuriosityData';
 import { TourGuide } from '../../components/TourGuide';
+import { fonts } from '../../utils/fonts'
 export const Dashboard = ({ navigation }) => {
     const [activeTab, setActiveTab] = useState('')
     const [step, setStep] = useState(0)

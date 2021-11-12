@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TextInput,Image,Dimensions, StatusBar,Platform 
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import SetNameSvg from '../../assets/SVG/setNameSVG'
-
 import CountryPicker from 'react-native-country-picker-modal'
 import { fonts } from '../../utils/fonts'
 

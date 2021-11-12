@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, Text, Dimensions, StyleSheet, ImageBackground, Image} from 'react-native'
 import WomenSvg from '../../assets/SVG/womenSvg.svg'
-
+import { fonts } from '../../utils/fonts'
+import NewmorphButton from '../../components/NewmorphButton/index'
 const {height, width} = Dimensions.get('screen')
-export const SleepMsg = () => {
+export const SleepMsg = ({navigation}) => {
 
     return(
         <View style={{flex: 1}}>
@@ -22,6 +23,16 @@ export const SleepMsg = () => {
                             </Text>
                        </View>
                     </ImageBackground>
+                    <View style={styles.smallCircle}>
+                    <Text style={styles.text4}>4</Text>
+                    </View>
+                    <View style={{marginTop:30}}>
+                    <NewmorphButton
+                    onPress={() => navigation.navigate('Dashboard1')}
+                    // backgroundColor="#9493AD"
+                    backgroundColor= {Platform.OS === 'ios' ? "#D4CFD6": "transparent"}
+                />
+                </View>
                 </View>
             </ImageBackground>
         </View>
@@ -56,5 +67,19 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: height/7,
         left: width/6        
+    },
+    text4:{
+        fontFamily:fonts.regulatorMedium,
+        fontSize:16,
+        color:"#ffffff"
+    },
+    smallCircle:{
+        borderColor:"#FFFFFF",
+        borderWidth:1,
+        borderRadius:20,
+        paddingHorizontal:12,
+        paddingVertical:6,
+        left:"27%",
+        bottom:30
     }
 })

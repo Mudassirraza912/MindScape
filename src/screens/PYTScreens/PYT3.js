@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const PYT3 = () => {
+export const PYT3 = ({navigation}) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -38,25 +38,33 @@ export const PYT3 = () => {
                             </Text>
 
                             <View>
-
+                                <TouchableOpacity 
+                                activeOpacity={0.8}
+                                onPress={() => navigation.navigate('PYT4')}
+                                >
                                 <Text
                                     style={styles.footerTextStyle}
 
                                 >
                                     Take a deep breathe
                                 </Text>
+                                </TouchableOpacity>
                                 <Text
                                     style={styles.lineStyle}
 
                                 >
                                     ___
                                 </Text>
+                                <TouchableOpacity
+                                activeOpacity={0.8}
+                                >
                                 <Text
                                     style={styles.footerTextStyle}
 
                                 >
                                     Call a close friend
                                 </Text>
+                                </TouchableOpacity>
                                 <Text
                                     style={styles.lineStyle}
 

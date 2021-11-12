@@ -1,8 +1,9 @@
+import { NavigationContainer } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View, Text, Dimensions, StyleSheet, Alert, TouchableOpacity, Image, ImageBackground } from 'react-native'
 
 const { height, width } = Dimensions.get('screen')
-export const SleepHours = () => {
+export const SleepHours = ({navigation}) => {
     const [selectedHours, setselectedHours] = useState("4")
 
     return (
@@ -80,7 +81,14 @@ export const SleepHours = () => {
                             3
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => setselectedHours('4')} style={{top: 20, right: 5}}>
+                    <TouchableOpacity onPress={() =>  
+                    
+               {
+                   navigation.navigate('SleepMsg')
+                setselectedHours('4')
+               }
+                
+                } style={{top: 20, right: 5}}>
                         <Text style={[styles.textStyle, selectedHours == "4" && styles.activeText ]}>
                             4
                         </Text>

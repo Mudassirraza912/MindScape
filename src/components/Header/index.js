@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, SafeAreaView, Image, StyleSheet, TouchableOpacity, Dimensions } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
+import { fonts } from '../../utils/fonts'
 const { width, height } = Dimensions.get('screen')
 
 const index = ({
@@ -43,7 +44,7 @@ const index = ({
                         marginTop: 50
 
                     }}>
-                        <Text style={{ fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4' }} >DAN’S MINDSCAPE</Text>
+                        <Text style={{ fontSize: 16, color: activeTab == 0 ? '#706F93' : '#F8F7F4',fontFamily:fonts.regulatorLight }} >DAN’S MINDSCAPE</Text>
                     </View>
 
 
@@ -83,7 +84,7 @@ const index = ({
                                             // marginTop: 10
                                         }}
                                     >
-                                        <Text style={{ fontSize: activeTab == i ? 12 : 10, fontFamily: 'Regulator Nova Medium', color: '#FFFFFF' }}>{item.title}</Text>
+                                        <Text style={{ fontSize: activeTab == i ? 12 : 10, fontFamily:fonts.regulatorMedium, color: '#FFFFFF' }}>{item.title}</Text>
 
 
                                     </LinearGradient>

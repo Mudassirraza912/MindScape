@@ -3,6 +3,7 @@ import { View, Text, Dimensions, StyleSheet, StatusBar, Image, ImageBackground,S
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient';
 import Bottom from '../../components/Bottom/index'
+import { fonts } from '../../utils/fonts'
 const { width, height } = Dimensions.get('screen')
 export const BreathingStarted = ({ navigation }) => {
     return (
@@ -13,7 +14,12 @@ export const BreathingStarted = ({ navigation }) => {
                     // resizeMode={"cover"}
                     style={{ height: 280, width: '100%' }}
                     source={require('../../assets/images/yoga.png')}  >
+                        <TouchableOpacity 
+                        activeOpacity={0.8}
+                        onPress={() =>navigation.goBack()}
+                        >
                     <Image style={styles.arrowIcon} source={require('../../assets/images/cancel.png')} />
+                    </TouchableOpacity>
                 </ImageBackground>
             </View>
             <ScrollView style={{ paddingHorizontal: 18,marginLeft:15 }}>
@@ -57,22 +63,27 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         color: "#F6F5F4",
         paddingLeft:10,
-        paddingTop:10
+        paddingTop:10,
+        fontFamily:fonts.OptimaRegular
     },
     text0: {
         fontSize:12,
-        fontWeight:"400",
         paddingVertical:20,
-        color:"#F8F7F4"
+        color:"#F8F7F4",
+        fontFamily:fonts.regulatorDemiBold
     },
     text2:{
         color:"#FFFFFF",
         fontSize:20,
-        paddingVertical:10
+        paddingVertical:10,
+        fontFamily:fonts.regulatorLight,
+        lineHeight:20
     },
     text3:{
         fontSize:15,
         color:"#FFFFFF",
+        fontFamily:fonts.regulatorLight,
+        lineHeight:20
     }
     ,
     footer:{

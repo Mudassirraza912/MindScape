@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient';
 import StepIndicator from 'react-native-step-indicator';
 import { ProgressSteps } from '../../components/ProgressSteps';
+import { fonts } from '../../utils/fonts'
 export const HomeProgram = ({ navigation }) => {
     const [currentPosition, setCurrentPosition] = useState(3);
     const [renderLabel, setRenderLabel] = useState();
@@ -39,10 +40,10 @@ export const HomeProgram = ({ navigation }) => {
         <LinearGradient style={styles.container} colors={['#EDE7E4', '#9B98B0']}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{ paddingHorizontal: "14%", paddingTop: "18%" }}>
-                    <Text style={{ paddingVertical: 4, color: "#A3A2BA", fontSize: 24 }}>PROGRAM</Text>
+                    <Text style={{ paddingVertical: 4, color: "#A3A2BA", fontSize: 24,fontFamily:fonts.regulatorLight }}>PROGRAM</Text>
                     <View style={styles.border}></View>
-                    <Text style={{ color: "#A3A2BA", fontSize: 14 }}>VIRTUE 1</Text>
-                    <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 24 }}>MINDFULNESS</Text>
+                    <Text style={{ color: "#A3A2BA", fontSize: 14,fontFamily:fonts.regulatorMedium }}>VIRTUE 1</Text>
+                    <Text style={{ color: "#706F93", fontWeight: "bold", fontSize: 24,fontFamily:fonts.regulatorBold }}>MINDFULNESS</Text>
 
                     <ProgressSteps
                         data={[{ title: 'Connect', week: 'w1' }, { title: 'Manage ', week: 'w2' }, { title: 'Discover', week: 'w3' }, { title: 'Practice', week: 'w4' }, { title: 'Become', week: 'w5' }]}
@@ -50,27 +51,27 @@ export const HomeProgram = ({ navigation }) => {
 
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 2</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>CURIOSITY</Text>
+                    <Text style={styles.text01}>VIRTUE 2</Text>
+                    <Text style={styles.text02}>CURIOSITY</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 3</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>COURAGE</Text>
+                    <Text style={styles.text01}>VIRTUE 3</Text>
+                    <Text style={styles.text02}>COURAGE</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 4</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>GRATITUDE</Text>
+                    <Text style={styles.text01}>VIRTUE 4</Text>
+                    <Text style={styles.text02}>GRATITUDE</Text>
                 </View>
                 <View style={styles.textBorder}>
-                    <Text style={{ color: "#BCBAC8", fontWeight: "bold", fontSize: 14 }}>VIRTUE 5</Text>
-                    <Text style={{ color: "#A8A6B9", fontSize: 24 }}>COMPASSION</Text>
+                    <Text style={styles.text01}>VIRTUE 5</Text>
+                    <Text style={styles.text02}>COMPASSION</Text>
                 </View>
                 <View style={{ justifyContent: "center", alignItems: "center", paddingVertical: 20 }}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Dashboard')}
                         style={styles.buttondv}
                     >
-                        <Text style={{ color: "#A3A2BA" }}>GET STARTED</Text>
+                        <Text style={{ color: "#A3A2BA",fontFamily:fonts.OptimaRegular,fontSize:16 }}>GET STARTED</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{ paddingBottom: 30 }}></View>
@@ -110,6 +111,15 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 20
+    },
+    text01:{
+        color: "#BCBAC8", fontWeight: "bold", 
+        fontSize: 14,fontFamily:fonts.regulatorBold
+    },
+    text02:{
+        color: "#A8A6B9",
+        fontSize: 24,
+        fontFamily:fonts.regulatorLight 
     }
 })
 

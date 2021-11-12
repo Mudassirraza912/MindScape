@@ -36,7 +36,7 @@ export const HomeSetName = ({ navigation }) => {
             <View style={{ flex: 0.5, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('HomeSetCountry')}
-                    backgroundColor="#A4A3BC"
+                    backgroundColor= {Platform.OS === 'ios' ? "#A4A3BC": "transparent"}
                 />
             </View>
         </View>

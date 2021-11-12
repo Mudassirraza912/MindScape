@@ -5,10 +5,7 @@ import MainNavigation from './navigation/navigation'
 import { Provider } from 'react-redux'
 import { store } from './stores'
 import 'react-native-gesture-handler';
-import { SleepHours } from './screens/SleepCount/sleepHours'
 import { PYT4 } from './screens/PYTScreens/PYT4'
-import { MorningMessage } from './screens/SleepCount/MorningMessage'
-import { SleepMsg } from './screens/SleepCount/SleepMsg'
 import { HomeWelcome } from './screens/Home/Welcome'
 
 const App = () => {

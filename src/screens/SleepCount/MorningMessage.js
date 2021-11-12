@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { View, Text, Dimensions, StyleSheet, ImageBackground, Image} from 'react-native'
 import WomenSvg from '../../assets/SVG/womenSvg.svg'
 
 const {height, width} = Dimensions.get('screen')
-export const MorningMessage = () => {
-
+export const MorningMessage = ({ navigation }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate('SleepHours')
+        }, 2000);
+      }, []);
     return(
         <View style={{flex: 1}}>
             <ImageBackground source={require('../../assets/images/start.png')} style={{height: height, width: width}}>

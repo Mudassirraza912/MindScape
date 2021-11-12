@@ -27,11 +27,11 @@ export const ToolsDashboard = ({navigation}) => {
             <Text style={{paddingVertical:30,color:"#E39684",fontSize:16,fontFamily:fonts.OptimaRegular}}>DASHBOARD</Text>
             </View>
             </View>
-            <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
+            <View style={{flex:1,alignItems:"center"}}>
             <NewmorphButton
                     onPress={() => navigation.navigate('HomePersona')}
                     // backgroundColor="#9493AD"
-                    backgroundColor="transparent"
+                    backgroundColor= {Platform.OS === 'ios' ? "#E9C5BC": "transparent"}
                 />
                 </View>
         </View>

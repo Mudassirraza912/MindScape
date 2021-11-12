@@ -18,6 +18,7 @@ import EmergencySvg from '../../assets/SVG/EmergencySvg'
 import Button from '../../components/button/index'
 import LinearGradient from 'react-native-linear-gradient'
 import ImageBackground from 'react-native/Libraries/Image/ImageBackground'
+import { fonts } from '../../utils/fonts'
 
 export const Loading1 = ({ navigation }) => {
   return (
@@ -40,7 +41,7 @@ export const Loading1 = ({ navigation }) => {
           barStyle={'dark-content'}
         />
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#fff', fontSize: 20, textAlign: 'center' }}>
+          <Text style={{ color: '#fff', fontSize: 20, textAlign: 'center',fontFamily:fonts.regulatorMedium }}>
             You feel…I feel {'\n'}but it’s not the same
           </Text>
           <Text
@@ -48,11 +49,12 @@ export const Loading1 = ({ navigation }) => {
               color: '#706F93',
               fontSize: 20,
               textAlign: 'center',
-              marginVertical: 10
+              marginVertical: 10,
+              fontFamily:fonts.OptimaRegular
             }}>
             Each of us experiences {'\n'}emotion in a unique way
           </Text>
-          <Text style={{ color: '#fff', fontSize: 20, textAlign: 'center' }}>
+          <Text style={{ color: '#fff', fontSize: 20, textAlign: 'center',fontFamily:fonts.OptimaRegular }}>
             3 mins
           </Text>
         </View>
@@ -67,7 +69,7 @@ export const Loading1 = ({ navigation }) => {
               backgroundColor: '#fff',
               borderColor: '#fff'
             }}
-            textStyle={{ color: '#FECAB6', fontSize: 16 }}
+            textStyle={{ color: '#FECAB6', fontSize: 16,fontFamily:fonts.OptimaRegular }}
           />
           <Button
             onPress={() => navigation.goBack()}
@@ -80,9 +82,9 @@ export const Loading1 = ({ navigation }) => {
               marginRight: 50,
               marginVertical: 10
             }}
-            textStyle={{ color: '#fff', fontSize: 16 }}
+            textStyle={{ color: '#fff', fontSize: 16,fontFamily:fonts.OptimaRegular }}
           />
-          <Text style={{ color: '#706F93', fontSize: 12, marginLeft: 10 }}>
+          <Text style={{ color: '#706F93', fontSize: 12, marginLeft: 10,fontFamily:fonts.OptimaRegular }}>
             The article will be saved {'\n'}in your library
           </Text>
         </View>

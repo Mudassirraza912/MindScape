@@ -30,7 +30,7 @@ export const PersonaVirtue = ({navigation}) => {
             <View style={{flex:1,justifyContent:'center'}}>
             <NewmorphButton
                     onPress={() => navigation.navigate('HomeProgram')}
-                    backgroundColor="#A5A4BD"
+                    backgroundColor= {Platform.OS === 'ios' ? "#A4A3BC": "transparent"}
                 />
                 </View>
                 </LinearGradient>
@@ -51,7 +51,8 @@ const styles = StyleSheet.create ({
     textdv:{
         paddingBottom:14,
         paddingTop:6,
-        fontSize:22,
-        color:"#A3A2BA"
+        fontSize:24,
+        color:"#A3A2BA",
+        fontFamily:fonts.regulatorLight
     }
 })

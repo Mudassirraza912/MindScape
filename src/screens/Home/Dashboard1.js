@@ -5,6 +5,7 @@ import CircleButton from '../../components/circleButton/index'
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 import Modal from 'react-native-modal';
+import { fonts } from '../../utils/fonts'
 export const Dashboard1 = ({ navigation }) => {
     const [reason, setReason] = useState([{ title: "01", },
     { title: "02", },
@@ -60,7 +61,7 @@ export const Dashboard1 = ({ navigation }) => {
 
             <ScrollView style={{ flex: 1.2, paddingHorizontal: 20 }} showsVerticalScrollIndicator={false}>
                 <View style={{ paddingTop: 20 }}>
-                    <Text style={{ textAlign: "center", color: "#fff", paddingVertical: 20 }}>
+                    <Text style={{ textAlign: "center", color: "#fff", paddingVertical: 20,fontFamily:fonts.regulatorLight,fontSize:16 }}>
                         HEY DANIEL
                     </Text>
                     <View style={{ flexDirection: "row" }}>
@@ -68,13 +69,13 @@ export const Dashboard1 = ({ navigation }) => {
                             <Image style={styles.plus} source={require('../../assets/images/plusCircle.png')} />
                             <View style={{ marginLeft: 15 }}>
                                 <CircleButton
-                                onPress={() => navigation.navigate('WeeklyProgress')}
+                                onPress={() => navigation.navigate('PYT1')}
                                     backgroundColor={"transparent"}
                                 />
                             </View>
                         </View>
                         <View style={{ paddingLeft: 10 }}>
-                            <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12 }}>THINK</Text>
+                            <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12,fontFamily:fonts.regulatorBold }}>THINK</Text>
                             <Text style={styles.stay}>Picture Your</Text>
                             <Text style={styles.connect}>Connect with your emotions</Text>
                             <TouchableOpacity
@@ -86,7 +87,7 @@ export const Dashboard1 = ({ navigation }) => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12 }}>NOURISH</Text>
+                    <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12,fontFamily:fonts.regulatorBold }}>NOURISH</Text>
                     <Text style={styles.stay}>Stay hydrated & stay focused</Text>
                     <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 20 }}>
                         {
@@ -178,15 +179,17 @@ export const Dashboard1 = ({ navigation }) => {
                             <TouchableOpacity
                                 style={{ top: 16 }}
                                 activeOpacity={0.9}
+                                onPress={()=>navigation.navigate('MorningMessage')}
                             >
                                 <Image source={require('../../assets/images/chand.png')} />
                             </TouchableOpacity>
                         </View>
                         <Text style={styles.june}>30 june 2021</Text>
-                        <View style={{ width: "40%", alignSelf: "center" }}>
+                        <View style={{ width: "35%", alignSelf: "center" }}>
                             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center", paddingVertical: 10 }}>
                                 <Image style={{ top: 14, right: 10 }} source={require('../../assets/images/leftArrow.png')} />
                                 <FlatList
+                                // style={{width:"100%"}}
                                     keyExtractor={(item, index) => index}
                                     horizontal={true}
                                     data={reason}
@@ -209,8 +212,8 @@ export const Dashboard1 = ({ navigation }) => {
                         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                             <Image source={require('../../assets/images/dashboardIcon.png')} />
                             <View>
-                                <Text style={{ fontSize: 18, color: "#626178", textAlign: "center" }}>LEVEL 01</Text>
-                                <Text style={{ fontSize: 18, color: "#626178", textAlign: "center" }}>MINDFULNESS</Text>
+                                <Text style={{ fontSize: 18, color: "#626178", textAlign: "center",fontFamily:fonts.regulatorLight }}>LEVEL 01</Text>
+                                <Text style={{ fontSize: 18, color: "#626178", textAlign: "center",fontFamily:fonts.regulatorLight }}>MINDFULNESS</Text>
                             </View>
                             <TouchableOpacity
                                 activeOpacity={0.9}
@@ -316,10 +319,13 @@ const styles = StyleSheet.create({
     },
     stay: {
         color: "#fff",
-        fontSize: 22
+        fontSize: 22,
+        fontFamily:fonts.regulatorLight
     },
     connect:{
-        paddingTop: 18, color: "#FFAE9B", fontWeight: "bold", fontSize: 13
+        paddingTop: 18, color: "#FFAE9B", 
+        fontWeight: "bold", fontSize: 13,
+        fontFamily:fonts.OptimaBold
     },
     smallCircle: {
         width: 17,
@@ -341,6 +347,9 @@ const styles = StyleSheet.create({
         fontSize: 84,
         color: "#fff",
         top: 14,
+        paddingHorizontal:10,
+        fontFamily:fonts.regulatorThin,
+        fontWeight:"bold"
     },
     modalView: {
         // backgroundColor: 'transparent',
@@ -360,17 +369,20 @@ const styles = StyleSheet.create({
     modalText: {
         paddingVertical: 10,
         color: "#6B6B8D",
-        fontSize: 22
+        fontSize: 24,
+        fontFamily:fonts.OptimaRegular
     },
     modalText1: {
         paddingVertical: 10,
         textAlign: "center",
         color: "#706F93",
-        fontSize: 16
+        fontSize: 16,
+        fontFamily:fonts.regulatorMedium
     },
     modalText2: {
         color: "#49485F",
         fontSize: 13,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontFamily:fonts.OptimaBold
     }
 })
