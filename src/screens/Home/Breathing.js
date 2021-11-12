@@ -3,6 +3,7 @@ import { View, Text, Dimensions, StyleSheet, StatusBar,ImageBackground,Image } f
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import WelcomeSvg from '../../assets/SVG/WelcomeSvg'
 // import WelcomeSvg from '../../assets/images/Welcome.svg'
+import { fonts } from '../../utils/fonts'
 const {width, height} = Dimensions.get('screen')
 export const Breathing = ({navigation}) => {
     return (
@@ -22,13 +23,13 @@ export const Breathing = ({navigation}) => {
             </View>
             <View style={styles.breath}>
             <Image style={styles.logo} source={require('../../assets/images/hp.png')} />
-                <Text style={{paddingVertical:10,fontSize:12,color:"#F8F7F4",fontWeight:"300"}}>MINDFUL BREATHING</Text>
-                <Text style={{fontSize:22,color:"#F8F7F4"}}>Oxygenate Your Brain</Text>
+                <Text style={{paddingVertical:10,fontSize:12,color:"#F8F7F4",fontFamily:fonts.regulatorDemiBold}}>MINDFUL BREATHING</Text>
+                <Text style={{fontSize:22,color:"#F8F7F4",fontFamily:fonts.OptimaRegular}}>Oxygenate Your Brain</Text>
                 <TouchableOpacity
                 activeOpacity={0.9}
                 onPress={() => navigation.navigate('BreathingStarted')} 
                 style={styles.btn}>
-                    <Text style={{color:"#F8F7F4"}}>Get Started</Text>
+                    <Text style={{color:"#F8F7F4",fontFamily:fonts.OptimaRegular}}>Get Started</Text>
                 </TouchableOpacity>
             </View>
         </ImageBackground>

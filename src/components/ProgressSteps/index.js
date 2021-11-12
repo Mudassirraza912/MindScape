@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import StepIndicator from 'react-native-step-indicator';
+import { fonts } from '../../utils/fonts';
 
 export const ProgressSteps = ({
     data = [],
@@ -12,6 +13,7 @@ export const ProgressSteps = ({
     indicatorCustomStyle = {},
     activeTextColor = "#E39684",
     nonActiveTextColor = '#ADAABC',
+    onPress= () => {}
 
 }) => {
 
@@ -68,10 +70,10 @@ export const ProgressSteps = ({
                     return (
                         <TouchableOpacity
                             activeOpacity={0.8}
-                            // onPress={() => { onStepPress() }}
+                            onPress={() => { onPress() }}
                             style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15 }, titleStyle]}>{value.title}</Text>
-                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15 }, weekStyle]}>{value.week}</Text>
+                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, titleStyle]}>{value.title}</Text>
+                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, weekStyle]}>{value.week}</Text>
                         </TouchableOpacity>
                         //  || (index + 1 < currentPosition)
                         //  || (index + 1 < currentPosition)

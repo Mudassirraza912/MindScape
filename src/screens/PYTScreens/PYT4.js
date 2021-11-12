@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const PYT4 = () => {
+export const PYT4 = ({navigation}) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -47,6 +47,7 @@ export const PYT4 = () => {
 
                             <TouchableOpacity
                                 style={styles.Button}
+                                onPress={() => navigation.navigate('WeeklyProgress')}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>Yes</Text>
                             </TouchableOpacity>
@@ -70,6 +71,7 @@ export const PYT4 = () => {
 
                             <TouchableOpacity
                                 style={styles.Button}
+                                onPress={() => navigation.navigate('Dashboard1')}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>No</Text>
                             </TouchableOpacity>

@@ -31,9 +31,12 @@ export const WeeklyProgress2 = ({navigation}) => {
                     <Text style={styles.text1}>ADD A CALENDER</Text>
                     </View>
                     <View style={{flex:1}}>
-                    <View style={styles.btn}>
+                    <TouchableOpacity
+                    activeOpacity={0.9}
+                    onPress={()=> navigation.navigate('Loading1')} 
+                    style={styles.btn}>
                         <Text style={{color:"#A3A2BA"}}>CONTINUE</Text>
-                    </View>
+                    </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.footer}> 
@@ -84,7 +87,8 @@ const styles = StyleSheet.create({
         backgroundColor:"#F5F2F0",
         paddingVertical:6,
         paddingHorizontal:"15%",
-        borderRadius:20
+        borderRadius:20,
+        alignItems:"center"
     },
     text1:{
         color:"#575672",

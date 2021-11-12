@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollView, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollView, StyleSheet, Dimensions, Platform } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
-export const PYT1 = () => {
+export const PYT1 = ({navigation}) => {
 
     const Images = [
         {
@@ -65,7 +65,9 @@ export const PYT1 = () => {
                     >
 
                         <NewmorphButton
-                            backgroundColor='#EFEAE7'
+                        onPress={() => navigation.navigate('PYT2')}
+                            backgroundColor='#EBE5DA'
+                            backgroundColor={Platform.OS == "ios" ? "#EBE5DA":"transparent"}
                         />
                     </View>
 

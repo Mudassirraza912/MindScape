@@ -45,7 +45,13 @@ import { CustomDrawer } from './CustomDrawer/CustomDrawer'
 import {Dashboard1} from '../screens/Home/Dashboard1'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
-// import { Dashboard1 } from '../screens/Home/Dashboard1'
+import { MorningMessage } from '../screens/SleepCount/MorningMessage'
+import { SleepMsg } from '../screens/SleepCount/SleepMsg'
+import { SleepHours } from '../screens/SleepCount/sleepHours'
+import {PYT1} from '../screens/PYTScreens/PYT1'
+import {PYT2} from '../screens/PYTScreens/PYT2'
+import {PYT3} from '../screens/PYTScreens/PYT3'
+import {PYT4} from '../screens/PYTScreens/PYT4'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -126,6 +132,9 @@ function AppStackNavigator() {
       <AppStack.Screen name="Breathing" component={Breathing} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />
+      <AppStack.Screen name="MorningMessage" component={MorningMessage} />
+      <AppStack.Screen name="SleepMsg" component={SleepMsg} />
+      <AppStack.Screen name="SleepHours" component={SleepHours} />
       <AppStack.Screen name="HomePersona" component={HomePersona} />
       <AppStack.Screen name="PersonaVirtue" component={PersonaVirtue} />
       <AppStack.Screen name="ToolsDashboard" component={ToolsDashboard} />
@@ -133,6 +142,10 @@ function AppStackNavigator() {
       <AppStack.Screen name="Dashboard1" component={Dashboard1} />
       <AppStack.Screen name="Loading1" component={Loading1} />
       <AppStack.Screen name="ArticleScreen" component={ArticleScreen} />
+      <AppStack.Screen name="PYT1" component={PYT1} />
+      <AppStack.Screen name="PYT2" component={PYT2} />
+      <AppStack.Screen name="PYT3" component={PYT3} />
+      <AppStack.Screen name="PYT4" component={PYT4} />
     </AppStack.Navigator>
   )
 }

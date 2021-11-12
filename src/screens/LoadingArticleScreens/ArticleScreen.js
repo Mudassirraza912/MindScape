@@ -14,7 +14,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import ImageBackground from 'react-native/Libraries/Image/ImageBackground'
 import Slider from 'react-native-slider'
 import Entypo from 'react-native-vector-icons/Entypo'
-
+import { fonts } from '../../utils/fonts'
 export const ArticleScreen = ({ navigation }) => {
   const [state, setState] = useState({
     value: 0.2
@@ -41,7 +41,8 @@ export const ArticleScreen = ({ navigation }) => {
                     style={{
                       color: '#fff',
                       fontSize: 12,
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontFamily:fonts.regulatorDemiBold
                     }}>
                     THINK
                   </Text>
@@ -50,7 +51,8 @@ export const ArticleScreen = ({ navigation }) => {
                       color: '#fff',
                       fontSize: 22,
                       textAlign: 'center',
-                      marginTop: 10
+                      marginTop: 10,
+                      fontFamily:fonts.OptimaRegular
                     }}>
                     A unique experience of {'\n'}a common emotion
                   </Text>
@@ -58,7 +60,8 @@ export const ArticleScreen = ({ navigation }) => {
                     style={{
                       color: '#fff',
                       fontSize: 14,
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontFamily:fonts.OptimaRegular
                     }}>
                     Orlando Bloom
                   </Text>
@@ -66,7 +69,8 @@ export const ArticleScreen = ({ navigation }) => {
                     style={{
                       color: '#fff',
                       fontSize: 14,
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontFamily:fonts.OptimaRegular
                     }}>
                     3 mins
                   </Text>
@@ -89,7 +93,8 @@ export const ArticleScreen = ({ navigation }) => {
                       style={{
                         color: '#fff',
                         fontSize: 14,
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        fontFamily:fonts.regulatorDemiBold
                       }}>
                       03:21
                     </Text>
@@ -130,7 +135,8 @@ export const ArticleScreen = ({ navigation }) => {
                     style={{
                       color: '#706F93',
                       fontSize: 12,
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontFamily:fonts.regulatorDemiBold
                     }}>
                     THINK
                   </Text>
@@ -139,7 +145,8 @@ export const ArticleScreen = ({ navigation }) => {
                       color: '#706F93',
                       fontSize: 22,
                       textAlign: 'center',
-                      marginTop: 10
+                      marginTop: 10,
+                      fontFamily:fonts.OptimaRegular
                     }}>
                     A unique experience of {'\n'}a common emotion
                   </Text>
@@ -147,7 +154,8 @@ export const ArticleScreen = ({ navigation }) => {
                     style={{
                       color: '#A3A2BA',
                       fontSize: 14,
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontFamily:fonts.OptimaRegular
                     }}>
                     Orlando Bloom
                   </Text>
@@ -170,7 +178,8 @@ export const ArticleScreen = ({ navigation }) => {
                     color: '#A3A2BA',
                     fontSize: 12,
                     textAlign: 'center',
-                    marginVertical: 20
+                    marginVertical: 20,
+                    fontFamily:fonts.OptimaRegular
                   }}>
                   Narration by Latifa Soobeydar
                 </Text>
@@ -181,7 +190,8 @@ export const ArticleScreen = ({ navigation }) => {
                     color: '#706F93',
                     fontSize: 22,
                     textAlign: 'center',
-                    marginVertical: 10
+                    marginVertical: 10,
+                    fontFamily:fonts.OptimaRegular
                   }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   lorem odio, mollis id aliquet non, accumsan ac ipsum. Sed a
@@ -246,7 +256,7 @@ export const ArticleScreen = ({ navigation }) => {
                   alignItems: 'center'
                 }}>
                 <TouchableOpacity activeOpacity={0.7} style={{ width: 100 }}>
-                  <Text style={{ fontSize: 22, color: '#706F93' }}>SHARE</Text>
+                  <Text style={{ fontSize: 22, color: '#706F93',fontFamily:fonts.OptimaRegular }}>SHARE</Text>
                 </TouchableOpacity>
               </View>
             </LinearGradient>
@@ -289,7 +299,8 @@ const styles = StyleSheet.create({
 
   lestgoTextStyle: {
     fontSize: 12,
-    color: '#fff'
+    color: '#fff',
+    fontFamily:fonts.regulatorDemiBold
   },
   section2: {
     paddingTop: 60,
@@ -303,6 +314,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     lineHeight: 28,
-    marginVertical: 15
+    marginVertical: 15,
+    fontFamily:fonts.OptimaRegular
   }
 })

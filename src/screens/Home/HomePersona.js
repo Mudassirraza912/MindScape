@@ -50,13 +50,13 @@ export const HomePersona = ({ navigation }) => {
             </TouchableOpacity>
             </View>
             </View>
-            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:20,fontFamily:fonts.OptimaRegular}}>It take up to 24hrs to {'\n'} update your parsona</Text>
+            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:30,fontFamily:fonts.OptimaRegular}}>It take up to 24hrs to {'\n'} update your parsona</Text>
             </View>
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('PersonaVirtue')}
                     // backgroundColor="#9493AD"
-                    backgroundColor={'transparent'}
+                    backgroundColor= {Platform.OS === 'ios' ? "#D4CFD6": "transparent"}
                 />
             </View>
         </View>

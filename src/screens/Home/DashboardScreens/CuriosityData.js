@@ -24,7 +24,9 @@ export const CuriosityData = () => {
                 </View>
 
             </ScrollView>
-            <Bottom bottomColor='#706F93' />
+            <Bottom 
+            textRetrun={'Return'}
+            bottomColor='#706F93' />
         </>
     )
 }

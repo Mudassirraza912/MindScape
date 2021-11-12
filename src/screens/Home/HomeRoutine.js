@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import NewmorphButton from '../../components/NewmorphButton/index'
 import DateTimePicker from '@react-native-community/datetimepicker';
 import PersonaSVG from '../../assets/SVG/personaSvg';
-// import PersonaSVG from '../../assets/images/Step1.svg'
+import { fonts } from '../../utils/fonts'
 
 export const HomeRoutine = ({ navigation }) => {
 
@@ -60,13 +60,13 @@ export const HomeRoutine = ({ navigation }) => {
                 />
             <View style={{ flex: 3, justifyContent: "center", paddingTop: "0%", }}>
                 <StatusBar hidden={true} />
-                <Text style={{ textAlign: "center", paddingBottom: 20, color: "#B6B4C5" }}>
+                <Text style={styles.text01}>
                     COMMITMENT
                 </Text>
-                <Text style={{ color: "#D1CDD4", fontSize: 20, paddingVertical: 10 }}>Lets align with your routine</Text>
+                <Text style={{ color: "#D1CDD4", fontSize: 24, paddingVertical: 10,fontFamily:fonts.regulatorLight }}>Lets align with your routine</Text>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
-                    <Text style={{ paddingVertical: 6 }}>What time do you wake up?</Text>
+                    <Text style={styles.text02}>What time do you wake up?</Text>
                     <TouchableOpacity
                         onPress={() => {showTimepicker('wakeup')}}
                         style={styles.buttondv}>
@@ -77,7 +77,7 @@ export const HomeRoutine = ({ navigation }) => {
                 </View>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
-                    <Text style={{ paddingVertical: 6 }} >Least busy hour in the afternoon?</Text>
+                    <Text style={styles.text02} >Least busy hour in the afternoon?</Text>
                     <TouchableOpacity
                         onPress={() => {showTimepicker('afternoon')}}
                         style={styles.buttondv}>
@@ -87,11 +87,11 @@ export const HomeRoutine = ({ navigation }) => {
                 </View>
                 <View style={styles.border}></View>
                 <View style={{ marginVertical: 10 }}>
-                    <Text style={{ paddingVertical: 6 }}>What time do you have dinner</Text>
+                    <Text style={styles.text02}>What time do you have dinner</Text>
                     <TouchableOpacity
                         onPress={() => {showTimepicker('dinner')}}
                         style={styles.buttondv}>
-                        <Text style={{ color: "#fff" }}>{    currentTime3 ? currentTime3 :'07:00'}</Text>
+                        <Text style={{ color: "#fff",fontFamily:fonts.regulatorLight,fontSize:16 }}>{    currentTime3 ? currentTime3 :'07:00'}</Text>
                         <Image style={{ marginTop: 6 }} source={require('../../assets/images/ComponentArrow.png')} />
                     </TouchableOpacity>
                     {show && (
@@ -147,5 +147,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 6,
         paddingVertical: 2,
         borderRadius: 20,
+    },
+    text01:{
+        textAlign: "center", 
+        paddingBottom: 20, 
+        color: "#B6B4C5" ,
+        fontSize:16,
+        fontFamily: fonts.OptimaRegular
+    },
+    text02:{
+        paddingVertical: 6,
+        fontFamily: fonts.OptimaRegular,
+        fontSize:16
     }
 })
