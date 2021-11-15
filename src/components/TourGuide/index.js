@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Modal, TouchableOpacity, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, Modal, TouchableOpacity, StyleSheet, Dimensions,Platform } from 'react-native'
 import Feather from 'react-native-vector-icons/Feather'
 import NewmorphButton from '../../components/NewmorphButton/index'
 
@@ -240,8 +240,9 @@ const styles = StyleSheet.create({
     step1TargetContainer: {
         width: width+20,
         right: 10,
-        top: height * 0.09,
-        height: height * 0.16,
+        // top: height * 0.10,
+        top: Platform.OS === 'ios' ? height * 0.10:height * 0.08,
+        height: height * 0.18,
         borderColor: '#fff',
         borderWidth: 1,
         borderBottomRightRadius: height * 0.08,
@@ -254,7 +255,7 @@ const styles = StyleSheet.create({
         marginTop: height * 0.07
     },
     step2round: {
-        top:  height * 0.007,
+        top:  Platform.OS == "ios" ? height * 0.03 : height * 0.017,
         borderWidth: 1,
         borderColor: '#fff',
         width: 45,
@@ -266,8 +267,8 @@ const styles = StyleSheet.create({
         height: height * 0.03,
         width: 1,
         backgroundColor: '#fff',
-        left: width* 0.85,
-        // marginTop: height * 0.001
+        left: Platform.OS == "ios" ? width* 0.86 : width* 0.86,
+        marginTop: Platform.OS == "ios" ? height * 0.0029 : -height * 0.028
     },
     step3Container: {
         position: 'absolute', 
