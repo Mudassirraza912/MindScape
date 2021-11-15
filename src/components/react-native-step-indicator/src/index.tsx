@@ -379,7 +379,7 @@ const StepIndicator = ({
               start={ { x: .5, y: .6 }}
               end={{ x: 0.1, y: .1 }} 
               key={'step-indicator'} 
-              style={{height: "100%", width: "100%"}}>
+              style={{height: "100%", width: "100%", borderRadius: 100}}>
                 {renderCustomStepIndicator ? (
                   renderCustomStepIndicator({
                     position,
@@ -402,7 +402,7 @@ const StepIndicator = ({
               start={ { x: .5, y: .6 }}
               end={{ x: 0.1, y: .1 }} 
               key={'step-indicator'} 
-              style={{height: "100%", width: "100%"}}>
+              style={{height: "100%", width: "100%", borderRadius: 100}}>
                 {renderCustomStepIndicator ? (
                   renderCustomStepIndicator({
                     position,

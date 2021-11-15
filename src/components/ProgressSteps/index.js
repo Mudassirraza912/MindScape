@@ -30,7 +30,7 @@ export const ProgressSteps = ({
         separatorUnFinishedColor: 'transparent',
         stepIndicatorFinishedColor: '#ADAABC',
         stepIndicatorUnFinishedColor: 'transparent',
-        stepIndicatorCurrentColor: 'red',
+        stepIndicatorCurrentColor: 'transparent',
         stepIndicatorLabelFontSize: 13,
         currentStepIndicatorLabelFontSize: 13,
         stepIndicatorLabelCurrentColor: 'transparent',

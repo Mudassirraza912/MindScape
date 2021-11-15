@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
         color: "#fff",
         top: 14,
         paddingHorizontal:10,
-        fontFamily:fonts.regulatorThin,
+        // fontFamily:fonts.regulatorThin,
         fontWeight:"bold"
     },
     modalView: {

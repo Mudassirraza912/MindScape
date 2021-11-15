@@ -119,7 +119,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Subscription">
+      initialRouteName="Dashboard">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -157,11 +157,11 @@ const MainNavigation = () => {
     <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* {isLoggedin ? */}
-          <Stack.Screen
+          {/* <Stack.Screen
             name="Login"
             options={{ headerShown: false }}
             component={AuthStackNavigator}
-          />
+          /> */}
           {/* : */}
           <Stack.Screen
             name="AppStack"
