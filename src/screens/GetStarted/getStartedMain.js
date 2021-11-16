@@ -33,7 +33,7 @@ export const GetstartedMain = ({ navigation }) => {
           <View style={{ marginVertical: 10 }}>
             <Button
               buttonStyle={{ borderColor: '#c5cbe3' }}
-              onPress={() => navigation.navigate('WalkThrough')}
+              onPress={() => navigation.navigate('Login')}
               // onPress={() => navigation.navigate('EmailVerification')}
               title={'Get Started'}
               textStyle={{ color: '#7f83a0', fontFamily: fonts.OptimaRegular }}
