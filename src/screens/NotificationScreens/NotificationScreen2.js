@@ -5,16 +5,16 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const PYT4 = ({ navigation }) => {
+export const NotificationScreen2 = () => {
     return (
         <SafeAreaView style={{
             flex: 1
         }}>
-            <StatusBar barStyle="dark-content" backgroundColor={'#F5F5F5'} />
+            <StatusBar barStyle="dark-content" backgroundColor={'#F1F0F0'} />
 
             <LinearGradient
                 style={styles.LinearGradient1}
-                colors={['#F5F5F5', '#ABA9BC']}>
+                colors={['#F1F0F0', '#AFADBF']}>
                 <View style={styles.crossStyle}>
                     <Feather onPress={() => {
                         //  navigation.navigate('BOB')
@@ -22,64 +22,34 @@ export const PYT4 = ({ navigation }) => {
                 </View>
                 <LinearGradient
                     style={styles.LinearGradient2}
-                    colors={['#ABA9BC', '#F5F5F5']}   >
-                    <Text style={styles.discliamerTextStyle}>
-                        Mindscape
-                        {'\n'}Assistance</Text>
+                    colors={['#EBBFB4', '#DFDEE5']}   >
+                    <Text style={styles.discliamerTextStyle}>WELL DONE</Text>
 
                     <View style={styles.centerTextViewStyle}>
                         <Text style={styles.centerTextStyle}>
-                            Would you like to talk about
-                            {'\n'}it with a professional?
+                            Target{'\n'}
+                            Achieved
                         </Text>
                     </View>
-
                     <View style={{
-                        width: '20%',
+                        // width: '20%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
                         <View
-
-                            style={styles.buttonViewStyle}
-
-
-                        >
-
-
+                            style={styles.buttonViewStyle}>
                             <TouchableOpacity
+                                onPress={() => navigation.navigate('PYT3')}
                                 style={styles.Button}
-                                onPress={() => navigation.navigate('WeeklyProgress')}
                                 activeOpacity={0.8}>
-                                <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>Yes</Text>
+                                <Text style={{ color: '#A3A2BA', fontSize: 14, fontFamily: 'Optima-Regular' }}>Back to Homepage</Text>
                             </TouchableOpacity>
 
                         </View>
                     </View>
 
 
-                    <View style={{
-                        width: '50%',
-                        // alignSelf: 'center',
-                        // backgroundColor: 'red'
-                    }}>
-                        <View
 
-                            style={styles.buttonViewStyle}
-
-
-                        >
-
-
-                            <TouchableOpacity
-                                style={styles.Button}
-                                onPress={() => navigation.navigate('Dashboard1')}
-                                activeOpacity={0.8}>
-                                <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>No</Text>
-                            </TouchableOpacity>
-
-                        </View>
-                    </View>
                 </LinearGradient>
 
             </LinearGradient>
@@ -113,7 +83,7 @@ const styles = StyleSheet.create({
     },
     centerTextViewStyle: {
         marginVertical: height * 0.12,
-        width: '85%',
+        width: '80%',
         // fontFamily: 'Optima'
     },
     centerTextStyle: {
@@ -129,7 +99,7 @@ const styles = StyleSheet.create({
     Button: {
         height: 24,
         width: 131,
-        backgroundColor: '#F2EEEC',
+        backgroundColor: '#EEE8E5',
         borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',

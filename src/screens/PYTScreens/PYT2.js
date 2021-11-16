@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const PYT2 = ({navigation}) => {
+export const PYT2 = ({ navigation }) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -16,7 +16,9 @@ export const PYT2 = ({navigation}) => {
                 style={styles.LinearGradient1}
                 colors={['#FFFFFF', '#EDE7E4']}>
                 <View style={styles.crossStyle}>
-                    <Feather onPress={() => { navigation.navigate('BOB') }} name={'x'} size={50} color={'#A3A2BA'} />
+                    <Feather onPress={() => {
+                        //  navigation.navigate('BOB')
+                    }} name={'x'} size={50} color={'#A3A2BA'} />
                 </View>
                 <LinearGradient
                     style={styles.LinearGradient2}
@@ -40,7 +42,7 @@ export const PYT2 = ({navigation}) => {
                         <View
                             style={styles.buttonViewStyle}>
                             <TouchableOpacity
-                            onPress={() => navigation.navigate('PYT3')}
+                                onPress={() => navigation.navigate('PYT3')}
                                 style={styles.Button}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>Yes</Text>
@@ -58,7 +60,7 @@ export const PYT2 = ({navigation}) => {
                         <View
                             style={styles.buttonViewStyle}>
                             <TouchableOpacity
-                            onPress={() => navigation.navigate('PYT1')}
+                                onPress={() => navigation.navigate('PYT1')}
                                 style={styles.Button}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 16, fontFamily: 'Optima-Regular', }}>No</Text>

@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const PYT3 = ({navigation}) => {
+export const PYT3 = ({ navigation }) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -16,7 +16,9 @@ export const PYT3 = ({navigation}) => {
                 style={styles.LinearGradient1}
                 colors={['#FFFFFF', '#EDE7E4']}>
                 <View style={styles.crossStyle}>
-                    <Feather onPress={() => { navigation.navigate('BOB') }} name={'x'} size={50} color={'#A3A2BA'} />
+                    <Feather onPress={() => {
+                        //  navigation.navigate('BOB')
+                    }} name={'x'} size={50} color={'#A3A2BA'} />
                 </View>
                 <View
                     style={styles.LinearGradient2}
@@ -38,16 +40,16 @@ export const PYT3 = ({navigation}) => {
                             </Text>
 
                             <View>
-                                <TouchableOpacity 
-                                activeOpacity={0.8}
-                                onPress={() => navigation.navigate('PYT4')}
+                                <TouchableOpacity
+                                    activeOpacity={0.8}
+                                    onPress={() => navigation.navigate('PYT4')}
                                 >
-                                <Text
-                                    style={styles.footerTextStyle}
+                                    <Text
+                                        style={styles.footerTextStyle}
 
-                                >
-                                    Take a deep breathe
-                                </Text>
+                                    >
+                                        Take a deep breathe
+                                    </Text>
                                 </TouchableOpacity>
                                 <Text
                                     style={styles.lineStyle}
@@ -56,14 +58,14 @@ export const PYT3 = ({navigation}) => {
                                     ___
                                 </Text>
                                 <TouchableOpacity
-                                activeOpacity={0.8}
+                                    activeOpacity={0.8}
                                 >
-                                <Text
-                                    style={styles.footerTextStyle}
+                                    <Text
+                                        style={styles.footerTextStyle}
 
-                                >
-                                    Call a close friend
-                                </Text>
+                                    >
+                                        Call a close friend
+                                    </Text>
                                 </TouchableOpacity>
                                 <Text
                                     style={styles.lineStyle}

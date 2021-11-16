@@ -7,6 +7,8 @@ import { GetstartedMain } from '../screens/GetStarted/getStartedMain'
 import { WalkThrough } from '../screens/GetStarted/WalkThrough'
 import { Login } from '../screens/Login/login'
 import { SignUp } from '../screens/SignUp/signup'
+import { ForgotPassword } from '../screens/ForgotPassword/ForgotPassword'
+import { ChangePassword } from '../screens/ChangePassword/ChangePassword'
 import { OtpVerification } from '../screens/OtpVerification/OtpVerification'
 import { EmailVerification } from '../screens/EmailVerification/EmailVerification'
 import { FreeTrialSubscription } from '../screens/FreeTrialSubscription/freeTrialSubscription'
@@ -42,16 +44,18 @@ import { PrivacyPolicy } from '../screens/PrivacyPolicy/privacyPolicy'
 import { ContactUs } from '../screens/ContactUs/contactUs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { CustomDrawer } from './CustomDrawer/CustomDrawer'
-import {Dashboard1} from '../screens/Home/Dashboard1'
+import { Dashboard1 } from '../screens/Home/Dashboard1'
 import { Loading1 } from '../screens/LoadingArticleScreens/Loading1'
 import { ArticleScreen } from '../screens/LoadingArticleScreens/ArticleScreen'
 import { MorningMessage } from '../screens/SleepCount/MorningMessage'
 import { SleepMsg } from '../screens/SleepCount/SleepMsg'
 import { SleepHours } from '../screens/SleepCount/sleepHours'
-import {PYT1} from '../screens/PYTScreens/PYT1'
-import {PYT2} from '../screens/PYTScreens/PYT2'
-import {PYT3} from '../screens/PYTScreens/PYT3'
-import {PYT4} from '../screens/PYTScreens/PYT4'
+import { PYT1 } from '../screens/PYTScreens/PYT1'
+import { PYT2 } from '../screens/PYTScreens/PYT2'
+import { PYT3 } from '../screens/PYTScreens/PYT3'
+import { PYT4 } from '../screens/PYTScreens/PYT4'
+import { NotificationScreen1 } from '../screens/NotificationScreens/NotificationScreen1'
+import { NotificationScreen2 } from '../screens/NotificationScreens/NotificationScreen2'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -69,6 +73,9 @@ function AuthStackNavigator() {
       <AuthStack.Screen name="WalkThrough" component={WalkThrough} />
       <AuthStack.Screen name="Login" component={Login} />
       <AuthStack.Screen name="SignUp" component={SignUp} />
+      <AuthStack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <AuthStack.Screen name="ChangePassword" component={ChangePassword} />
+
       <AuthStack.Screen name="OtpVerification" component={OtpVerification} />
       <AuthStack.Screen name="AccountSecure" component={AccountSecure} />
       <AuthStack.Screen name="AccountSetting" component={AccountSetting} />
@@ -119,7 +126,7 @@ function AppStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Dashboard">
+      initialRouteName="Subscription">
       <AppStack.Screen name="Subscription" component={FreeTrialSubscription} />
       <AppStack.Screen name="HomeWelcome" component={HomeWelcome} />
       <AppStack.Screen name="HomeSetName" component={HomeSetName} />
@@ -156,19 +163,19 @@ const MainNavigation = () => {
   return (
     <NavigationContainer theme={{ ...DefaultTheme, dark: true, }}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* {isLoggedin ? */}
-          {/* <Stack.Screen
+        {isLoggedin ?
+          <Stack.Screen
             name="Login"
             options={{ headerShown: false }}
             component={AuthStackNavigator}
-          /> */}
-          {/* : */}
+          />
+          :
           <Stack.Screen
             name="AppStack"
             options={{ headerShown: false }}
             component={AppStackNavigator}
           />
-        {/* add your another screen here using -> Stack.Screen */}
+        }
       </Stack.Navigator>
     </NavigationContainer>
   )
