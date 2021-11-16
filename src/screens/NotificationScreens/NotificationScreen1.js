@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const NotificationScreen1 = () => {
+export const NotificationScreen1 = ({navigation}) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -17,7 +17,7 @@ export const NotificationScreen1 = () => {
                 colors={['#F1F0F0', '#AFADBF']}>
                 <View style={styles.crossStyle}>
                     <Feather onPress={() => {
-                        //  navigation.navigate('BOB')
+                         navigation.goBack()
                     }} name={'x'} size={50} color={'#A3A2BA'} />
                 </View>
                 <LinearGradient
@@ -39,7 +39,6 @@ export const NotificationScreen1 = () => {
                         <View
                             style={styles.buttonViewStyle}>
                             <TouchableOpacity
-                                onPress={() => navigation.navigate('PYT3')}
                                 style={styles.Button}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 14, fontFamily: 'Optima-Regular' }}>Log My Hydration</Text>
@@ -57,7 +56,7 @@ export const NotificationScreen1 = () => {
                         <View
                             style={styles.buttonViewStyle}>
                             <TouchableOpacity
-                                onPress={() => navigation.navigate('PYT1')}
+                                onPress={() => navigation.navigate('NotificationScreen2')}
                                 style={styles.Button}
                                 activeOpacity={0.8}>
                                 <Text style={{ color: '#A3A2BA', fontSize: 14, fontFamily: 'Optima-Regular', }}>Maybe Later</Text>

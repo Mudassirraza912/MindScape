@@ -88,7 +88,12 @@ export const Dashboard1 = ({ navigation }) => {
                         </View>
                     </View>
                     <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12,fontFamily:fonts.regulatorBold }}>NOURISH</Text>
+                    <TouchableOpacity 
+                    activeOpacity={0.8}
+                    onPress={() => navigation.navigate('NotificationScreen1')}
+                    >
                     <Text style={styles.stay}>Stay hydrated & stay focused</Text>
+                    </TouchableOpacity>
                     <View style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 20 }}>
                         {
                             loop.map((item, i) => {
@@ -185,7 +190,7 @@ export const Dashboard1 = ({ navigation }) => {
                             </TouchableOpacity>
                         </View>
                         <Text style={styles.june}>30 june 2021</Text>
-                        <View style={{ width: "35%", alignSelf: "center" }}>
+                        <View style={{ width: "38%", alignSelf: "center" }}>
                             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center", paddingVertical: 10 }}>
                                 <Image style={{ top: 14, right: 10 }} source={require('../../assets/images/leftArrow.png')} />
                                 <FlatList

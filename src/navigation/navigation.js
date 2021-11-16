@@ -153,6 +153,8 @@ function AppStackNavigator() {
       <AppStack.Screen name="PYT2" component={PYT2} />
       <AppStack.Screen name="PYT3" component={PYT3} />
       <AppStack.Screen name="PYT4" component={PYT4} />
+      <AppStack.Screen name="NotificationScreen1" component={NotificationScreen1} />
+      <AppStack.Screen name="NotificationScreen2" component={NotificationScreen2} />
     </AppStack.Navigator>
   )
 }
