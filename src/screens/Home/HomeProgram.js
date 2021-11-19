@@ -117,9 +117,9 @@ const styles = StyleSheet.create({
         fontSize: 14,fontFamily:fonts.regulatorBold
     },
     text02:{
-        color: "#A8A6B9",
+        color: "#8E8CA7",
         fontSize: 24,
-        fontFamily:fonts.regulatorLight 
+        fontFamily:fonts.regulatorLight ,
     }
 })
 

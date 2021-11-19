@@ -50,7 +50,7 @@ export const HomePersona = ({ navigation }) => {
             </TouchableOpacity>
             </View>
             </View>
-            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:30,fontFamily:fonts.OptimaRegular}}>It take up to 24hrs to {'\n'} update your parsona</Text>
+            <Text style={{fontSize:14,color:"#E39684",textAlign:'center',paddingTop:30,fontFamily:fonts.OptimaRegular}}>It takes up to 24hrs to  {'\n'} update your persona</Text>
             </View>
             <View style={{ flex: 1, alignItems: "center", }}>
                 <NewmorphButton
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     },
     circle:{
         borderWidth:1,
-        borderRadius:180,
+        borderRadius:190,
         borderColor:"#A09EB4",
         width:"85%",
         height:"40%",

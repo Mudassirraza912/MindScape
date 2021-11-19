@@ -16,7 +16,7 @@ export const AccountSecure = ({ navigation }) => {
               textAlign: 'center',
               fontFamily: fonts.regulatorLight
             }}>
-            KEEP YOUR {'\n'}ACCOUT SECURE
+            KEEP YOUR {'\n'}ACCOUNT SECURE
           </Text>
         </View>
         <View style={styles.EmptyView} />
@@ -26,7 +26,7 @@ export const AccountSecure = ({ navigation }) => {
             title="YES, PROTECT WITH FACE ID"
             buttonStyle={{
               height: 26,
-              width: 235,
+              width: 250,
               backgroundColor: 'rgba(229, 228, 247, .35)',
               marginVertical: 15
             }}
@@ -37,8 +37,8 @@ export const AccountSecure = ({ navigation }) => {
             title="May be later"
             buttonStyle={{
               height: 26,
-              width: 235,
-              borderColor: 'rgba(255, 255, 255, 1)'
+              width: 250,
+              borderColor: 'rgba(255, 255, 255, 1)',
             }}
             textStyle={{ fontSize: 16, color: 'rgba(255, 255, 255, 1)', fontFamily: fonts.regulatorDemiBold }}
           />

@@ -72,8 +72,8 @@ export const ProgressSteps = ({
                             activeOpacity={0.8}
                             onPress={() => { onPress() }}
                             style={{ flexDirection: "row", justifyContent: "space-between", paddingVertical: 10 }}>
-                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, titleStyle]}>{value.title}</Text>
-                            <Text style={[{ color: (((index + 1 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, weekStyle]}>{value.week}</Text>
+                            <Text style={[{ color: (((index + 2 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, titleStyle]}>{value.title}</Text>
+                            <Text style={[{ color: (((index + 2 == currentPosition)) ? activeTextColor : nonActiveTextColor), fontSize: 15, fontWeight: "bold", fontSize: 15,fontFamily:fonts.OptimaBold }, weekStyle]}>{value.week}</Text>
                         </TouchableOpacity>
                         //  || (index + 1 < currentPosition)
                         //  || (index + 1 < currentPosition)
