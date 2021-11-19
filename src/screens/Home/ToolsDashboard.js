@@ -20,7 +20,7 @@ export const ToolsDashboard = ({navigation}) => {
                 TOOLS
             </Text>
             <Text style={{color:"#A3A2BA",paddingBottom:15,fontSize:24,fontFamily:fonts.regulatorLight,paddingLeft:14}}>Virtues are equipped with {'\n'} a set of tools.</Text>
-            <Text style={{paddingBottom:10,color:"#E39684",paddingLeft:15,fontSize:16,fontFamily:fonts.OptimaRegular}}>These tools are designed and destined to become your life long compassion.</Text>
+            <Text style={{paddingBottom:10,color:"#E39684",paddingLeft:15,fontSize:16,fontFamily:fonts.OptimaRegular,lineHeight:22}}>These tools are designed and destined to become your life long companion.</Text>
             <View style={{paddingTop:30,alignItems:"center"}}>
             <Image style={{marginTop:8,marginLeft:3}} source={require('../../assets/images/Group276.png')}/>
             <Text style={styles.toolbox}>Toolbox</Text>

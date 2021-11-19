@@ -188,7 +188,9 @@ const styles = StyleSheet.create({
     text0: {
         paddingVertical: 6,
         paddingLeft: 20,
-        fontFamily:'Regulator Nova'
+        fontFamily:'Regulator Nova',
+        color:"#FFFFFF",
+        fontSize:30
     },
     row1: {
         flexDirection: "row",
@@ -245,8 +247,9 @@ const styles = StyleSheet.create({
     continueBtn:{
         backgroundColor:"#F4F0EF",
         paddingVertical:6,
-        paddingHorizontal:"15%",
-        borderRadius:20
+        paddingHorizontal:"10%",
+        borderRadius:20,
+        marginBottom:10
     },
     continueText:{
         fontSize:16,

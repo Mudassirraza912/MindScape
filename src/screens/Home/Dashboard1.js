@@ -53,7 +53,9 @@ export const Dashboard1 = ({ navigation }) => {
         require('../../assets/images/logo01.png')
     }
     return (
-        <LinearGradient style={styles.container} colors={['#707091', '#A1A0B9']}>
+        <LinearGradient style={styles.container}
+        colors={['#707091', '#A1A0B9']}
+         >
             <StatusBar hidden={true} />
             {/* <ImageBackground
                 style={{ height: '100%', width: '100%' }}
@@ -154,13 +156,13 @@ export const Dashboard1 = ({ navigation }) => {
                             : <Image source={require('../../assets/images/path01.png')} />}
                     </TouchableOpacity>
                 </View>
-            </ScrollView>
+            </ScrollView>         
             <ImageBackground
-                style={{ height: 398, width: '100%', flex: 0.9}}
-                source={require('../../assets/images/bgShadow2.png')}
+                style={{ height: 398, width: '100%', flex: 0.9,}}
+                source={require('../../assets/images/bgShadow3.png')}
             >
                 <View style={{ paddingHorizontal: 20 }}>
-                    <View style={{ paddingTop: "23%" }}>
+                    <View style={{ paddingTop: "20%" }}>
                         <View style={{ flexDirection: "row", justifyContent: "space-evenly", top: 20, }}>
                             <TouchableOpacity
                                 style={{ top: 16 }}
@@ -192,7 +194,10 @@ export const Dashboard1 = ({ navigation }) => {
                         <Text style={styles.june}>30 june 2021</Text>
                         <View style={{ width: "38%", alignSelf: "center" }}>
                             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center", paddingVertical: 10 }}>
+                                <View>
                                 <Image style={{ top: 14, right: 10 }} source={require('../../assets/images/leftArrow.png')} />
+                                </View>
+                                <View>
                                 <FlatList
                                 // style={{width:"100%"}}
                                     keyExtractor={(item, index) => index}
@@ -211,7 +216,11 @@ export const Dashboard1 = ({ navigation }) => {
                                         )
                                     }}>
                                 </FlatList>
-                                <Image style={{ top: 14, }} source={require('../../assets/images/rightArrow.png')} />
+                                </View>
+                                <View>
+                                <Image style={{ top: 14,left:8 }} source={require('../../assets/images/rightArrow.png')} />
+                                </View>
+                                
                             </View>
                         </View>
                         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -344,7 +353,7 @@ const styles = StyleSheet.create({
     },
     june: {
         textAlign: "center",
-        top: "15%",
+        top: "17%",
         fontSize: 12,
         color: "#49485F"
     },
