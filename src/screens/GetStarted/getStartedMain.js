@@ -14,7 +14,6 @@ import { fonts } from '../../utils/fonts'
 export const GetstartedMain = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <SafeAreaView>
       <StatusBar backgroundColor={'transparent'} translucent={true} />
       <ImageBackground
         style={{ height: '100%', width: '100%' }}
@@ -44,7 +43,6 @@ export const GetstartedMain = ({ navigation }) => {
           </View>
         </View>
       </ImageBackground>
-      </SafeAreaView>
     </View>
   )
 }

@@ -20,7 +20,7 @@ export const AboutUs = ({ navigation }) => {
         <View style={styles.mainContainer}>
         <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'light-content'}/>
         <ImageBackground
-          style={{ height: 450, width: '100%' }}
+          style={{ height: 500, width: '100%' }}
           source={require('../../assets/images/aboutUsImg.png')}>
           <View style={styles.topCutButton}>
             <TouchableOpacity
@@ -49,7 +49,7 @@ export const AboutUs = ({ navigation }) => {
               }}>
               ThirtySevenPointFive is an ideology-driven initiative dedicated to
               providing solutions to address a large spectrum of issues
-              concerning Contemporary {'\n'}Wellbeing.
+              concerning {'\n'}Contemporary {'\n'}Wellbeing.
             </Text>
           </View>
           <View>
