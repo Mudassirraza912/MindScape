@@ -9,34 +9,44 @@ export const ChangePassword = ({ navigation }) => {
         <ImageBackground
             source={require('../../assets/images/LogIn.png')}
             style={styles.container}>
-            <View style={{ justifyContent: "center", alignItems: "center", marginBottom: 40 }}>
-                <Text style={styles.helloText}>
-                    Change Password
-                </Text>
+
+            <View style={{
+                height: '30%',
+                // backgroundColor: 'red',
+                // alignItems: 'center',
+                justifyContent: 'flex-end',
+                marginBottom: 20
+            }}>
+
+
+                <View style={{ alignItems: "center", marginBottom: 30 }}>
+                    <Text style={styles.helloText}>
+                        Change Password
+                    </Text>
+
+                </View>
+
+                <TextInput
+                    placeholder="Password"
+                    placeholderTextColor="#CFCFDB"
+                    style={styles.field}
+                ></TextInput>
+                <TextInput
+                    placeholder="Confirm Password"
+                    placeholderTextColor="#CFCFDB"
+                    style={styles.field}
+                ></TextInput>
+
+
 
             </View>
-            <TextInput
-                placeholder="Password"
-                placeholderTextColor="#CFCFDB"
-                style={styles.field}
-            ></TextInput>
-            <TextInput
-                placeholder="Retype Password"
-                placeholderTextColor="#CFCFDB"
-                style={styles.field}
 
-            ></TextInput>
-
-
-
-
-            <View style={{ flex: 0, justifyContent: "center", alignItems: "center", marginTop: '25%' }}>
+            <View style={{ justifyContent: "center", alignItems: "center", marginTop: '30%' }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('Login')}
                     backgroundColor="#9493AD"
                 />
             </View>
-
 
 
         </ImageBackground>

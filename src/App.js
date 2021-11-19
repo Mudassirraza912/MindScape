@@ -5,13 +5,14 @@ import MainNavigation from './navigation/navigation'
 import { Provider } from 'react-redux'
 import { store } from './stores'
 import 'react-native-gesture-handler';
-import { NotificationScreen2 } from './screens/NotificationScreens/NotificationScreen2'
+import { Home } from '../src/screens/Home/Home'
 const App = () => {
   return (
     <>
       <Provider store={store}>
         <MainNavigation />
       </Provider>
+
     </>
   )
 }
