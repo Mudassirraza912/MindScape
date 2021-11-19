@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   BorderView: {
     borderBottomColor: 'rgba(255, 255, 255, .3)',
     borderBottomWidth: 1.5,
-    width: '45%',
+    width: '39%',
     marginVertical: 10
   }
 })
