@@ -253,9 +253,10 @@ export const ArticleScreen = ({ navigation }) => {
                 style={{
                   marginVertical: 70,
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  alignSelf:"center",
                 }}>
-                <TouchableOpacity activeOpacity={0.7} style={{ width: 100 }}>
+                <TouchableOpacity activeOpacity={0.7}>
                   <Text style={{ fontSize: 22, color: '#706F93',fontFamily:fonts.OptimaRegular }}>SHARE</Text>
                 </TouchableOpacity>
               </View>
@@ -300,7 +301,8 @@ const styles = StyleSheet.create({
   lestgoTextStyle: {
     fontSize: 12,
     color: '#fff',
-    fontFamily:fonts.regulatorDemiBold
+    fontFamily:fonts.regulatorDemiBold,
+    paddingTop:20
   },
   section2: {
     paddingTop: 60,
