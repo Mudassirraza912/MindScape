@@ -25,7 +25,7 @@ export const HomeSetName = ({ navigation }) => {
                 <Text style={{fontFamily: fonts.OptimaRegular}}>
                     So Daniel,
                 </Text>
-                <Text style={{fontFamily: fonts.OptimaRegular}}>What do your friend call you?</Text>
+                <Text style={{fontFamily: fonts.OptimaRegular}}>What do your friends call you?</Text>
                 <TextInput
                     placeholder="Nick Name"
                     placeholderTextColor="#9493AD"
