@@ -3,7 +3,7 @@ import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollVie
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
-import Feather from 'react-native-vector-icons/Feather'
+import Entypo from 'react-native-vector-icons/Entypo'
 
 export const PYT2 = ({ navigation }) => {
     return (
@@ -16,14 +16,14 @@ export const PYT2 = ({ navigation }) => {
                 style={styles.LinearGradient1}
                 colors={['#FFFFFF', '#EDE7E4']}>
                 <View style={styles.crossStyle}>
-                    <Feather onPress={() => {
+                    <Entypo onPress={() => {
                         //  navigation.navigate('BOB')
-                    }} name={'x'} size={50} color={'#A3A2BA'} />
+                    }} name={'chevron-thin-right'} size={30} color={'#A3A2BA'} />
                 </View>
                 <LinearGradient
                     style={styles.LinearGradient2}
                     colors={['#C0BFCE', '#FAF9F8']}   >
-                    <Image source={require('../../assets/images/circleyes.png')} style={{ width: 22, height: 22 }} />
+                    <Image source={require('../../assets/images/circleyes.png')} style={{ width: 22, height: 22, top: 25 }} />
                     <Text style={styles.discliamerTextStyle}>Activity
                         {'\n'}Completed</Text>
 
@@ -35,7 +35,7 @@ export const PYT2 = ({ navigation }) => {
                         </Text>
                     </View>
                     <View style={{
-                        width: '20%',
+                        width: '30%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -53,7 +53,7 @@ export const PYT2 = ({ navigation }) => {
 
 
                     <View style={{
-                        width: '50%',
+                        width: '60%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -85,22 +85,24 @@ const styles = StyleSheet.create({
         width: '85%',
 
         marginTop: height * 0.02,
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
     },
     LinearGradient2: {
         width: '80%', height: height * 0.75, borderRadius: height / 2, backgroundColor: 'transparent',
         overflow: 'hidden',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 10
     },
     discliamerTextStyle: {
         color: '#6B6B8D',
         fontSize: 22,
         fontFamily: 'Optima-Regular',
-        textAlign: 'center'
+        textAlign: 'center',
+        top: 30
     },
     centerTextViewStyle: {
-        marginVertical: height * 0.12,
+        marginVertical: height * 0.15,
         width: '80%',
         // fontFamily: 'Optima'
     },

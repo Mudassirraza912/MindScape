@@ -9,42 +9,53 @@ export const Login = ({ navigation }) => {
         <ImageBackground
             source={require('../../assets/images/LogIn.png')}
             style={styles.container}>
-            <View style={{ justifyContent: "center", alignItems: "center", marginBottom: 40 }}>
-                <Text style={styles.helloText}>
-                    Log In
-                </Text>
 
+            <View style={{
+                height: '62%',
+                // backgroundColor: 'red',
+                // alignItems: 'center',
+                justifyContent: 'flex-end',
+                marginBottom: 20
+            }}>
+
+
+                <View style={{ alignItems: "center", marginBottom: 30 }}>
+                    <Text style={styles.helloText}>
+                        Log In
+                    </Text>
+
+                </View>
+
+                <TextInput
+                    placeholder="Email Address"
+                    placeholderTextColor="#CFCFDB"
+                    style={styles.field}
+                ></TextInput>
+                <TextInput
+                    placeholder="Password"
+                    placeholderTextColor="#CFCFDB"
+                    style={styles.field}
+                ></TextInput>
+
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('ForgotPassword')}
+                    activeOpacity={0.7}
+                    style={{
+                        justifyContent: "center", alignItems: "center", marginTop: 20,
+                        // marginBottom: 25
+                    }}>
+                    <Text style={{
+                        fontSize: 14,
+                        color: '#49485F',
+                        fontFamily: 'Optima-Regular'
+                    }}>
+                        Forgot Password?
+                    </Text>
+
+                </TouchableOpacity>
             </View>
 
-            <TextInput
-                placeholder="Email Address"
-                placeholderTextColor="#CFCFDB"
-                style={styles.field}
-            ></TextInput>
-            <TextInput
-                placeholder="Password"
-                placeholderTextColor="#CFCFDB"
-                style={styles.field}
-            ></TextInput>
-
-            <TouchableOpacity
-                onPress={() => navigation.navigate('ForgotPassword')}
-                activeOpacity={0.7}
-                style={{
-                    justifyContent: "center", alignItems: "center", marginTop: 20,
-                    // marginBottom: 25
-                }}>
-                <Text style={{
-                    fontSize: 14,
-                    color: '#fff',
-                    fontFamily: 'Regulator Nova Medium'
-                }}>
-                    Forgot Password?
-                </Text>
-
-            </TouchableOpacity>
-
-            <View style={{ flex: 0, justifyContent: "center", alignItems: "center", marginTop: '25%' }}>
+            <View style={{ justifyContent: "center", alignItems: "center", marginTop: '25%' }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('AccountSecure')}
                     backgroundColor="#9493AD"
@@ -53,11 +64,12 @@ export const Login = ({ navigation }) => {
 
             <View
                 style={{
-                    justifyContent: "center", alignItems: "center", flexDirection: 'row', marginTop: 10
-                    // marginBottom: 25
+                    justifyContent: "center", alignItems: "center", flexDirection: 'row',
+                    marginTop: 10
                 }}>
                 <Text style={{
                     fontSize: 14,
+                    color: '#49485F'
 
                 }}>
                     Don't have an Account ?
@@ -86,8 +98,7 @@ export const Login = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, justifyContent:
-            "center",
+        flex: 1,
         backgroundColor: "#9493AD",
     },
     helloText: {
