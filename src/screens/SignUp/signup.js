@@ -17,7 +17,7 @@ export const SignUp = ({ navigation }) => {
                 </Text>
                 <TouchableOpacity  >
                     <Text style={{ paddingBottom: 6, fontFamily: fonts.OptimaRegular}}>
-                        Top to type
+                        Tap to type
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -42,7 +42,7 @@ export const SignUp = ({ navigation }) => {
                 style={styles.field}
 
             ></TextInput>
-            <View style={{ flex: 0, justifyContent: "center", alignItems: "center", marginTop: "10%" }}>
+            <View style={{ flex: 0, justifyContent: "center", alignItems: "center", top: "13%" }}>
                 <NewmorphButton
                     onPress={() => navigation.navigate('OtpVerification')}
                     backgroundColor="#9493AD"

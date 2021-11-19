@@ -12,6 +12,7 @@ import {
 import ToggleButton from '../../components/ToggleButton/index'
 import Icon from 'react-native-vector-icons/EvilIcons'
 import { imagePicker } from '../../helper/utils'
+import { fonts } from '../../utils/fonts'
 
 export const Account = ({ navigation }) => {
   const [image, setImage] = useState()
@@ -35,17 +36,17 @@ export const Account = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContainer}>
-          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8 }}>
+          <Text style={{ color: '#8C8BA5', fontSize: 24, marginVertical: 8, fontFamily: fonts.regulatorMedium }}>
             ACCOUNT
           </Text>
-          <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6,}}>
+          <Text style={{ color: '#FFFFFF', fontSize: 18, marginVertical: 6, fontFamily: fonts.regulatorMedium}}>
             LOGIN INFORMATION
           </Text>
-          <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8 }}>
+          <Text style={{ color: '#E39684', fontSize: 22, marginVertical: 8, fontFamily: fonts.OptimaRegular }}>
             Tap to Type
           </Text>
           <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Name</Text>
+            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: fonts.OptimaRegular }}>Name</Text>
             <View>
               <TextInput
                 style={styles.input}
@@ -58,7 +59,7 @@ export const Account = ({ navigation }) => {
             </View>
           </View>
           <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Email</Text>
+            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: fonts.OptimaRegular }}>Email</Text>
             <View>
               <TextInput
                 style={styles.input}
@@ -71,7 +72,7 @@ export const Account = ({ navigation }) => {
             </View>
           </View>
           <View style={{ justifyContent: 'space-between' }}>
-            <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Contact</Text>
+            <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: fonts.OptimaRegular }}>Contact</Text>
             <View>
               <TextInput
                 style={styles.input}
@@ -94,7 +95,7 @@ export const Account = ({ navigation }) => {
             }}>
             <View style={{ width: '70%' }}>
               <Text
-                style={{ color: '#FFFFFF', fontSize: 16, marginVertical: 5 }}>
+                style={{ color: '#FFFFFF', fontSize: 16, marginVertical: 5, fontFamily: fonts.OptimaRegular }}>
                 Refresh Your Silhouette
               </Text>
             </View>
@@ -147,9 +148,9 @@ export const Account = ({ navigation }) => {
                   justifyContent: 'center',
                   alignItems: 'center'
                 }}>
-                <Text style={{ color: '#8C8BA5', fontSize: 16 }}>Upload</Text>
+                <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: fonts.regulatorMedium }}>Upload</Text>
               </TouchableOpacity>
-              <Text style={{ color: '#E39684', fontSize: 14, marginTop: 10, fontFamily:"Optima-Regular" }}>
+              <Text style={{ color: '#E39684', fontSize: 14, marginTop: 10, fontFamily: fonts.OptimaRegular }}>
                 *update within {'\n'}24 hours
               </Text>
             </View>
@@ -172,10 +173,12 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     paddingTop: 35,
-    paddingHorizontal: 50
+    paddingHorizontal: 50,
+    justifyContent: 'center',
+    // alignItems: 'center'
   },
   input: {
-    width: 240,
+    width: "88%",
     height: 33,
     marginVertical: 12,
     borderRadius: 25,
