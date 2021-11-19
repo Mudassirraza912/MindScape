@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Slider from 'react-native-slider'
 
-export const MindfullnessSong = () => {
+export const MindfullnessSong = ({navigation}) => {
     const [state, setState] = useState({
         value: 0.2
     })
@@ -62,6 +62,7 @@ export const MindfullnessSong = () => {
 
                     }}>INTRODUCTION</Text>
                     <TouchableOpacity
+                        onPress={() => {navigation.navigate('HomeSong')}}
                         activeOpacity={0.8}
                         style={{
                             width: 60,

@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 
-export const Home = () => {
+export const Home = ({navigation}) => {
     return (
         <ImageBackground source={require('../../assets/images/home.png')}
 
@@ -32,8 +32,8 @@ export const Home = () => {
                 alignItems: 'center'
             }}>
                 <NewmorphButton
-                    // onPress={() => navigation.navigate('Login')}
-                    backgroundColor="transparent"
+                    onPress={() => navigation.navigate('Dashboard')}
+                    backgroundColor="#727093"
                 />
 
 

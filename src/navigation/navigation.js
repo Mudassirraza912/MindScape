@@ -57,6 +57,8 @@ import { PYT4 } from '../screens/PYTScreens/PYT4'
 import { NotificationScreen1 } from '../screens/NotificationScreens/NotificationScreen1'
 import { NotificationScreen2 } from '../screens/NotificationScreens/NotificationScreen2'
 import { MindfullnessSong } from '../screens/MindfullnessSong/MindfullnessSong'
+import { Home } from '../screens/Home/Home'
+
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()
@@ -156,6 +158,10 @@ function AppStackNavigator() {
       <AppStack.Screen name="PYT4" component={PYT4} />
       <AppStack.Screen name="NotificationScreen1" component={NotificationScreen1} />
       <AppStack.Screen name="NotificationScreen2" component={NotificationScreen2} />
+      <AppStack.Screen name="MindfullnessSong" component={MindfullnessSong} />
+      <AppStack.Screen name="HomeSong" component={Home} />
+
+    
     </AppStack.Navigator>
   )
 }

@@ -68,7 +68,7 @@ export const HomeProgram = ({ navigation }) => {
                 </View>
                 <View style={{ justifyContent: "center", alignItems: "center", paddingVertical: 20 }}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('Dashboard')}
+                        onPress={() => navigation.navigate('MindfullnessSong')}
                         style={styles.buttondv}
                     >
                         <Text style={{ color: "#A3A2BA",fontFamily:fonts.OptimaRegular,fontSize:16 }}>GET STARTED</Text>
