@@ -20,7 +20,7 @@ export const OtpVerification = ({ navigation }) => {
           <Text style={{ color: '#fff', fontSize: 24, textAlign: 'center', fontFamily: fonts.regulatorLight }}>
             Enter 4 digit code {'\n'}to authenticate
           </Text>
-          <Text style={{ color: '#000', fontSize: 16, textAlign: 'center', fontFamily: fonts.OptimaRegular, paddingVertical: 10 }}>
+          <Text style={{ color: '#575672', fontSize: 16, textAlign: 'center', fontFamily: fonts.OptimaRegular, paddingVertical: 10 }}>
             Check your email
           </Text>
         </View>

@@ -19,14 +19,14 @@ export const SleepMsg = ({navigation}) => {
                                 REMEMBER 
                             </Text>
                             <Text style={styles.rememberMsg}>
-                                How you sleep at night {"\n"} determines how well {"\n"} you do in the day. 
+                                How you sleep at night {"\n"}determines how well {"\n"}you do in the day. 
                             </Text>
                        </View>
                     </ImageBackground>
                     <View style={styles.smallCircle}>
                     <Text style={styles.text4}>4</Text>
                     </View>
-                    <View style={{marginTop:30}}>
+                    <View style={{top: "12%"}}>
                     <NewmorphButton
                     onPress={() => navigation.navigate('Dashboard1')}
                     // backgroundColor="#9493AD"
@@ -53,20 +53,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     rememberImg:  { 
-        height: 284,
-        width: 280, 
+        height: 234,
+        width: 230, 
         resizeMode: 'stretch' 
     },
     rememberHeading: {
-        color: "#E39684"
+        color: "#E39684",
+        // fontSize: 14
     },
     rememberMsg: {
-        color: "#fff"
+        color: "#fff",
+        fontSize: 16
     },
     rememberMsgContainer: {
         position: "absolute",
-        top: height/7,
-        left: width/6        
+        top: height/9.5,
+        left: width/9.5        
     },
     text4:{
         fontFamily:fonts.regulatorMedium,
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     },
     smallCircle:{
         borderColor:"#FFFFFF",
-        borderWidth:1,
+        borderWidth:0.5,
         borderRadius:20,
         paddingHorizontal:12,
         paddingVertical:6,

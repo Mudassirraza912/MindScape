@@ -31,7 +31,7 @@ export const Loading1 = ({ navigation }) => {
             }}>
       <SafeAreaView style={styles.mainContainer}>
           <ImageBackground
-           style={{ height: '98%', width: '100%' }}
+           style={{ height: '95%', width: '100%', marginTop:20 }}
            source={require('../../assets/images/loadingBg.png')}
           >
 
@@ -106,9 +106,10 @@ const styles = StyleSheet.create({
   },
   backButtonView: {
     paddingBottom: 60,
-    height: height * 0.42,
+    height: height * 0.38,
     justifyContent: 'flex-end',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingLeft:15
   }
 })
 

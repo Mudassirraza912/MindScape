@@ -35,7 +35,7 @@ export const PYT4 = ({ navigation }) => {
                     </View>
 
                     <View style={{
-                        width: '20%',
+                        width: '30%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -59,7 +59,7 @@ export const PYT4 = ({ navigation }) => {
 
 
                     <View style={{
-                        width: '50%',
+                        width: '60%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -109,10 +109,11 @@ const styles = StyleSheet.create({
         color: '#6B6B8D',
         fontSize: 22,
         fontFamily: 'Optima-Regular',
-        textAlign: 'center'
+        textAlign: 'center',
+        top: 30
     },
     centerTextViewStyle: {
-        marginVertical: height * 0.12,
+        marginVertical: height * 0.15,
         width: '85%',
         // fontFamily: 'Optima'
     },

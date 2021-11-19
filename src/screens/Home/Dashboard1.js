@@ -369,34 +369,41 @@ const styles = StyleSheet.create({
         // backgroundColor: 'transparent',
         // backgroundColor:"#70709290",
         // borderRadius: 15,
-        paddingTop: "4%",
+        // paddingTop: "4%",
     },
     LinearGradient: {
-        width: '100%', height: height * 0.75, borderRadius: height / 2,
+        width: '100%', 
+        height: height * 0.8, 
+        borderRadius: (height * 0.8) / 2,
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'transparent',
         opacity: 0.8,
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
+
     },
     modalText: {
         paddingVertical: 10,
-        color: "#6B6B8D",
+        color: "#706F93",
         fontSize: 24,
-        fontFamily:fonts.OptimaRegular
+        fontFamily:fonts.OptimaRegular,
+        textAlign: 'center'
     },
     modalText1: {
         paddingVertical: 10,
         textAlign: "center",
         color: "#706F93",
         fontSize: 16,
-        fontFamily:fonts.regulatorMedium
+        fontFamily:fonts.regulatorMedium,
+        width: '80%'
     },
     modalText2: {
         color: "#49485F",
         fontSize: 13,
         fontWeight: "bold",
-        fontFamily:fonts.OptimaBold
+        fontFamily:fonts.OptimaBold,
+        top: '5%'
     }
 })
+ 

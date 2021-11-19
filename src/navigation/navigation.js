@@ -56,6 +56,7 @@ import { PYT3 } from '../screens/PYTScreens/PYT3'
 import { PYT4 } from '../screens/PYTScreens/PYT4'
 import { NotificationScreen1 } from '../screens/NotificationScreens/NotificationScreen1'
 import { NotificationScreen2 } from '../screens/NotificationScreens/NotificationScreen2'
+import { MindfullnessSong } from '../screens/MindfullnessSong/MindfullnessSong'
 
 const Stack = createStackNavigator()
 const AuthStack = createStackNavigator()

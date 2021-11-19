@@ -3,7 +3,7 @@ import { View, Text, SafeAreaView, StatusBar, TouchableOpacity, Image, ScrollVie
 import LinearGradient from 'react-native-linear-gradient';
 const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
-export const PYT1 = ({navigation}) => {
+export const PYT1 = ({ navigation }) => {
 
     const Images = [
         {
@@ -65,9 +65,9 @@ export const PYT1 = ({navigation}) => {
                     >
 
                         <NewmorphButton
-                        onPress={() => navigation.navigate('PYT2')}
+                            onPress={() => navigation.navigate('PYT2')}
                             backgroundColor='#EBE5DA'
-                            backgroundColor={Platform.OS == "ios" ? "#EBE5DA":"transparent"}
+                            backgroundColor={Platform.OS == "ios" ? "#EBE5DA" : "transparent"}
                         />
                     </View>
 
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 
     centerTextViewStyle: {
         width: '80%',
-        height: '100%',
+        height: '110%',
         alignSelf: 'center',
         // height: 150,
         alignItems: 'center',

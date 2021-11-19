@@ -97,7 +97,7 @@ export const Subscription = ({ navigation }) => {
                   onPress={() => imageSelector()}
                   activeOpacity={0.7}
                   style={{
-                    marginTop: 25,
+                    marginTop: 15,
                     width: 100,
                     height: 35,
                     borderRadius: 20,
@@ -120,7 +120,7 @@ export const Subscription = ({ navigation }) => {
               style={{
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginVertical: 60,
+                marginVertical: 70,
               }}>
               <TouchableOpacity
                 onPress={() => navigation.goBack()}

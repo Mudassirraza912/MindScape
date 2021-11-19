@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 import NewmorphButton from '../../components/NewmorphButton/index'
 import Feather from 'react-native-vector-icons/Feather'
 
-export const NotificationScreen1 = ({navigation}) => {
+export const NotificationScreen1 = ({ navigation }) => {
     return (
         <SafeAreaView style={{
             flex: 1
@@ -17,7 +17,7 @@ export const NotificationScreen1 = ({navigation}) => {
                 colors={['#F1F0F0', '#AFADBF']}>
                 <View style={styles.crossStyle}>
                     <Feather onPress={() => {
-                         navigation.goBack()
+                        navigation.goBack()
                     }} name={'x'} size={50} color={'#A3A2BA'} />
                 </View>
                 <LinearGradient
@@ -32,7 +32,9 @@ export const NotificationScreen1 = ({navigation}) => {
                         </Text>
                     </View>
                     <View style={{
-                        width: '20%',
+                        width: '35%',
+                        // marginTop: '30%'
+                        // marginTop: 20
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -49,7 +51,7 @@ export const NotificationScreen1 = ({navigation}) => {
 
 
                     <View style={{
-                        width: '50%',
+                        width: '60%',
                         // alignSelf: 'center',
                         // backgroundColor: 'red'
                     }}>
@@ -93,11 +95,17 @@ const styles = StyleSheet.create({
         color: '#6B6B8D',
         fontSize: 22,
         fontFamily: 'Optima-Regular',
-        textAlign: 'center'
+        textAlign: 'center',
+        top: 30
+        // marginTop: 10
+        // marginBottom: '50%'
     },
     centerTextViewStyle: {
-        marginVertical: height * 0.12,
+        marginVertical: height * 0.18,
+        // marginTop: height * 0.09,
+        // marginBottom: height * 0.18,
         width: '80%',
+        // marginBottom: '20%'
         // fontFamily: 'Optima'
     },
     centerTextStyle: {
