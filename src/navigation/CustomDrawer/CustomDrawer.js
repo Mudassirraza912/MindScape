@@ -11,7 +11,7 @@ export const CustomDrawer = ({ navigation }) => {
             navigateTo: 'Preference'
         },
         {
-            title: 'ACOUNT',
+            title: 'ACCOUNT',
             navigateTo: 'MainAcount'
         },
         {

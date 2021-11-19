@@ -185,7 +185,12 @@ export const Preference = ({ navigation }) => {
                     >
                         Add a reminder
                     </Text>
-                    <LinearGradient
+                    <TouchableOpacity activeOpacity={0.8}>
+
+                        <Image source={require('../../assets/images/circleplus.png')} style={{ width: 28, height: 31 }} />
+
+                    </TouchableOpacity>
+                    {/* <LinearGradient
                         colors={['#C39290', '#8C8BA5',]}
                         start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}
                         style={styles.linearCircleViewStyle1}
@@ -193,7 +198,7 @@ export const Preference = ({ navigation }) => {
                     >
                         <AntDesign name="plus" size={15} color="#fff" />
 
-                    </LinearGradient>
+                    </LinearGradient> */}
                 </View>
 
                 <View
@@ -267,7 +272,7 @@ const styles = StyleSheet.create({
     dailyTextStyle: {
         fontSize: 18,
         fontFamily: 'Regulator Nova Medium',
-        color: '#D99888'
+        color: '#FFFFFF'
     },
     linearCircleViewStyle1: {
         width: 28,
