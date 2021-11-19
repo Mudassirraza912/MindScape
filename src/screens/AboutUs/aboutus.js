@@ -11,6 +11,7 @@ import {
   SafeAreaView
 } from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
+import { fonts } from '../../utils/fonts'
 
 export const AboutUs = ({ navigation }) => {
   return (
@@ -42,12 +43,13 @@ export const AboutUs = ({ navigation }) => {
                 color: '#fff',
                 fontSize: 20,
                 textAlign: 'center',
+                // letterSpacing:2,
                 padding: 50,
-                fontFamily: 'Regulator Nova Medium'
+                fontFamily: fonts.regulatorLight
               }}>
               ThirtySevenPointFive is an ideology-driven initiative dedicated to
               providing solutions to address a large spectrum of issues
-              concerning Contemporary Wellbeing.
+              concerning Contemporary {'\n'}Wellbeing.
             </Text>
           </View>
           <View>
@@ -56,8 +58,8 @@ export const AboutUs = ({ navigation }) => {
                 color: '#49485F',
                 fontSize: 16,
                 textAlign: 'center',
-                paddingBottom: 30,
-                fontFamily: 'Optima-Regular'
+                paddingBottom: 50,
+                fontFamily: fonts.OptimaRegular
               }}>
               Scroll to explore
             </Text>

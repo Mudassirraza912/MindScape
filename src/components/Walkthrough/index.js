@@ -10,9 +10,9 @@ const height = Dimensions.get('screen').height
 
 export const WalkThroughComponent = ({
     data = [
-        { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'Wellbeing Management is the most significant skill of our times..' },
-        { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'This 175 day program will teach you 5 virtues providing life long access to empowering tools.' },
-        { img: 'https://i.pinimg.com/originals/30/c6/54/30c654e9b6a44f2913eab09b0ae7312c.jpg', text: 'Scientifically designed to enable you to explore the best version of yourself' }
+        { img: require('../../assets/images/walkthrough1.png'), text: 'Wellbeing Management is the most significant skill of our times..' },
+        { img: require('../../assets/images/walkthrough2.png'), text: 'This 175 day program will teach you 5 virtues providing life long access to empowering tools.' },
+        { img: require('../../assets/images/walkthrough3.png'), text: 'Scientifically designed to enable you to explore the best version of yourself' }
     ],
     navigation
 
@@ -52,9 +52,9 @@ export const WalkThroughComponent = ({
                 renderItem={({ item, index }) => {
                     return (
                         <View style={{ flex: 1, width: width }}>
-                            <Image source={{ uri: item.img }} style={{ height: "65%", width: width }} />
+                            <Image source={item.img} style={{ height: "68%", width: width }} resizeMode="cover" />
                             <View style={{ padding: 30 }}>
-                                <Text style={{ textAlign: 'center', color: "#74727d", fontFamily: fonts.regulatorLight }}>
+                                <Text style={{ textAlign: 'center', color: "#706F93", fontFamily: fonts.regulatorLight, fontSize: 22 }}>
                                     {item.text}
                                 </Text>
                             </View>
