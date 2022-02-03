@@ -119,6 +119,13 @@ function MainDrawer() {
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="TermsCondition" component={TermsCondition} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="PrivacyPolicy" component={PrivacyPolicy} />
       <Drawer.Screen options={{ activeTintColor: "#fff" }} name="ContactUs" component={ContactUs} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Dashboard1" component={Dashboard1} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="Breathing" component={Breathing} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="BreathingStarted" component={BreathingStarted} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="WeeklyProgress2" component={WeeklyProgress2} />
+      <Drawer.Screen options={{ activeTintColor: "#fff" }} name="WeeklyProgress" component={WeeklyProgress} />
+
+
     </Drawer.Navigator>
   )
 }
@@ -136,9 +143,9 @@ function AppStackNavigator() {
       <AppStack.Screen name="HomeSetCountry" component={HomeSetCountry} />
       <AppStack.Screen name="HomeWarning" component={HomeWarning} />
       <AppStack.Screen name="HomeCommitment" component={HomeCommitment} />
-      <AppStack.Screen name="WeeklyProgress" component={WeeklyProgress} />
+      {/* <AppStack.Screen name="WeeklyProgress" component={WeeklyProgress} /> */}
       <AppStack.Screen name="BreathingStarted" component={BreathingStarted} />
-      <AppStack.Screen name="WeeklyProgress2" component={WeeklyProgress2} />
+      {/* <AppStack.Screen name="WeeklyProgress2" component={WeeklyProgress2} /> */}
       <AppStack.Screen name="Breathing" component={Breathing} />
       <AppStack.Screen name="HomeRoutine" component={HomeRoutine} />
       <AppStack.Screen name="HomeProgram" component={HomeProgram} />

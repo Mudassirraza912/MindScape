@@ -52,13 +52,13 @@ export const WalkThroughComponent = ({
                 renderItem={({ item, index }) => {
                     return (
                         <View style={{ flex: 1, width: width }}>
-                            <Image source={item.img} style={{ height: "68%", width: width }} resizeMode="cover" />
+                            <Image source={item.img} style={{ height: "65%", width: width }} resizeMode="cover" />
                             <View style={{ padding: 30 }}>
                                 <Text style={{ textAlign: 'center', color: "#706F93", fontFamily: fonts.regulatorLight, fontSize: 22 }}>
                                     {item.text}
                                 </Text>
                             </View>
-                            <View style={{ flex: 0, justifyContent: "center", alignItems: "center" }}>
+                            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
                                 <Button
                                     buttonStyle={{ borderColor: "#afafb7" }}
                                     onPress={() => navigation.navigate('SignUp')} title={"SIGN UP"} textStyle={{ color: '#a4a4ae', fontFamily: fonts.OptimaRegular}} />

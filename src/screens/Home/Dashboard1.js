@@ -80,15 +80,15 @@ export const Dashboard1 = ({ navigation }) => {
                             <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12,fontFamily:fonts.regulatorBold }}>THINK</Text>
                             <Text style={styles.stay}>Picture Your</Text>
                             <Text style={styles.connect}>Connect with your emotions</Text>
-                            <TouchableOpacity
-                                onPress={() => setTick(!tick)}
-                                activeOpacity={0.9}
-                                style={styles.circle} >
-                                {tick ? <Image source={require('../../assets/images/path02.png')} />
-                                    : <Image source={require('../../assets/images/path01.png')} />}
-                            </TouchableOpacity>
                         </View>
                     </View>
+                    <TouchableOpacity
+                        onPress={() => setTick(!tick)}
+                        activeOpacity={0.9}
+                        style={[styles.circle]} >
+                        {tick ? <Image source={require('../../assets/images/path02.png')} />
+                            : <Image source={require('../../assets/images/path01.png')} />}
+                    </TouchableOpacity>
                     <Text style={{ color: "#575672", fontWeight: "bold", fontSize: 12,fontFamily:fonts.regulatorBold }}>NOURISH</Text>
                     <TouchableOpacity 
                     activeOpacity={0.8}
@@ -230,6 +230,7 @@ export const Dashboard1 = ({ navigation }) => {
                                 <Text style={{ fontSize: 18, color: "#626178", textAlign: "center",fontFamily:fonts.regulatorLight }}>MINDFULNESS</Text>
                             </View>
                             <TouchableOpacity
+                                onPress={() => navigation.openDrawer()}
                                 activeOpacity={0.9}
                             >
                                 <Image source={require('../../assets/images/menuIcon.png')} />

@@ -345,7 +345,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mindscape" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindScape" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -633,8 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5387AGUHB;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = L5NW6G2KXA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MindScape/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -646,7 +646,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.appstirr.MindScape;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstirr.mindScape;
 				PRODUCT_NAME = MindScape;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -660,8 +660,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5387AGUHB;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = L5NW6G2KXA;
 				INFOPLIST_FILE = MindScape/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,7 +672,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.appstirr.MindScape;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appstirr.mindScape;
 				PRODUCT_NAME = MindScape;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -823,7 +823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mindscape" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindScape" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

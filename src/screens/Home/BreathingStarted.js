@@ -34,6 +34,7 @@ export const BreathingStarted = ({ navigation }) => {
                 <View style={{height:40}}></View>
             </ScrollView>
             <Bottom
+            navigation={navigation}
             bottomColor={"treansparent"}
             textRetrun = "Return"
             />

@@ -61,7 +61,7 @@ export const ProgressSteps = ({
                 <StepIndicator
                     stepCount={data.length > 0 ? data.length : 2}
                     customStyles={{ ...customStyles, ...indicatorCustomStyle }}
-                    currentPosition={currentPosition - 1}
+                    currentPosition={currentPosition - 2}
                     direction={'vertical'}
                 />
             </View>

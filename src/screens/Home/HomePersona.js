@@ -42,7 +42,7 @@ export const HomePersona = ({ navigation }) => {
                 <Text style={{fontSize:24,color:"#BEBBC9",paddingVertical:10,paddingLeft:10,fontFamily:fonts.regulatorLight}}>Upload your picture to help us customize your Mindscape</Text>
                 <View style={styles.circle}>
             <Image style={styles.img}  source= {require('../../assets/images/group243.png')}/>
-            <View style={{flex:0,alignItems:"center",position:"absolute",top:"95%",left:"36%"}}>
+            <View style={{flex:0,alignItems:"center", position:"absolute",top:"95%",left:"32%"}}>
             <TouchableOpacity 
             onPress={()=> imageSelector()}
             style={styles.btn}>
@@ -95,10 +95,12 @@ const styles = StyleSheet.create({
     },
     btn:{
         backgroundColor:"#2F2F40",
-        width:70,
+        width:100,
         paddingVertical:6,
         borderRadius:30,
-        paddingHorizontal:2
+        paddingHorizontal:10,
+        // alignSelf: 'center',
+        // right: 10
     },
     img:{
         width:"90%",

@@ -131,6 +131,7 @@ export const WeeklyProgress = ({ navigation }) => {
                 </ScrollView>
                 <View>
                     <Bottom 
+                    navigation={navigation}
                     bottomColor={"treansparent"}
                     borderColor = {"#EFEFEF"}
                     iconText = {'07'}

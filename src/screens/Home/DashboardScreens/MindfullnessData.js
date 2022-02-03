@@ -220,7 +220,7 @@ export const MindfullnessData = ({ navigation, step }) => {
                 </View>
             </ScrollView>
             <Bottom 
-            textRetrun={'Retrun'}
+            textRetrun={'Return'}
             navigation={navigation} />
         </>
     )

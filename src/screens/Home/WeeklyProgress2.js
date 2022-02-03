@@ -49,7 +49,9 @@ export const WeeklyProgress2 = ({navigation}) => {
 
                         >07</Text>
                     </ImageBackground>
-                    <Image  source={require('../../assets/images/menu.png')} />
+                    <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                        <Image  source={require('../../assets/images/menu.png')} />
+                    </TouchableOpacity>
                 </View>
                 </View>
   </ImageBackground>

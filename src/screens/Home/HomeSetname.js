@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         borderBottomColor: "#000",
         // borderStyle:"dashed",
         fontSize: 22,
-        fontFamily: fonts.regulatorLight
+        fontFamily: fonts.regulatorLight,
+        marginTop: Platform.OS == "ios" ? 10 : 0
     }
 })

@@ -151,7 +151,7 @@ export const Account = ({ navigation }) => {
                 <Text style={{ color: '#8C8BA5', fontSize: 16, fontFamily: fonts.regulatorMedium }}>Upload</Text>
               </TouchableOpacity>
               <Text style={{ color: '#E39684', fontSize: 14, marginTop: 10, fontFamily: fonts.OptimaRegular }}>
-                *update within {'\n'}24 hours
+                *update within {'\n'} 24 hours
               </Text>
             </View>
           </View>
