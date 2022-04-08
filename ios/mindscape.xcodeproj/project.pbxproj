@@ -10,25 +10,25 @@
 		00E356F31AD99517003FC87E /* MindScapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MindScapeTests.m */; };
 		12594A5E273BAA30001ABFBF /* Regulator-Nova.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12594A5A273BAA30001ABFBF /* Regulator-Nova.otf */; };
 		12594A62273BADA4001ABFBF /* Regulator Nova Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12594A61273BADA4001ABFBF /* Regulator Nova Medium.otf */; };
-		12BD5C9F273D19B0007116D2 /* Regulator Nova Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8A273D1970007116D2 /* Regulator Nova Bold Italic.otf */; };
-		12BD5CA0273D19B0007116D2 /* Regulator Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C83273D196F007116D2 /* Regulator Nova Bold.otf */; };
-		12BD5CA1273D19B0007116D2 /* Regulator Nova Cameo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C85273D196F007116D2 /* Regulator Nova Cameo.otf */; };
-		12BD5CA2273D19B0007116D2 /* Regulator Nova Demi Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C86273D196F007116D2 /* Regulator Nova Demi Bold Italic.otf */; };
-		12BD5CA3273D19B0007116D2 /* Regulator Nova Demi Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8B273D1970007116D2 /* Regulator Nova Demi Bold.otf */; };
-		12BD5CA4273D19B0007116D2 /* Regulator Nova Extra Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C84273D196F007116D2 /* Regulator Nova Extra Light Italic.otf */; };
-		12BD5CA5273D19B0007116D2 /* Regulator Nova Extra Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C90273D1970007116D2 /* Regulator Nova Extra Light.otf */; };
-		12BD5CA6273D19B0007116D2 /* Regulator Nova Heavy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8C273D1970007116D2 /* Regulator Nova Heavy Italic.otf */; };
-		12BD5CA7273D19B0007116D2 /* Regulator Nova Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C87273D196F007116D2 /* Regulator Nova Heavy.otf */; };
-		12BD5CA8273D19B0007116D2 /* Regulator Nova Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8F273D1970007116D2 /* Regulator Nova Light Italic.otf */; };
-		12BD5CA9273D19B0007116D2 /* Regulator Nova Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8D273D1970007116D2 /* Regulator Nova Light.otf */; };
-		12BD5CAA273D19B0007116D2 /* Regulator Nova Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C89273D1970007116D2 /* Regulator Nova Medium Italic.otf */; };
-		12BD5CAB273D19B0007116D2 /* Regulator Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C88273D196F007116D2 /* Regulator Nova Thin Italic.otf */; };
-		12BD5CAC273D19B0007116D2 /* Regulator Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BD5C8E273D1970007116D2 /* Regulator Nova Thin.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3FABCF7225E43D72E71D4472 /* libPods-MindScape-MindScapeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C73CDE4CA68B2E8CB0AF8C7D /* libPods-MindScape-MindScapeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		847AD47927B127B900960F97 /* Regulator Nova Heavy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD46B27B127B800960F97 /* Regulator Nova Heavy Italic.otf */; };
+		847AD47A27B127B900960F97 /* Regulator Nova Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD46C27B127B800960F97 /* Regulator Nova Bold Italic.otf */; };
+		847AD47B27B127B900960F97 /* Regulator Nova Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD46D27B127B800960F97 /* Regulator Nova Medium Italic.otf */; };
+		847AD47C27B127B900960F97 /* Regulator Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD46E27B127B800960F97 /* Regulator Nova Bold.otf */; };
+		847AD47D27B127B900960F97 /* Regulator Nova Extra Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD46F27B127B800960F97 /* Regulator Nova Extra Light.otf */; };
+		847AD47E27B127B900960F97 /* Regulator Nova Demi Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47027B127B800960F97 /* Regulator Nova Demi Bold Italic.otf */; };
+		847AD47F27B127B900960F97 /* Regulator Nova Extra Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47127B127B900960F97 /* Regulator Nova Extra Light Italic.otf */; };
+		847AD48027B127B900960F97 /* Regulator Nova Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47227B127B900960F97 /* Regulator Nova Light.otf */; };
+		847AD48127B127B900960F97 /* Regulator Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47327B127B900960F97 /* Regulator Nova Thin.otf */; };
+		847AD48227B127B900960F97 /* Regulator Nova Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47427B127B900960F97 /* Regulator Nova Thin Italic.otf */; };
+		847AD48327B127B900960F97 /* Regulator Nova Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47527B127B900960F97 /* Regulator Nova Heavy.otf */; };
+		847AD48427B127B900960F97 /* Regulator Nova Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47627B127B900960F97 /* Regulator Nova Light Italic.otf */; };
+		847AD48527B127B900960F97 /* Regulator Nova Cameo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47727B127B900960F97 /* Regulator Nova Cameo.otf */; };
+		847AD48627B127B900960F97 /* Regulator Nova Demi Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 847AD47827B127B900960F97 /* Regulator Nova Demi Bold.otf */; };
 		B7AFD74AFF00A64C1E00BA0E /* libPods-MindScape.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F14B0CA0533C6586ECFD5C38 /* libPods-MindScape.a */; };
 /* End PBXBuildFile section */
 
@@ -59,20 +59,6 @@
 		12B4E39F273AB96D0083A119 /* Optima-Regular.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Regular.TTF"; sourceTree = "<group>"; };
 		12B4E3A0273AB96D0083A119 /* Optima-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Medium.ttf"; sourceTree = "<group>"; };
 		12B4E3A1273AB96E0083A119 /* Optima-Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Bold.TTF"; sourceTree = "<group>"; };
-		12BD5C83273D196F007116D2 /* Regulator Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Bold.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Bold.otf"; sourceTree = "<group>"; };
-		12BD5C84273D196F007116D2 /* Regulator Nova Extra Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Extra Light Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Extra Light Italic.otf"; sourceTree = "<group>"; };
-		12BD5C85273D196F007116D2 /* Regulator Nova Cameo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Cameo.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Cameo.otf"; sourceTree = "<group>"; };
-		12BD5C86273D196F007116D2 /* Regulator Nova Demi Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Demi Bold Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Demi Bold Italic.otf"; sourceTree = "<group>"; };
-		12BD5C87273D196F007116D2 /* Regulator Nova Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Heavy.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Heavy.otf"; sourceTree = "<group>"; };
-		12BD5C88273D196F007116D2 /* Regulator Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Thin Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Thin Italic.otf"; sourceTree = "<group>"; };
-		12BD5C89273D1970007116D2 /* Regulator Nova Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Medium Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Medium Italic.otf"; sourceTree = "<group>"; };
-		12BD5C8A273D1970007116D2 /* Regulator Nova Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Bold Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Bold Italic.otf"; sourceTree = "<group>"; };
-		12BD5C8B273D1970007116D2 /* Regulator Nova Demi Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Demi Bold.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Demi Bold.otf"; sourceTree = "<group>"; };
-		12BD5C8C273D1970007116D2 /* Regulator Nova Heavy Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Heavy Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Heavy Italic.otf"; sourceTree = "<group>"; };
-		12BD5C8D273D1970007116D2 /* Regulator Nova Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Light.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Light.otf"; sourceTree = "<group>"; };
-		12BD5C8E273D1970007116D2 /* Regulator Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Thin.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Thin.otf"; sourceTree = "<group>"; };
-		12BD5C8F273D1970007116D2 /* Regulator Nova Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Light Italic.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Light Italic.otf"; sourceTree = "<group>"; };
-		12BD5C90273D1970007116D2 /* Regulator Nova Extra Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Regulator Nova Extra Light.otf"; path = "../../../../Downloads/Regul_t0r_N0v-4/Regulator Nova Extra Light.otf"; sourceTree = "<group>"; };
 		12BD5C91273D1997007116D2 /* Regulator Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Bold.otf"; sourceTree = "<group>"; };
 		12BD5C92273D1997007116D2 /* Regulator Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Thin Italic.otf"; sourceTree = "<group>"; };
 		12BD5C93273D1997007116D2 /* Regulator Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Thin.otf"; sourceTree = "<group>"; };
@@ -101,6 +87,20 @@
 		65FA26A905234E22AB24EDAF /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		817DCA354262A7E1449AFEE7 /* Pods-MindScape-MindScapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindScape-MindScapeTests.release.xcconfig"; path = "Target Support Files/Pods-MindScape-MindScapeTests/Pods-MindScape-MindScapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MindScape/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847AD46B27B127B800960F97 /* Regulator Nova Heavy Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Heavy Italic.otf"; sourceTree = "<group>"; };
+		847AD46C27B127B800960F97 /* Regulator Nova Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Bold Italic.otf"; sourceTree = "<group>"; };
+		847AD46D27B127B800960F97 /* Regulator Nova Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Medium Italic.otf"; sourceTree = "<group>"; };
+		847AD46E27B127B800960F97 /* Regulator Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Bold.otf"; sourceTree = "<group>"; };
+		847AD46F27B127B800960F97 /* Regulator Nova Extra Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Extra Light.otf"; sourceTree = "<group>"; };
+		847AD47027B127B800960F97 /* Regulator Nova Demi Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Demi Bold Italic.otf"; sourceTree = "<group>"; };
+		847AD47127B127B900960F97 /* Regulator Nova Extra Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Extra Light Italic.otf"; sourceTree = "<group>"; };
+		847AD47227B127B900960F97 /* Regulator Nova Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Light.otf"; sourceTree = "<group>"; };
+		847AD47327B127B900960F97 /* Regulator Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Thin.otf"; sourceTree = "<group>"; };
+		847AD47427B127B900960F97 /* Regulator Nova Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Thin Italic.otf"; sourceTree = "<group>"; };
+		847AD47527B127B900960F97 /* Regulator Nova Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Heavy.otf"; sourceTree = "<group>"; };
+		847AD47627B127B900960F97 /* Regulator Nova Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Light Italic.otf"; sourceTree = "<group>"; };
+		847AD47727B127B900960F97 /* Regulator Nova Cameo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Cameo.otf"; sourceTree = "<group>"; };
+		847AD47827B127B900960F97 /* Regulator Nova Demi Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Regulator Nova Demi Bold.otf"; sourceTree = "<group>"; };
 		8490FC53004E8B009FD0ACA5 /* Pods-MindScape-MindScapeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindScape-MindScapeTests.debug.xcconfig"; path = "Target Support Files/Pods-MindScape-MindScapeTests/Pods-MindScape-MindScapeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86BA38912A5B42B08D952F76 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		89D3FA1B3A0F47C59AC17178 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -230,20 +230,20 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				12BD5C8A273D1970007116D2 /* Regulator Nova Bold Italic.otf */,
-				12BD5C83273D196F007116D2 /* Regulator Nova Bold.otf */,
-				12BD5C85273D196F007116D2 /* Regulator Nova Cameo.otf */,
-				12BD5C86273D196F007116D2 /* Regulator Nova Demi Bold Italic.otf */,
-				12BD5C8B273D1970007116D2 /* Regulator Nova Demi Bold.otf */,
-				12BD5C84273D196F007116D2 /* Regulator Nova Extra Light Italic.otf */,
-				12BD5C90273D1970007116D2 /* Regulator Nova Extra Light.otf */,
-				12BD5C8C273D1970007116D2 /* Regulator Nova Heavy Italic.otf */,
-				12BD5C87273D196F007116D2 /* Regulator Nova Heavy.otf */,
-				12BD5C8F273D1970007116D2 /* Regulator Nova Light Italic.otf */,
-				12BD5C8D273D1970007116D2 /* Regulator Nova Light.otf */,
-				12BD5C89273D1970007116D2 /* Regulator Nova Medium Italic.otf */,
-				12BD5C88273D196F007116D2 /* Regulator Nova Thin Italic.otf */,
-				12BD5C8E273D1970007116D2 /* Regulator Nova Thin.otf */,
+				847AD46C27B127B800960F97 /* Regulator Nova Bold Italic.otf */,
+				847AD46E27B127B800960F97 /* Regulator Nova Bold.otf */,
+				847AD47727B127B900960F97 /* Regulator Nova Cameo.otf */,
+				847AD47027B127B800960F97 /* Regulator Nova Demi Bold Italic.otf */,
+				847AD47827B127B900960F97 /* Regulator Nova Demi Bold.otf */,
+				847AD47127B127B900960F97 /* Regulator Nova Extra Light Italic.otf */,
+				847AD46F27B127B800960F97 /* Regulator Nova Extra Light.otf */,
+				847AD46B27B127B800960F97 /* Regulator Nova Heavy Italic.otf */,
+				847AD47527B127B900960F97 /* Regulator Nova Heavy.otf */,
+				847AD47627B127B900960F97 /* Regulator Nova Light Italic.otf */,
+				847AD47227B127B900960F97 /* Regulator Nova Light.otf */,
+				847AD46D27B127B800960F97 /* Regulator Nova Medium Italic.otf */,
+				847AD47427B127B900960F97 /* Regulator Nova Thin Italic.otf */,
+				847AD47327B127B900960F97 /* Regulator Nova Thin.otf */,
 				12594A63273BAE22001ABFBF /* Regulator Nova Medium.otf */,
 				12594A5C273BAA30001ABFBF /* Optima-Bold.TTF */,
 				12594A59273BAA30001ABFBF /* Optima-Medium.ttf */,
@@ -345,7 +345,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindScape" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mindscape" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -376,20 +376,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12BD5C9F273D19B0007116D2 /* Regulator Nova Bold Italic.otf in Resources */,
-				12BD5CA0273D19B0007116D2 /* Regulator Nova Bold.otf in Resources */,
-				12BD5CA1273D19B0007116D2 /* Regulator Nova Cameo.otf in Resources */,
-				12BD5CA2273D19B0007116D2 /* Regulator Nova Demi Bold Italic.otf in Resources */,
-				12BD5CA3273D19B0007116D2 /* Regulator Nova Demi Bold.otf in Resources */,
-				12BD5CA4273D19B0007116D2 /* Regulator Nova Extra Light Italic.otf in Resources */,
-				12BD5CA5273D19B0007116D2 /* Regulator Nova Extra Light.otf in Resources */,
-				12BD5CA6273D19B0007116D2 /* Regulator Nova Heavy Italic.otf in Resources */,
-				12BD5CA7273D19B0007116D2 /* Regulator Nova Heavy.otf in Resources */,
-				12BD5CA8273D19B0007116D2 /* Regulator Nova Light Italic.otf in Resources */,
-				12BD5CA9273D19B0007116D2 /* Regulator Nova Light.otf in Resources */,
-				12BD5CAA273D19B0007116D2 /* Regulator Nova Medium Italic.otf in Resources */,
-				12BD5CAB273D19B0007116D2 /* Regulator Nova Thin Italic.otf in Resources */,
-				12BD5CAC273D19B0007116D2 /* Regulator Nova Thin.otf in Resources */,
+				847AD47927B127B900960F97 /* Regulator Nova Heavy Italic.otf in Resources */,
+				847AD47A27B127B900960F97 /* Regulator Nova Bold Italic.otf in Resources */,
+				847AD47B27B127B900960F97 /* Regulator Nova Medium Italic.otf in Resources */,
+				847AD47C27B127B900960F97 /* Regulator Nova Bold.otf in Resources */,
+				847AD47D27B127B900960F97 /* Regulator Nova Extra Light.otf in Resources */,
+				847AD47E27B127B900960F97 /* Regulator Nova Demi Bold Italic.otf in Resources */,
+				847AD47F27B127B900960F97 /* Regulator Nova Extra Light Italic.otf in Resources */,
+				847AD48027B127B900960F97 /* Regulator Nova Light.otf in Resources */,
+				847AD48127B127B900960F97 /* Regulator Nova Thin.otf in Resources */,
+				847AD48227B127B900960F97 /* Regulator Nova Thin Italic.otf in Resources */,
+				847AD48327B127B900960F97 /* Regulator Nova Heavy.otf in Resources */,
+				847AD48427B127B900960F97 /* Regulator Nova Light Italic.otf in Resources */,
+				847AD48527B127B900960F97 /* Regulator Nova Cameo.otf in Resources */,
+				847AD48627B127B900960F97 /* Regulator Nova Demi Bold.otf in Resources */,
 				12594A62273BADA4001ABFBF /* Regulator Nova Medium.otf in Resources */,
 				12594A5E273BAA30001ABFBF /* Regulator-Nova.otf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
@@ -823,7 +823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MindScape" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mindscape" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

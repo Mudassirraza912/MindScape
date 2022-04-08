@@ -31,6 +31,8 @@ export const HomeSetCountry = ({ navigation }) => {
                         setvisible(false)
                         setCountry(country.name)
                     }}
+                    withFilter
+                    withAlphaFilter
                 />
             <View style={{ flex: 2, justifyContent: "center", paddingTop: "30%",paddingLeft:20 }}>
                 <StatusBar hidden={true}/>
